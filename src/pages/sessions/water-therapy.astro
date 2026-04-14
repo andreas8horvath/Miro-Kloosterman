@@ -1,0 +1,82 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Reveal } from '../../components/Reveal';
+
+const title = "Harmonic Flow Aquatic Healing Arts — With Miro Kloosterman and Damla Yaku";
+const description = "Harmonic Flow Aquatic Healing Arts. Water-based healing in three stages — above water, under water, and the return. Reaches what land-based work can't.";
+---
+
+<Layout title={title} description={description}>
+  <section class="py-section-y px-section-x max-w-5xl mx-auto">
+    <Reveal client:load>
+      <div class="mb-24">
+        <span class="text-sm font-medium tracking-[0.2em] uppercase text-soil-muted mb-8 block">Session Modality</span>
+        <h1 class="text-6xl md:text-8xl font-display mb-12 text-soil leading-tight">Harmonic Flow Aquatic Healing Arts</h1>
+        <p class="text-xl md:text-2xl text-soil-muted max-w-3xl mb-12 leading-relaxed font-medium">
+          Water therapy that works in three stages — above water, under water, and the return.
+        </p>
+      </div>
+    </Reveal>
+
+    <div class="space-y-32">
+      <Reveal client:load>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+          <div class="lg:col-span-4">
+            <h2 class="text-3xl md:text-4xl font-display text-soil sticky top-32">What it is</h2>
+          </div>
+          <div class="lg:col-span-8 space-y-8 text-lg text-soil-muted leading-relaxed">
+            <p>Harmonic Flow Aquatic Healing Arts is a water therapy tradition that brings together multiple lineages of water-based healing. I trained in it, and I also co-facilitate this work with my partner Damla Yaku, who carries the lineage deeply.</p>
+            <p>Water does something land-based work can't. It holds you. It takes away the weight of your own body. It reaches parts of the nervous system that rarely get touched when you're standing upright. The element itself is part of the therapy.</p>
+          </div>
+        </div>
+      </Reveal>
+
+      <Reveal client:load>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+          <div class="lg:col-span-4">
+            <h2 class="text-3xl md:text-4xl font-display text-soil sticky top-32">The three stages</h2>
+          </div>
+          <div class="lg:col-span-8 space-y-12">
+            <div class="bg-surface-container-low p-12 rounded-xl shadow-tactile">
+              <h3 class="text-sm font-medium uppercase tracking-[0.2em] text-primary mb-6 block">1. Above water.</h3>
+              <p class="text-lg text-soil-muted leading-relaxed">We begin at the surface. Float bands support your legs, nose clips go on, and a water pillow supports your head. The body can finally let go — most clients enter a quiet, meditative, almost theta-state kind of rest within the first few minutes.</p>
+            </div>
+            <div class="bg-surface-container-low p-12 rounded-xl shadow-tactile">
+              <h3 class="text-sm font-medium uppercase tracking-[0.2em] text-primary mb-6 block">2. Under water.</h3>
+              <p class="text-lg text-soil-muted leading-relaxed">Short submersions at first, held in stillness. As you get comfortable, the movements become more fluid and dynamic — there's a specific kind of surrender that underwater work opens. Clients report symbolic experiences, old memories, a quality of being held that some describe as returning to the womb.</p>
+            </div>
+            <div class="bg-surface-container-low p-12 rounded-xl shadow-tactile">
+              <h3 class="text-sm font-medium uppercase tracking-[0.2em] text-primary mb-6 block">3. The return.</h3>
+              <p class="text-lg text-soil-muted leading-relaxed">Emerging from water is metaphorically a birth, and we treat it that way. We ground the experience with breath, gentle massage, and whatever the body needs to come fully back. Aromatherapy, incense, and quiet instruments are part of this stage.</p>
+            </div>
+          </div>
+        </div>
+      </Reveal>
+
+      <Reveal client:load>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+          <div class="lg:col-span-4">
+            <h2 class="text-3xl md:text-4xl font-display text-soil sticky top-32">Practical</h2>
+          </div>
+          <div class="lg:col-span-8">
+            <p class="text-lg text-soil-muted leading-relaxed">Water therapy happens in pools, the sea, or natural water sources. The water has to be clean and at the right temperature — this matters more than people think. Every session is unique. The best thing you can do before a water session is let go of what you expect it to be.</p>
+          </div>
+        </div>
+      </Reveal>
+
+      <Reveal client:load>
+        <div class="therapy-note max-w-3xl mx-auto">
+          <p class="text-2xl md:text-3xl font-display italic text-soil mb-8 leading-relaxed">"The anxiety I was carrying due to work-related stress completely melted away, replaced by a deep and grounding sense of calm."</p>
+          <p class="font-hand text-4xl text-right text-primary">— Amirhossein Rezaei</p>
+        </div>
+      </Reveal>
+
+      <Reveal client:load>
+        <div class="text-center bg-surface-container-low p-16 rounded-xl shadow-tactile">
+          <h2 class="text-4xl md:text-5xl font-display mb-8 text-soil">Ready to flow?</h2>
+          <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a free discovery call</a>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+</Layout>

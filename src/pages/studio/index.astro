@@ -1,0 +1,99 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Reveal } from '../../components/Reveal';
+
+const title = "Miro Kloosterman — Actor & Model";
+const description = "Dutch actor and model. Known for Goede Tijden, Slechte Tijden (Thijs Kramer, 2014–2017), The Bodyguard musical, The Passion, Men's Health, and The Rake.";
+---
+
+<Layout title={title} description={description}>
+  <section class="py-section-y px-section-x max-w-7xl mx-auto">
+    <Reveal client:load>
+      <h1 class="text-5xl md:text-7xl font-display mb-4 text-center">Miro Kloosterman</h1>
+      <p class="text-xl md:text-2xl text-center max-w-3xl mx-auto mb-20 text-soil-muted uppercase tracking-widest">
+        Actor. Model. Based in Europe and Bali.
+      </p>
+    </Reveal>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
+      <Reveal client:load>
+        <h2 class="text-3xl md:text-4xl font-display mb-8">Work</h2>
+        <div class="space-y-6 text-lg">
+          <p>I trained as an actor and worked in Dutch television, theatre, and film for over a decade. Best known for playing Thijs Kramer, a lawyer on Goede Tijden, Slechte Tijden, from 2014 to 2017. Before and after the series I worked in musical theatre — including The Bodyguard, where I played Frank Farmer — and in film, including Hartenstrijd and Rotterdam I Love You. I performed in The Passion.</p>
+          <p>As a model, I've worked with Men's Health magazine (cover) and The Rake, among others.</p>
+          <p>These days I am selective. I take on projects when the material is right and the work aligns with the other side of my life, which is healing. When both are alive at once, the work is better.</p>
+        </div>
+      </Reveal>
+      <div class="aspect-[3/4] rounded-xl overflow-hidden">
+        <img src="https://picsum.photos/seed/miro-studio/1000/1333" alt="Miro Studio" class="object-cover w-full h-full" referrerpolicy="no-referrer" />
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
+      <Reveal client:load delay={0.1}>
+        <div class="service-card h-full">
+          <h3>Men's Health</h3>
+          <p>Cover shoot and feature.</p>
+          <a href="#" class="btn-text mt-auto">View feature →</a>
+        </div>
+      </Reveal>
+      <Reveal client:load delay={0.2}>
+        <div class="service-card h-full">
+          <h3>The Rake</h3>
+          <p>Editorial feature.</p>
+          <a href="#" class="btn-text mt-auto">View feature →</a>
+        </div>
+      </Reveal>
+      <Reveal client:load delay={0.3}>
+        <div class="service-card h-full">
+          <h3>Story Magazine</h3>
+          <p>March 2026 — long-form feature on the pivot from actor to healer.</p>
+          <a href="/about" class="btn-text mt-auto">Read story →</a>
+        </div>
+      </Reveal>
+    </div>
+
+    <div class="max-w-4xl mx-auto mb-32">
+      <Reveal client:load>
+        <h2 class="text-3xl md:text-4xl font-display mb-12 text-center">Resume</h2>
+        <div class="space-y-12">
+          <div>
+            <h3 class="text-xl font-bold uppercase tracking-widest text-soil-muted mb-6">Television</h3>
+            <ul class="space-y-2 text-lg">
+              <li><span class="font-medium">Goede Tijden, Slechte Tijden</span> — Thijs Kramer (series regular, 2014–2017)</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold uppercase tracking-widest text-soil-muted mb-6">Theatre</h3>
+            <ul class="space-y-2 text-lg">
+              <li><span class="font-medium">The Bodyguard</span> (musical) — Frank Farmer</li>
+              <li><span class="font-medium">The Passion</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold uppercase tracking-widest text-soil-muted mb-6">Film</h3>
+            <ul class="space-y-2 text-lg">
+              <li><span class="font-medium">Hartenstrijd</span></li>
+              <li><span class="font-medium">Rotterdam I Love You</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold uppercase tracking-widest text-soil-muted mb-6">Modeling</h3>
+            <ul class="space-y-2 text-lg">
+              <li><span class="font-medium">Men's Health</span> (cover)</li>
+              <li><span class="font-medium">The Rake</span> (editorial)</li>
+            </ul>
+          </div>
+        </div>
+      </Reveal>
+    </div>
+
+    <div class="bg-linen/30 p-12 md:p-20 rounded-2xl text-center">
+      <Reveal client:load>
+        <h2 class="text-3xl md:text-4xl font-display mb-8">Representation & Contact</h2>
+        <p class="text-lg mb-12 max-w-xl mx-auto">For casting, editorial, and commercial enquiries, please reach out directly.</p>
+        <a href="mailto:info@mirokloosterman.com" class="btn-primary">info@mirokloosterman.com</a>
+      </Reveal>
+    </div>
+  </section>
+</Layout>

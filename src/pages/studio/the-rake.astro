@@ -1,0 +1,20 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Reveal } from '../../components/Reveal';
+
+const title = "The Rake Feature — Miro Kloosterman";
+const description = "Editorial feature in The Rake magazine.";
+---
+
+<Layout title={title} description={description}>
+  <section class="py-section-y px-section-x max-w-4xl mx-auto text-center">
+    <Reveal client:load>
+      <h1 class="text-5xl font-display mb-12">The Rake</h1>
+      <div class="aspect-[3/4] bg-linen rounded-xl mb-12 flex items-center justify-center">
+        <span class="text-soil-muted italic">Feature imagery coming soon</span>
+      </div>
+      <p class="text-lg">Editorial feature in The Rake magazine.</p>
+      <a href="/studio" class="btn-text mt-12 block">← Back to Studio</a>
+    </Reveal>
+  </section>
+</Layout>

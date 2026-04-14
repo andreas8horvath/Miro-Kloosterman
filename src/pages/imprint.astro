@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Reveal } from '../components/Reveal';
+
+const title = "Imprint — Body, Mind & Soul Therapy";
+const description = "Legal imprint for Miro Kloosterman's Body, Mind & Soul Therapy.";
+---
+
+<Layout title={title} description={description}>
+  <section class="py-section-y px-section-x max-w-4xl mx-auto">
+    <Reveal client:load>
+      <h1 class="text-4xl md:text-5xl font-display mb-12">Imprint</h1>
+      <div class="space-y-8 text-lg">
+        <div>
+          <h2 class="text-sm font-medium uppercase tracking-widest text-soil-muted mb-2">Service Provider</h2>
+          <p class="font-medium">Miro Kloosterman</p>
+          <p>Body, Mind & Soul Therapy</p>
+        </div>
+        <div>
+          <h2 class="text-sm font-medium uppercase tracking-widest text-soil-muted mb-2">Contact</h2>
+          <p>Email: info@mirokloosterman.com</p>
+        </div>
+        <div>
+          <h2 class="text-sm font-medium uppercase tracking-widest text-soil-muted mb-2">Based in</h2>
+          <p>Bali, Indonesia</p>
+          <p>Turkey</p>
+        </div>
+        <p class="mt-12 text-soil-muted italic">This imprint is provided for EU compliance. Full legal details to be updated by the site owner.</p>
+      </div>
+    </Reveal>
+  </section>
+</Layout>

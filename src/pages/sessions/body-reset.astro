@@ -1,0 +1,89 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Reveal } from '../../components/Reveal';
+
+const title = "Body Reset Therapy — With Miro Kloosterman";
+const description = "Body Reset Therapy — manual therapy treating every joint as part of a connected system. Often brings immediate relief from chronic pain and migraines.";
+---
+
+<Layout title={title} description={description}>
+  <section class="py-section-y px-section-x max-w-5xl mx-auto">
+    <Reveal client:load>
+      <div class="mb-24">
+        <span class="text-sm font-medium tracking-[0.2em] uppercase text-soil-muted mb-8 block">Session Modality</span>
+        <h1 class="text-6xl md:text-8xl font-display mb-12 text-soil leading-tight">Body Reset Therapy</h1>
+        <p class="text-xl md:text-2xl text-soil-muted max-w-3xl mb-12 leading-relaxed font-medium">
+          Manual therapy based on Fixed Points Theory. It treats every joint in the body as part of a single connected system.
+        </p>
+      </div>
+    </Reveal>
+
+    <div class="space-y-32">
+      <Reveal client:load>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+          <div class="lg:col-span-4">
+            <h2 class="text-3xl md:text-4xl font-display text-soil sticky top-32">What it is</h2>
+          </div>
+          <div class="lg:col-span-8">
+            <p class="text-lg text-soil-muted leading-relaxed">A restriction in one joint almost always creates compensation somewhere else, and that compensation is usually where the pain finally shows up. I work through the whole body, joint by joint, by hand. The first session often brings a shift people haven't felt in years.</p>
+          </div>
+        </div>
+      </Reveal>
+
+      <Reveal client:load>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+          <div class="lg:col-span-4">
+            <h2 class="text-3xl md:text-4xl font-display text-soil sticky top-32">What it addresses</h2>
+          </div>
+          <div class="lg:col-span-8">
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 text-lg text-soil-muted">
+              {[
+                "Back, hip, knee, ankle, foot pain",
+                "Shoulder, elbow, wrist, and neck pain",
+                "Pelvic instability, hernias, whiplash, RSI",
+                "Migraines and cluster headaches",
+                "Ménière's disease, sinus issues",
+                "Asthma, hay fever",
+                "Spastic intestinal problems",
+                "Menstrual pain, restless legs",
+                "Unexplained fatigue",
+                "Emotional instability and depression",
+                "Scoliosis in children (from age five)"
+              ].map(item => (
+                <li class="flex items-start gap-4">
+                  <div class="w-1.5 h-1.5 rounded-full bg-secondary mt-2.5 flex-shrink-0"></div>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </Reveal>
+
+      <Reveal client:load>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+          <div class="lg:col-span-4">
+            <h2 class="text-3xl md:text-4xl font-display text-soil sticky top-32">Treatment rhythm</h2>
+          </div>
+          <div class="lg:col-span-8">
+            <p class="text-lg text-soil-muted leading-relaxed">The first session can initiate a big change. A second session usually follows three to four weeks later. After that the intervals stretch out — most clients use it as an ongoing preventative practice, not a one-time fix.</p>
+          </div>
+        </div>
+      </Reveal>
+
+      <Reveal client:load>
+        <div class="therapy-note max-w-3xl mx-auto">
+          <p class="text-2xl md:text-3xl font-display italic text-soil mb-8 leading-relaxed">"After only one session, [years of neck and shoulder tension] was all gone."</p>
+          <p class="font-hand text-4xl text-right text-primary">— Anna</p>
+        </div>
+      </Reveal>
+
+      <Reveal client:load>
+        <div class="text-center bg-surface-container-low p-16 rounded-xl shadow-tactile">
+          <h2 class="text-4xl md:text-5xl font-display mb-8 text-soil">Ready to reset?</h2>
+          <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a free discovery call</a>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+</Layout>

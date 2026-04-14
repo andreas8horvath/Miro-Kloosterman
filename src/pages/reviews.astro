@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Reveal } from '../components/Reveal';
+
+const title = "Reviews — Body, Mind & Soul Therapy";
+const description = "What clients say about working with Miro Kloosterman. Thirty plus reviews across breathwork, bodywork, retreats, and more.";
+
+const featuredReviews = [
+  {
+    name: "Christopher",
+    modality: "Breathwork",
+    quote: "What I experienced with Miro was beyond any description. Like I'm leaving my body and then coming back again but as a different person. It really feels like a rebirth."
+  },
+  {
+    name: "Anna",
+    modality: "Body Reset",
+    quote: "After only one session, [years of neck and shoulder tension] was all gone."
+  },
+  {
+    name: "Lina",
+    modality: "Breathwork (Lithuania)",
+    quote: "It really feels like I released the pain from my family's line. I have no trauma bonding with my mom anymore."
+  },
+  {
+    name: "Maria Johanna",
+    modality: "Chi Nei Tsang",
+    quote: "During the first session I experienced the most intense crying in my whole life. It was grief of being a vanished twin. After this session I can say that my life shifted completely."
+  },
+  {
+    name: "Dragonheart",
+    modality: "Breathwork",
+    quote: "I met many shamans, healers, coaches. He is the cleanest energy one."
+  }
+];
+
+const allReviews = [
+  { name: "Steven", modality: "Private Retreat", quote: "Investing time with Miro has transformed my life on multiple levels. I am now stronger, healthier, happier, and more fulfilled." },
+  { name: "Jacqueline", modality: "Private Retreat", quote: "This special and gifted person is able to challenge you, to make you feel what needs to be felt. Go if you feel you have to go." },
+  { name: "Wouter Blom", modality: "Private Retreat", quote: "The rest, exercise, yoga, fitness, breathing exercises, and activities gave me peace and intrinsic motivation to get out and be active." },
+  { name: "Amirhossein Rezaei", modality: "Water Therapy", quote: "The anxiety I was carrying due to work-related stress completely melted away, replaced by a deep and grounding sense of calm." },
+  { name: "Awa", modality: "Hypnotherapy", quote: "Our hypnotherapy sessions were deeply insightful and transformative, leaving me with more clarity and inner strength." },
+  { name: "Nathalie", modality: "Coaching", quote: "You are someone with a huge passion for his profession and a great love for his coachees." }
+];
+---
+
+<Layout title={title} description={description}>
+  <section class="py-section-y px-section-x max-w-7xl mx-auto">
+    <Reveal client:load>
+      <div class="text-center mb-32">
+        <span class="text-sm font-medium tracking-[0.2em] uppercase text-soil-muted mb-8 block">Client Experiences</span>
+        <h1 class="text-6xl md:text-8xl font-display mb-12 text-soil leading-tight">The word people use first is safe.</h1>
+        <p class="text-xl md:text-2xl text-soil-muted max-w-3xl mx-auto leading-relaxed">
+          I've kept almost every review clients have written me over the years. Reading them back, one pattern is impossible to miss — the first thing people describe is the safety of the room.
+        </p>
+      </div>
+    </Reveal>
+
+    <div class="space-y-20 mb-40">
+      {featuredReviews.map((review, index) => (
+        <Reveal client:load delay={index * 0.1}>
+          <div class={`review-card max-w-5xl mx-auto ${index % 2 === 1 ? 'lg:translate-x-12' : 'lg:-translate-x-12'}`}>
+            <blockquote class="text-3xl md:text-4xl font-display italic leading-relaxed text-soil">"{review.quote}"</blockquote>
+            <div class="mt-12 flex items-center gap-6">
+              <div class="w-12 h-px bg-secondary"></div>
+              <div class="flex flex-col">
+                <span class="font-medium text-soil">{review.name}</span>
+                <span class="text-soil-muted font-medium uppercase tracking-widest text-xs">{review.modality}</span>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      ))}
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-32">
+      {allReviews.map((review, index) => (
+        <Reveal client:load delay={index * 0.05}>
+          <div class="review-card h-full">
+            <blockquote class="text-xl italic leading-relaxed text-soil-muted">"{review.quote}"</blockquote>
+            <div class="mt-auto pt-10 flex items-center gap-4">
+              <div class="w-8 h-px bg-secondary/40"></div>
+              <div class="flex flex-col">
+                <span class="font-medium text-soil text-sm">{review.name}</span>
+                <span class="text-soil-muted font-medium text-[10px] uppercase tracking-widest">{review.modality}</span>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      ))}
+    </div>
+
+    <Reveal client:load>
+      <div class="text-center bg-surface-container-low p-16 rounded-xl shadow-tactile max-w-4xl mx-auto">
+        <h2 class="text-4xl md:text-5xl font-display mb-8 text-soil">Ready to start your own?</h2>
+        <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a free discovery call</a>
+      </div>
+    </Reveal>
+  </section>
+</Layout>

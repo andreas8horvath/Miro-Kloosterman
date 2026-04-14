@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Reveal } from '../components/Reveal';
+
+const title = "Contact — Book a discovery call with Miro";
+const description = "Book a free thirty-minute discovery call with Miro Kloosterman. Or send a message directly.";
+---
+
+<Layout title={title} description={description}>
+  <section class="py-section-y px-section-x max-w-7xl mx-auto">
+    <Reveal client:load>
+      <h1 class="text-5xl md:text-7xl font-display mb-8 text-center">Let's talk.</h1>
+      <p class="text-xl md:text-2xl text-center max-w-3xl mx-auto mb-20 text-soil-muted">
+        The best way to start is a thirty-minute discovery call. It's free. No pitch, no pressure. Just a conversation about what's actually going on for you and whether I'm the right person to help.
+      </p>
+    </Reveal>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
+      <Reveal client:load delay={0.1}>
+        <div class="service-card h-full text-center">
+          <h3 class="mb-4">Book a discovery call</h3>
+          <p class="mb-8">Thirty minutes, free, on video. Pick a time that works for you.</p>
+          <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary w-full">Book now</a>
+        </div>
+      </Reveal>
+      <Reveal client:load delay={0.2}>
+        <div class="service-card h-full text-center">
+          <h3 class="mb-4">Send a message</h3>
+          <p class="mb-8">If you'd rather write first, use the form below. I usually reply within one to two days.</p>
+          <a href="#contact-form" class="btn-text">Scroll to form</a>
+        </div>
+      </Reveal>
+      <Reveal client:load delay={0.3}>
+        <div class="service-card h-full text-center">
+          <h3 class="mb-4">Email me directly</h3>
+          <p class="mb-8">info@mirokloosterman.com</p>
+          <p class="text-sm text-soil-muted">I read every message personally.</p>
+        </div>
+      </Reveal>
+    </div>
+
+    <div id="contact-form" class="max-w-3xl mx-auto bg-linen/30 p-12 md:p-20 rounded-2xl">
+      <Reveal client:load>
+        <h2 class="text-3xl md:text-4xl font-display mb-12 text-center">Send a message.</h2>
+        <form class="space-y-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="space-y-2">
+              <label for="name" class="text-sm font-medium uppercase tracking-widest text-soil-muted">Name</label>
+              <input type="text" id="name" name="name" required class="w-full bg-white border-none rounded-md p-4 focus:ring-2 focus:ring-terracotta outline-none" />
+            </div>
+            <div class="space-y-2">
+              <label for="email" class="text-sm font-medium uppercase tracking-widest text-soil-muted">Email</label>
+              <input type="email" id="email" name="email" required class="w-full bg-white border-none rounded-md p-4 focus:ring-2 focus:ring-terracotta outline-none" />
+            </div>
+          </div>
+          <div class="space-y-2">
+            <label for="interest" class="text-sm font-medium uppercase tracking-widest text-soil-muted">What are you interested in?</label>
+            <select id="interest" name="interest" class="w-full bg-white border-none rounded-md p-4 focus:ring-2 focus:ring-terracotta outline-none appearance-none">
+              <option>Not sure yet</option>
+              <option>Private Retreat</option>
+              <option>Individual Sessions</option>
+              <option>Group Retreats</option>
+            </select>
+          </div>
+          <div class="space-y-2">
+            <label for="message" class="text-sm font-medium uppercase tracking-widest text-soil-muted">What are you dealing with?</label>
+            <textarea id="message" name="message" rows="5" placeholder="The more you tell me, the better I can respond." class="w-full bg-white border-none rounded-md p-4 focus:ring-2 focus:ring-terracotta outline-none resize-none"></textarea>
+          </div>
+          <button type="submit" class="btn-primary w-full">Send</button>
+        </form>
+      </Reveal>
+    </div>
+
+    <div class="mt-32 text-center max-w-2xl mx-auto">
+      <Reveal client:load>
+        <h2 class="text-2xl font-display mb-6">In which language can we speak?</h2>
+        <p class="text-lg mb-12">I work primarily in English, and I'm Dutch by birth, so I'm happy to speak Dutch with Dutch clients. A dedicated Dutch version of this site is coming soon.</p>
+        <p class="text-lg italic mb-8">If you've read this far, thank you. Whatever you're dealing with — reach out. That's the hardest part, and after it, everything gets easier.</p>
+        <span class="font-hand text-4xl text-clay-dark">— Miro</span>
+      </Reveal>
+    </div>
+  </section>
+</Layout>

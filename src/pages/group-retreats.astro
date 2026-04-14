@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Reveal } from '../components/Reveal';
+
+const title = "Group Retreats — With Miro Kloosterman and Damla Yaku";
+const description = "Occasional small-group healing retreats in Bali, Turkey, and other destinations — co-facilitated with Damla Yaku. Join the waitlist.";
+---
+
+<Layout title={title} description={description}>
+  <section class="py-section-y px-section-x max-w-7xl mx-auto">
+    <Reveal client:load>
+      <h1 class="text-5xl md:text-7xl font-display mb-8 text-center">Group Retreats.</h1>
+      <p class="text-xl md:text-2xl text-center max-w-3xl mx-auto mb-20 text-soil-muted">
+        Occasional immersive retreats in Bali, Turkey, and other destinations. Small groups. Two practitioners. Real depth.
+      </p>
+    </Reveal>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
+      <Reveal client:load>
+        <h2 class="text-3xl md:text-4xl font-display mb-8">Two practitioners. One container. Several places in the world.</h2>
+        <div class="space-y-6 text-lg">
+          <p>A few times a year, Damla and I run a retreat together. Most often in Bali or Turkey, sometimes in other destinations when the right opportunity opens up. These are small, immersive, and built around breathwork, bodywork, water, and the kind of integration that only happens when you give it several full days in a row.</p>
+          <p>When we work together, you get two practitioners in the room — each with our own lineage, our own way of reading what's happening, and a shared commitment to holding the container safely for everyone in it. Group work has a particular kind of power that one-on-one work doesn't, especially when the group is small and the container is tight.</p>
+          <p>Locations and dates open throughout the year. Retreats fill from the waitlist before they're ever publicly announced — so if you want to be there, get on the list.</p>
+        </div>
+      </Reveal>
+      <div class="aspect-square rounded-xl overflow-hidden">
+        <img src="https://picsum.photos/seed/group-retreat/1000/1000" alt="Group Retreat" class="object-cover w-full h-full" referrerpolicy="no-referrer" />
+      </div>
+    </div>
+
+    <div class="max-w-3xl mx-auto bg-linen/30 p-12 md:p-20 rounded-2xl mb-32">
+      <Reveal client:load>
+        <h2 class="text-3xl md:text-4xl font-display mb-8 text-center">The next retreat.</h2>
+        <p class="text-lg text-center mb-12">We are currently planning our next immersive experiences. Join the waitlist to be the first to know when dates and locations are released.</p>
+        <form class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label for="name" class="text-sm font-medium uppercase tracking-widest text-soil-muted">Name</label>
+              <input type="text" id="name" name="name" required class="w-full bg-white border-none rounded-md p-4 focus:ring-2 focus:ring-terracotta outline-none" />
+            </div>
+            <div class="space-y-2">
+              <label for="email" class="text-sm font-medium uppercase tracking-widest text-soil-muted">Email</label>
+              <input type="email" id="email" name="email" required class="w-full bg-white border-none rounded-md p-4 focus:ring-2 focus:ring-terracotta outline-none" />
+            </div>
+          </div>
+          <div class="space-y-2">
+            <label for="goal" class="text-sm font-medium uppercase tracking-widest text-soil-muted">What are you hoping to find in a retreat? (optional)</label>
+            <textarea id="goal" name="goal" rows="3" class="w-full bg-white border-none rounded-md p-4 focus:ring-2 focus:ring-terracotta outline-none resize-none"></textarea>
+          </div>
+          <button type="submit" class="btn-primary w-full">Join the waitlist</button>
+        </form>
+      </Reveal>
+    </div>
+
+    <div class="max-w-3xl mx-auto">
+      <Reveal client:load>
+        <h2 class="text-3xl md:text-4xl font-display mb-12 text-center">Group retreats are for you if…</h2>
+        <ul class="space-y-6 text-lg">
+          {[
+            "You want depth, but you also want the particular power that comes from working alongside other people doing the same work",
+            "You've done individual sessions before and you're ready for the next layer",
+            "You want two practitioners holding the space, not one",
+            "You're comfortable in a small group container (we cap attendance on purpose)",
+            "You want to travel for the work"
+          ].map(item => (
+            <li class="flex items-start gap-4">
+              <span class="w-2 h-2 rounded-full bg-terracotta mt-2.5 flex-shrink-0"></span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </Reveal>
+    </div>
+  </section>
+</Layout>

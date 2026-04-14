@@ -1,0 +1,106 @@
+---
+import '../index.css';
+import { getDomainInfo } from '../lib/domain';
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+const host = ''; // Static build
+const { siteName, showStudio } = getDomainInfo(host);
+
+const navItems = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Retreat', href: '/retreat' },
+  { name: 'Sessions', href: '/sessions' },
+  { name: 'Group Retreats', href: '/group-retreats' },
+  { name: 'Reviews', href: '/reviews' },
+  { name: 'Contact', href: '/contact' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+
+    <!-- SEO -->
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta name="twitter:card" content="summary_large_image" />
+	</head>
+	<body class="bg-surface text-soil font-body antialiased selection:bg-primary/20">
+    <nav class="glass-nav sticky top-0 z-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-24 items-center">
+          <div class="flex-shrink-0">
+            <a href="/" class="font-display text-2xl font-medium text-primary tracking-tight">{siteName}</a>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-10">
+              {navItems.map(item => (
+                <a href={item.href} class="text-sm font-medium hover:text-primary transition-colors tracking-wide">{item.name}</a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+		<main>
+			<slot />
+		</main>
+
+    <footer class="bg-surface-container-highest text-soil py-24 px-6 mt-24">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16">
+        <div>
+          <h3 class="font-display text-2xl mb-8">Navigate</h3>
+          <ul class="space-y-4">
+            {navItems.map(item => (
+              <li><a href={item.href} class="hover:text-primary transition-colors">{item.name}</a></li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-display text-2xl mb-8">Modalities</h3>
+          <ul class="space-y-4">
+            <li><a href="/sessions/breathwork" class="hover:text-primary transition-colors">Breathwork</a></li>
+            <li><a href="/sessions/body-reset" class="hover:text-primary transition-colors">Body Reset</a></li>
+            <li><a href="/sessions/chi-nei-tsang" class="hover:text-primary transition-colors">Chi Nei Tsang</a></li>
+            <li><a href="/sessions/water-therapy" class="hover:text-primary transition-colors">Water Therapy</a></li>
+            <li><a href="/sessions/hypnotherapy" class="hover:text-primary transition-colors">Hypnotherapy</a></li>
+            <li><a href="/sessions/coaching" class="hover:text-primary transition-colors">Coaching</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-display text-2xl mb-8">Find me</h3>
+          <ul class="space-y-4">
+            <li><a href="#" class="hover:text-primary transition-colors">Instagram</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Facebook</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">TikTok</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">YouTube</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-display text-2xl mb-8">Contact</h3>
+          <p class="mb-4 opacity-80">Based in Bali and Turkey<br/>Available worldwide</p>
+          <p class="mb-8 font-medium">info@mirokloosterman.com</p>
+          <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary w-full">Book a discovery call</a>
+        </div>
+      </div>
+      <div class="max-w-7xl mx-auto mt-24 pt-10 border-t border-soil/10 text-sm opacity-60 flex flex-col md:flex-row justify-between items-center gap-6">
+        <p>© 2026 {siteName} · Body, Mind & Soul Therapy {showStudio && <span> · <a href="/studio" class="hover:text-primary">Actor & Model</a></span>} · <a href="/privacy" class="hover:text-primary">Privacy Policy</a> · <a href="/imprint" class="hover:text-primary">Imprint</a></p>
+      </div>
+    </footer>
+	</body>
+</html>
