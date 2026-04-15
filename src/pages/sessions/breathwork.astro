@@ -7,84 +7,127 @@ const description = "Transformative breathwork — conscious connected breathing
 ---
 
 <Layout title={title} description={description}>
-  <section class="py-section-y px-section-x max-w-5xl mx-auto">
-    <Reveal client:load>
-      <div class="mb-24">
-        <span class="text-sm font-medium tracking-[0.2em] uppercase text-soil-muted mb-8 block">Session Modality</span>
-        <h1 class="text-6xl md:text-8xl font-display mb-12 text-soil leading-tight">Transformative Breathwork</h1>
-        <p class="text-xl md:text-2xl text-soil-muted max-w-3xl mb-12 leading-relaxed font-medium">
-          Conscious connected breathing combined with bodywork, movement, and sound. Not breathing to feel calmer. Breathing to move what the mind can't reach on its own.
-        </p>
+  <!-- Section 1 — Hero -->
+  <section class="relative h-screen flex items-center px-section-x pt-24 overflow-hidden grain bg-deep-forest">
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://picsum.photos/seed/miro-breathwork/1920/1080" 
+        alt="Breathwork Session" 
+        class="object-cover w-full h-full opacity-40"
+        referrerpolicy="no-referrer"
+      />
+    </div>
+    <div class="max-w-7xl mx-auto w-full z-10">
+      <Reveal client:load>
+        <div class="max-w-3xl">
+          <span class="label !text-gold">Session Modality</span>
+          <h1 class="text-white mb-8">Transformative Breathwork.</h1>
+          <p class="font-body text-xl md:text-2xl font-light text-sand/80 mb-8 tracking-wide">
+            Conscious connected breathing combined with bodywork, movement, and sound. Access and release what the mind can't reach on its own.
+          </p>
+          <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a Discovery Call</a>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- Section 2 — The Work -->
+  <section class="bg-sand py-section-y px-section-x">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-24">
+        <div class="lg:col-span-4">
+          <Reveal client:load>
+            <h2 class="sticky top-32">What makes it different.</h2>
+          </Reveal>
+        </div>
+        <div class="lg:col-span-8 space-y-12">
+          <Reveal client:load delay={0.1}>
+            <div class="space-y-8 text-lg font-light text-charcoal/80 leading-relaxed">
+              <p>In-person, I bring bodywork and every modality I've trained in into the same session. Breath and touch and sound, all at once. This is what clients tend to mean when they say they've done breathwork elsewhere and never felt anything like this.</p>
+              <p>Online, I work with breath alongside specialised hypnotherapy. The depth is different but the work is still real, and for many clients being at home in their own space lets them go somewhere they wouldn't in a studio.</p>
+            </div>
+          </Reveal>
+        </div>
       </div>
-    </Reveal>
+    </div>
+  </section>
 
-    <div class="space-y-32">
-      <Reveal client:load>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          <div class="lg:col-span-4">
-            <h2 class="text-3xl md:text-4xl font-display text-soil sticky top-32">What makes it different</h2>
-          </div>
-          <div class="lg:col-span-8 space-y-8 text-lg text-soil-muted leading-relaxed">
-            <p>In-person, I bring bodywork and every modality I've trained in into the same session. Breath and touch and sound, all at once. This is what clients tend to mean when they say they've done breathwork elsewhere and never felt anything like this.</p>
-            <p>Online, I work with breath alongside specialised hypnotherapy. The depth is different but the work is still real, and for many clients being at home in their own space lets them go somewhere they wouldn't in a studio.</p>
-          </div>
+  <!-- Section 3 — Formats -->
+  <section class="bg-cream py-section-y px-section-x">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-24">
+        <div class="lg:col-span-4">
+          <Reveal client:load>
+            <h2 class="sticky top-32">Formats.</h2>
+          </Reveal>
         </div>
-      </Reveal>
-
-      <Reveal client:load>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          <div class="lg:col-span-4">
-            <h2 class="text-3xl md:text-4xl font-display text-soil sticky top-32">Formats</h2>
-          </div>
-          <div class="lg:col-span-8">
-            <ul class="space-y-6 text-lg text-soil-muted">
+        <div class="lg:col-span-8">
+          <Reveal client:load delay={0.1}>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
-                "Group sessions in-person — around three hours from start to finish",
-                "Private sessions in-person — around three hours to begin with, building up to four as you go deeper",
-                "Water breathwork — for clients who have done several land-based sessions",
-                "Online sessions — private, with hypnotherapy integration",
-                "Ten-session cards — for clients committed to the full arc"
+                "Group sessions in-person (3 hours)",
+                "Private sessions in-person (3-4 hours)",
+                "Water breathwork (advanced)",
+                "Online sessions (with hypnotherapy)",
+                "Ten-session cards (for full arc)"
               ].map(item => (
-                <li class="flex items-start gap-4">
-                  <div class="w-1.5 h-1.5 rounded-full bg-secondary mt-2.5 flex-shrink-0"></div>
-                  <span>{item}</span>
-                </li>
+                <div class="flex items-center gap-4">
+                  <div class="w-2 h-2 bg-gold rotate-45 flex-shrink-0"></div>
+                  <span class="font-body text-sm font-light text-charcoal">{item}</span>
+                </div>
               ))}
-            </ul>
-          </div>
+            </div>
+          </Reveal>
         </div>
-      </Reveal>
+      </div>
+    </div>
+  </section>
 
-      <Reveal client:load>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          <div class="lg:col-span-4">
-            <h2 class="text-3xl md:text-4xl font-display text-soil sticky top-32">What clients come to breathwork for</h2>
-          </div>
-          <div class="lg:col-span-8">
-            <p class="text-lg text-soil-muted leading-relaxed">Anxiety, depression, panic, shyness, low self-esteem, identity confusion, stuck grief, stored trauma, relationship patterns that keep repeating, chronic pain, asthma, skin conditions, burnout, and the feeling that they're not living anywhere near their full potential.</p>
-          </div>
+  <!-- Section 4 — Who it's for -->
+  <section class="bg-sand py-section-y px-section-x">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-24">
+        <div class="lg:col-span-4">
+          <Reveal client:load>
+            <h2 class="sticky top-32">Who this is for.</h2>
+          </Reveal>
         </div>
-      </Reveal>
+        <div class="lg:col-span-8">
+          <Reveal client:load delay={0.1}>
+            <p class="text-lg font-light text-charcoal/80 leading-relaxed mb-12">
+              Anxiety, depression, panic, shyness, low self-esteem, identity confusion, stuck grief, stored trauma, relationship patterns that keep repeating, chronic pain, asthma, skin conditions, burnout, and the feeling that they're not living anywhere near their full potential.
+            </p>
+            <div class="bg-deep-forest p-12 grain">
+              <h3 class="text-white mb-6">Important: who this isn't for</h3>
+              <p class="text-sand/60 font-light text-sm leading-relaxed">
+                Breathwork is powerful and there are some conditions where it isn't safe. Please don't book this work if you have cardiovascular problems, high blood pressure, a history of aneurysms, epilepsy, are on heavy medication, have active severe psychiatric symptoms, bipolar depression in an active phase, osteoporosis, recent surgery, glaucoma, are pregnant, are in active addiction, or are in a mental or spiritual emergency. Minimum age is eighteen.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Section 5 — Testimonial -->
+  <section class="bg-cream py-section-y px-section-x">
+    <div class="max-w-4xl mx-auto text-center">
       <Reveal client:load>
-        <div class="bg-surface-container-highest p-12 rounded-xl border-l-4 border-secondary shadow-tactile">
-          <h2 class="text-2xl font-display mb-6 text-soil">Important: who this isn't for</h2>
-          <p class="text-lg text-soil-muted leading-relaxed">Breathwork is powerful and there are some conditions where it isn't safe. Please don't book this work if you have cardiovascular problems, high blood pressure, a history of aneurysms, epilepsy, are on heavy medication, have active severe psychiatric symptoms, bipolar depression in an active phase, osteoporosis, recent surgery, glaucoma, are pregnant, are in active addiction, or are in a mental or spiritual emergency. Minimum age is eighteen.</p>
-        </div>
+        <blockquote class="pull-quote">
+          "What I experienced with Miro was beyond any description. Like I'm leaving my body and then coming back again but as a different person. It really feels like a rebirth."
+        </blockquote>
+        <p class="font-serif italic text-2xl text-deep-forest mt-8">— Christopher</p>
       </Reveal>
+    </div>
+  </section>
 
+  <!-- Section 6 — Closing CTA -->
+  <section class="bg-deep-forest pt-section-y pb-16 px-section-x grain relative">
+    <div class="max-w-3xl mx-auto text-center">
       <Reveal client:load>
-        <div class="therapy-note max-w-3xl mx-auto">
-          <p class="text-2xl md:text-3xl font-display italic text-soil mb-8 leading-relaxed">"What I experienced with Miro was beyond any description. Like I'm leaving my body and then coming back again but as a different person. It really feels like a rebirth."</p>
-          <p class="font-hand text-4xl text-right text-primary">— Christopher</p>
-        </div>
-      </Reveal>
-
-      <Reveal client:load>
-        <div class="text-center bg-surface-container-low p-16 rounded-xl shadow-tactile">
-          <h2 class="text-4xl md:text-5xl font-display mb-8 text-soil">Ready to breathe?</h2>
-          <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a free discovery call</a>
-        </div>
+        <h2 class="text-white mb-8">Ready to breathe?</h2>
+        <p class="text-sand/60 text-xl font-light mb-16 leading-relaxed">The work starts with a thirty-minute discovery call. No pitch, no script, no pressure.</p>
+        <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a Discovery Call</a>
       </Reveal>
     </div>
   </section>

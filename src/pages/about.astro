@@ -7,113 +7,127 @@ const description = "The full story behind Body, Mind & Soul Therapy. Actor, Lym
 ---
 
 <Layout title={title} description={description}>
-  <section class="py-section-y px-section-x max-w-5xl mx-auto">
-    <Reveal client:load>
-      <h1 class="text-6xl md:text-8xl font-display mb-12 text-soil">Hi, my name is Miro.</h1>
-      <p class="text-xl md:text-2xl text-soil-muted mb-16 leading-relaxed max-w-3xl">
-        I'm a certified life coach, breathwork facilitator, hypnotherapist, body reset therapist, Chi Core Release massage therapist, Reiki master, water therapist, intuitive massage therapist, and nutrition and detox coach. I've been doing this work since 2001.
-      </p>
-      <div class="flex items-center gap-6 mb-24">
-        <div class="w-16 h-px bg-primary"></div>
-        <p class="text-xl font-display italic text-primary">But that's the CV. The real reason I do this work is harder to put on a list.</p>
-      </div>
-    </Reveal>
-
-    <div class="space-y-32">
+  <!-- Section 1 — Hero -->
+  <section class="relative h-screen flex items-center px-section-x pt-24 overflow-hidden grain bg-deep-forest">
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://picsum.photos/seed/miro-about-hero/1920/1080" 
+        alt="Miro Kloosterman" 
+        class="object-cover w-full h-full opacity-40"
+        referrerpolicy="no-referrer"
+      />
+    </div>
+    <div class="max-w-7xl mx-auto w-full z-10">
       <Reveal client:load>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          <div class="lg:col-span-4">
-            <h2 class="text-3xl md:text-4xl font-display text-soil sticky top-32">Before this, I was a performer.</h2>
-          </div>
-          <div class="lg:col-span-8 space-y-8 text-lg text-soil-muted leading-relaxed">
-            <p>I spent three years playing Thijs Kramer, a lawyer on Goede Tijden, Slechte Tijden — one of the most-watched shows in the Netherlands. Before and after the series I did musical theatre (The Bodyguard, where I played Frank Farmer), film, and The Passion. I worked with Men's Health magazine. I was on the cover of The Rake. If you're Dutch and you're over thirty, there's a reasonable chance my face is already familiar to you.</p>
-            <p>That whole world is still part of me, and I haven't walked away from it completely — I still work as an actor and model when the right project comes. But I no longer organise my life around it. Something else became more important.</p>
-          </div>
+        <div class="max-w-3xl">
+          <span class="label !text-gold">The Story</span>
+          <h1 class="text-white mb-8">The Long Way Round.</h1>
+          <p class="font-body text-xl md:text-2xl font-light text-sand/80 mb-8 tracking-wide">
+            From the spotlight to the silence. This is how I found my way back.
+          </p>
         </div>
       </Reveal>
+    </div>
+  </section>
 
-      <Reveal client:load>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          <div class="lg:col-span-4">
-            <h2 class="text-3xl md:text-4xl font-display text-soil sticky top-32">Then my body stopped cooperating.</h2>
+  <section class="bg-sand pt-section-y pb-12 px-section-x">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-24">
+        <!-- Sticky Sidebar for Desktop -->
+        <div class="lg:col-span-4 hidden lg:block">
+          <div class="sticky top-32 space-y-8">
+            <div class="h-px w-12 bg-gold"></div>
+            <nav class="flex flex-col gap-4">
+              <a href="#performer" class="text-xs font-bold uppercase tracking-[2px] text-sage hover:text-gold transition-colors">01. The Performer</a>
+              <a href="#fall" class="text-xs font-bold uppercase tracking-[2px] text-sage hover:text-gold transition-colors">02. The Fall</a>
+              <a href="#reconstruction" class="text-xs font-bold uppercase tracking-[2px] text-sage hover:text-gold transition-colors">03. The Reconstruction</a>
+              <a href="#today" class="text-xs font-bold uppercase tracking-[2px] text-sage hover:text-gold transition-colors">04. Today</a>
+            </nav>
           </div>
-          <div class="lg:col-span-8 space-y-8 text-lg text-soil-muted leading-relaxed">
-            <p>I'd been ignoring my body for years. I had intestinal problems, migraines, and severe eczema since childhood — my father is a health practitioner, so healthy food was always around, but I chose the opposite in my twenties. Sugar, caffeine, tobacco, marijuana, alcohol, recreational drugs, no exercise. At twenty-one, during a working holiday in Australia, the exhaustion caught up with me and I had my first real taste of what meditation and conscious breathing could do. I got better. Then I went back to old habits.</p>
-            <p>Around thirty, everything started collapsing at once.</p>
-            <p>My mother died of breast cancer when I was two years old. I grew up with that. Then my brother Goran died suddenly of cardiac arrest at thirty-three — and I had to keep showing up on the television set, because a series regular can't just be replaced. After Goran, my relationship ended. And then the burnout I'd been outrunning for a decade finally caught me.</p>
-            
-            <p class="text-2xl font-medium text-primary">I couldn't get out of bed.</p>
-            
-            <div class="therapy-note my-16">
-              <p class="text-2xl font-display italic text-soil mb-6">"You can spend the rest of your life mourning, or you can decide to live. My mother and brother would have wanted me to be happy."</p>
-              <p class="font-hand text-3xl text-right text-primary">— Miro</p>
+        </div>
+
+        <div class="lg:col-span-8 space-y-32">
+          <!-- Section 01 — The Performer -->
+          <Reveal client:load id="performer">
+            <span class="label">01. The Performer</span>
+            <h2 class="mb-12">Before this, I was a performer.</h2>
+            <div class="space-y-8 text-lg font-light text-charcoal/80 leading-relaxed">
+              <p>I spent three years playing Thijs Kramer, a lawyer on Goede Tijden, Slechte Tijden — one of the most-watched shows in the Netherlands. Before and after the series I did musical theatre (The Bodyguard, where I played Frank Farmer), film, and The Passion. I worked with Men's Health magazine. I was on the cover of The Rake. If you're Dutch and you're over thirty, there's a reasonable chance my face is already familiar to you.</p>
+              <p>That whole world is still part of me, and I haven't walked away from it completely — I still work as an actor and model when the right project comes. But I no longer organise my life around it. Something else became more important.</p>
             </div>
-            
-            <p>I was diagnosed with Lyme disease somewhere in the middle of all of that. I spent five years fighting chronic fatigue, body pain, and doctors telling me some people never fully recover from what I had.</p>
-          </div>
+          </Reveal>
+
+          <!-- Section 02 — The Fall -->
+          <Reveal client:load id="fall">
+            <span class="label">02. The Fall</span>
+            <h2 class="mb-12">Then my body stopped cooperating.</h2>
+            <div class="space-y-8 text-lg font-light text-charcoal/80 leading-relaxed">
+              <p>I'd been ignoring my body for years. I had intestinal problems, migraines, and severe eczema since childhood — my father is a health practitioner, so healthy food was always around, but I chose the opposite in my twenties. Sugar, caffeine, tobacco, marijuana, alcohol, recreational drugs, no exercise. At twenty-one, during a working holiday in Australia, the exhaustion caught up with me and I had my first real taste of what meditation and conscious breathing could do. I got better. Then I went back to old habits.</p>
+              <p>Around thirty, everything started collapsing at once.</p>
+              <p>My mother died of breast cancer when I was two years old. I grew up with that. Then my brother Goran died suddenly of cardiac arrest at thirty-three — and I had to keep showing up on the television set, because a series regular can't just be replaced. After Goran, my relationship ended. And then the burnout I'd been outrunning for a decade finally caught me.</p>
+              
+              <div class="pull-quote my-16 border-l-2 border-gold pl-12 py-4">
+                "You can spend the rest of your life mourning, or you can decide to live. My mother and brother would have wanted me to be happy."
+              </div>
+              
+              <p>I was diagnosed with Lyme disease somewhere in the middle of all of that. I spent five years fighting chronic fatigue, body pain, and doctors telling me some people never fully recover from what I had.</p>
+            </div>
+          </Reveal>
+
+          <!-- Section 03 — The Reconstruction -->
+          <Reveal client:load id="reconstruction">
+            <span class="label">03. The Reconstruction</span>
+            <h2 class="mb-12">I was going to prove them wrong.</h2>
+            <div class="space-y-8 text-lg font-light text-charcoal/80 leading-relaxed">
+              <p>I started reading. I started trying things. I got a nutrition certification because I needed to understand what was happening in my gut. I got a breathwork certification because I needed to know why the breath was the only thing that ever fully calmed my nervous system. I got a body reset certification because my joints were seized and I needed the tool to unlock them. I learned hypnotherapy because the loops in my mind wouldn't stop on their own.</p>
+              <p>Each certification was something I needed to save my own life first. Then I started using them with other people.</p>
+              <p>I went vegan. I almost entirely stopped drinking. I moved to Bali. I kept studying. Chi Nei Tsang, because I had grief stuck in my belly that bodywork couldn't touch. Reiki. Intuitive massage, which I had been doing since childhood without knowing it had a name. Harmonic Flow Aquatic Healing Arts, which reached a part of me nothing else could reach. Nine modalities, in the end. One practice.</p>
+              <p>After all of that, I went back to acting briefly and appeared on the cover of Men's Health. I mention that not because the magazine cover is the point — but because it was the body the doctors said might never fully come back.</p>
+            </div>
+          </Reveal>
+
+          <!-- Section 04 — Today -->
+          <Reveal client:load id="today">
+            <span class="label">04. Today</span>
+            <h2 class="mb-12">The work I do now.</h2>
+            <div class="space-y-8 text-lg font-light text-charcoal/80 leading-relaxed">
+              <p>My work lives in a few places now. I run private retreats in Bali, where most of this practice grew up. I also run retreats in Turkey, with my partner Damla Yaku. And when the right client calls and the costs work out, I travel to them — I've done this work in living rooms, on boats, in villas, in places I'd never been before I was asked to come.</p>
+              <p>I take online clients from anywhere in the world — breathwork, hypnotherapy, coaching. The people who find me are usually deep into their own version of what I went through — chronic illness, burnout, grief, trauma, or simply the sense that they are stuck in their own life and can't remember how to move.</p>
+              <p>I hold space for them the way people held space for me when I needed it most. I use whichever of the nine modalities is right for that moment. I stay until the work is done.</p>
+              <p>I am not a guru. I don't have a message. I am a person who got through something and now helps other people get through it too. That's the whole thing.</p>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Credibility Strip -->
+  <section class="bg-cream py-16 px-section-x border-y border-gold/10">
+    <div class="max-w-7xl mx-auto">
+      <Reveal client:load>
+        <span class="label text-center">As Seen In</span>
+        <div class="flex flex-wrap justify-center items-center gap-16 md:gap-32 opacity-30 grayscale">
+          <span class="font-display text-2xl md:text-4xl font-bold">Men's Health</span>
+          <span class="font-display text-2xl md:text-4xl font-bold">THE RAKE</span>
+          <span class="font-display text-2xl md:text-4xl font-bold">Story</span>
+          <span class="font-display text-2xl md:text-4xl font-bold">GTST</span>
         </div>
       </Reveal>
+    </div>
+  </section>
 
+  <!-- Closing CTA -->
+  <section class="bg-deep-forest pt-16 pb-16 px-section-x grain relative">
+    <div class="max-w-3xl mx-auto text-center">
       <Reveal client:load>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          <div class="lg:col-span-4">
-            <h2 class="text-3xl md:text-4xl font-display text-soil sticky top-32">I was going to prove them wrong.</h2>
-          </div>
-          <div class="lg:col-span-8 space-y-8 text-lg text-soil-muted leading-relaxed">
-            <p>I started reading. I started trying things. I got a nutrition certification because I needed to understand what was happening in my gut. I got a breathwork certification because I needed to know why the breath was the only thing that ever fully calmed my nervous system. I got a body reset certification because my joints were seized and I needed the tool to unlock them. I learned hypnotherapy because the loops in my mind wouldn't stop on their own.</p>
-            <p>Each certification was something I needed to save my own life first. Then I started using them with other people.</p>
-            <p>I went vegan. I almost entirely stopped drinking. I moved to Bali. I kept studying. Chi Nei Tsang, because I had grief stuck in my belly that bodywork couldn't touch. Reiki. Intuitive massage, which I had been doing since childhood without knowing it had a name. Harmonic Flow Aquatic Healing Arts, which reached a part of me nothing else could reach. Nine modalities, in the end. One practice.</p>
-            <p>After all of that, I went back to acting briefly and appeared on the cover of Men's Health. I mention that not because the magazine cover is the point — but because it was the body the doctors said might never fully come back.</p>
-          </div>
+        <h2 class="text-white mb-8">If any of this resonates, let's talk.</h2>
+        <p class="text-sand/60 text-xl font-light mb-16 leading-relaxed">The work starts with a thirty-minute discovery call. No pitch, no script, no pressure. We'll talk about what's going on for you, and I'll be honest about whether I can help.</p>
+        <div class="mb-16">
+          <p class="text-gold text-sm uppercase tracking-widest mb-4">With Love,</p>
+          <span class="font-display italic text-5xl text-white">— Miro</span>
         </div>
-      </Reveal>
-
-      <Reveal client:load>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          <div class="lg:col-span-4">
-            <h2 class="text-3xl md:text-4xl font-display text-soil sticky top-32">The work I do now.</h2>
-          </div>
-          <div class="lg:col-span-8 space-y-8 text-lg text-soil-muted leading-relaxed">
-            <p>My work lives in a few places now. I run private retreats in Bali, where most of this practice grew up. I also run retreats in Turkey, with my partner Damla Yaku. And when the right client calls and the costs work out, I travel to them — I've done this work in living rooms, on boats, in villas, in places I'd never been before I was asked to come.</p>
-            <p>I take online clients from anywhere in the world — breathwork, hypnotherapy, coaching. The people who find me are usually deep into their own version of what I went through — chronic illness, burnout, grief, trauma, or simply the sense that they are stuck in their own life and can't remember how to move.</p>
-            <p>I hold space for them the way people held space for me when I needed it most. I use whichever of the nine modalities is right for that moment. I stay until the work is done.</p>
-            <p>I am not a guru. I don't have a message. I am a person who got through something and now helps other people get through it too. That's the whole thing.</p>
-          </div>
-        </div>
-      </Reveal>
-
-      <Reveal client:load>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          <div class="lg:col-span-4">
-            <h2 class="text-3xl md:text-4xl font-display text-soil sticky top-32">A few other things about me.</h2>
-          </div>
-          <div class="lg:col-span-8 space-y-8 text-lg text-soil-muted leading-relaxed">
-            <p>Outside the work, I read about consciousness, reincarnation, and the origin of the universe. I still surf when the waves are right. I spend a lot of time outside. I have a lot of what friends call Labrador energy — enthusiastic, child-like, very warm — sitting next to the wiser, quieter part that shows up in sessions. Both are real. They're both in the room when we work together.</p>
-          </div>
-        </div>
-      </Reveal>
-
-      <Reveal client:load>
-        <div class="pt-24 border-t border-soil/10">
-          <span class="text-sm font-medium uppercase tracking-[0.2em] text-soil-muted mb-12 block">As seen in</span>
-          <div class="flex flex-wrap gap-16 items-center opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
-            <span class="text-3xl font-bold font-display">Men's Health</span>
-            <span class="text-3xl font-bold font-display">THE RAKE</span>
-            <span class="text-3xl font-bold font-display">Story</span>
-          </div>
-        </div>
-      </Reveal>
-
-      <Reveal client:load>
-        <div class="bg-surface-container-low p-16 rounded-xl text-center shadow-tactile">
-          <h2 class="text-4xl md:text-5xl font-display mb-8 text-soil">If any of this resonates, let's talk.</h2>
-          <p class="text-xl text-soil-muted mb-12 max-w-2xl mx-auto leading-relaxed">The work starts with a thirty-minute discovery call. No pitch, no script, no pressure. We'll talk about what's going on for you, and I'll be honest about whether I can help.</p>
-          <div class="mb-12">
-            <p class="text-soil-muted text-sm uppercase tracking-widest mb-4">With Love,</p>
-            <span class="font-hand text-6xl text-primary">— Miro</span>
-          </div>
-          <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a free discovery call</a>
-        </div>
+        <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a free discovery call</a>
       </Reveal>
     </div>
   </section>

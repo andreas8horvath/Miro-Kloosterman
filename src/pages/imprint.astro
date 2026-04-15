@@ -7,26 +7,32 @@ const description = "Legal imprint for Miro Kloosterman's Body, Mind & Soul Ther
 ---
 
 <Layout title={title} description={description}>
-  <section class="py-section-y px-section-x max-w-4xl mx-auto">
-    <Reveal client:load>
-      <h1 class="text-4xl md:text-5xl font-display mb-12">Imprint</h1>
-      <div class="space-y-8 text-lg">
-        <div>
-          <h2 class="text-sm font-medium uppercase tracking-widest text-soil-muted mb-2">Service Provider</h2>
-          <p class="font-medium">Miro Kloosterman</p>
-          <p>Body, Mind & Soul Therapy</p>
+  <section class="bg-sand h-screen flex items-center pt-24 px-section-x">
+    <div class="max-w-4xl mx-auto">
+      <Reveal client:load>
+        <span class="label !text-gold mb-8 block">Legal</span>
+        <h1 class="mb-16">Imprint.</h1>
+        <div class="space-y-12 text-lg font-light text-charcoal/80 leading-relaxed">
+          <div class="space-y-4">
+            <span class="label !text-gold">Service Provider</span>
+            <p class="font-serif text-2xl text-deep-forest">Miro Kloosterman</p>
+            <p>Body, Mind & Soul Therapy</p>
+          </div>
+          
+          <div class="space-y-4">
+            <span class="label !text-gold">Contact</span>
+            <p>Email: info@mirokloosterman.com</p>
+          </div>
+
+          <div class="space-y-4">
+            <span class="label !text-gold">Based in</span>
+            <p>Bali, Indonesia</p>
+            <p>Turkey</p>
+          </div>
+
+          <p class="mt-24 text-sm italic opacity-60">This imprint is provided for EU compliance. Full legal details to be updated by the site owner.</p>
         </div>
-        <div>
-          <h2 class="text-sm font-medium uppercase tracking-widest text-soil-muted mb-2">Contact</h2>
-          <p>Email: info@mirokloosterman.com</p>
-        </div>
-        <div>
-          <h2 class="text-sm font-medium uppercase tracking-widest text-soil-muted mb-2">Based in</h2>
-          <p>Bali, Indonesia</p>
-          <p>Turkey</p>
-        </div>
-        <p class="mt-12 text-soil-muted italic">This imprint is provided for EU compliance. Full legal details to be updated by the site owner.</p>
-      </div>
-    </Reveal>
+      </Reveal>
+    </div>
   </section>
 </Layout>

@@ -7,61 +7,94 @@ const description = "Hypnotherapy with Miro Kloosterman. Subconscious work for a
 ---
 
 <Layout title={title} description={description}>
-  <section class="py-section-y px-section-x max-w-5xl mx-auto">
-    <Reveal client:load>
-      <div class="mb-24">
-        <span class="text-sm font-medium tracking-[0.2em] uppercase text-soil-muted mb-8 block">Session Modality</span>
-        <h1 class="text-6xl md:text-8xl font-display mb-12 text-soil leading-tight">Hypnotherapy</h1>
-        <p class="text-xl md:text-2xl text-soil-muted max-w-3xl mb-12 leading-relaxed font-medium">
-          Subconscious work for the loops the conscious mind can't break on its own. Online or in-person.
-        </p>
-      </div>
-    </Reveal>
-
-    <div class="space-y-32">
+  <!-- Section 1 — Hero -->
+  <section class="relative h-screen flex items-center px-section-x pt-24 overflow-hidden grain bg-deep-forest">
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://picsum.photos/seed/miro-hypnotherapy/1920/1080" 
+        alt="Hypnotherapy" 
+        class="object-cover w-full h-full opacity-40"
+        referrerpolicy="no-referrer"
+      />
+    </div>
+    <div class="max-w-7xl mx-auto w-full z-10">
       <Reveal client:load>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          <div class="lg:col-span-4">
-            <h2 class="text-3xl md:text-4xl font-display text-soil sticky top-32">What it is</h2>
-          </div>
-          <div class="lg:col-span-8">
-            <p class="text-lg text-soil-muted leading-relaxed">Hypnotherapy uses heightened focus and deep relaxation to reach the subconscious mind — where most of our automatic patterns, fears, and self-beliefs actually live. You stay aware the entire time. You can accept or reject anything that's suggested. The work is collaborative, not something that happens *to* you.</p>
-          </div>
+        <div class="max-w-3xl">
+          <span class="label !text-gold">Session Modality</span>
+          <h1 class="text-white mb-8">Hypnotherapy.</h1>
+          <p class="font-body text-xl md:text-2xl font-light text-sand/80 mb-8 tracking-wide">
+            Subconscious work for the loops the conscious mind can't break on its own. Online or in-person.
+          </p>
+          <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a Discovery Call</a>
         </div>
       </Reveal>
+    </div>
+  </section>
 
-      <Reveal client:load>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          <div class="lg:col-span-4">
-            <h2 class="text-3xl md:text-4xl font-display text-soil sticky top-32">What happens</h2>
-          </div>
-          <div class="lg:col-span-8 space-y-12">
-            {[
-              { title: "1. Induction", desc: "Breathing exercises, guided imagery, and progressive muscle relaxation bring the body and mind into a receptive state." },
-              { title: "2. Deepening", desc: "We go further, ensuring full immersion and openness to the work." },
-              { title: "3. Therapeutic suggestions", desc: "Tailored specifically to what you came in for. Not a script." },
-              { title: "4. Exploration", desc: "We look at past experiences, memories, or patterns that are influencing current behavior." },
-              { title: "5. Awakening", desc: "A gentle return to normal awareness. You feel refreshed, relaxed, and usually lighter." }
-            ].map((step, index) => (
+  <!-- Section 2 — The Work -->
+  <section class="bg-sand py-section-y px-section-x">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-24">
+        <div class="lg:col-span-4">
+          <Reveal client:load>
+            <h2 class="sticky top-32">What it is.</h2>
+          </Reveal>
+        </div>
+        <div class="lg:col-span-8">
+          <Reveal client:load delay={0.1}>
+            <p class="text-lg font-light text-charcoal/80 leading-relaxed">
+              Hypnotherapy uses heightened focus and deep relaxation to reach the subconscious mind — where most of our automatic patterns, fears, and self-beliefs actually live. You stay aware the entire time. You can accept or reject anything that's suggested. The work is collaborative, not something that happens *to* you.
+            </p>
+          </Reveal>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3 — What happens -->
+  <section class="bg-cream py-section-y px-section-x">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-24">
+        <div class="lg:col-span-4">
+          <Reveal client:load>
+            <h2 class="sticky top-32">What happens.</h2>
+          </Reveal>
+        </div>
+        <div class="lg:col-span-8 space-y-12">
+          {[
+            { title: "1. Induction", desc: "Breathing exercises, guided imagery, and progressive muscle relaxation bring the body and mind into a receptive state." },
+            { title: "2. Deepening", desc: "We go further, ensuring full immersion and openness to the work." },
+            { title: "3. Therapeutic suggestions", desc: "Tailored specifically to what you came in for. Not a script." },
+            { title: "4. Exploration", desc: "We look at past experiences, memories, or patterns that are influencing current behavior." },
+            { title: "5. Awakening", desc: "A gentle return to normal awareness. You feel refreshed, relaxed, and usually lighter." }
+          ].map((step, i) => (
+            <Reveal client:load delay={i * 0.1}>
               <div class="flex gap-8">
-                <div class="text-secondary font-display text-4xl font-bold opacity-20">{index + 1}</div>
+                <span class="font-serif text-4xl text-gold/40">{i + 1}</span>
                 <div>
-                  <h3 class="text-xl font-bold text-soil mb-2">{step.title}</h3>
-                  <p class="text-lg text-soil-muted leading-relaxed">{step.desc}</p>
+                  <h3 class="text-charcoal mb-2">{step.title}</h3>
+                  <p class="text-lg font-light text-charcoal/80 leading-relaxed">{step.desc}</p>
                 </div>
               </div>
-            ))}
-          </div>
+            </Reveal>
+          ))}
         </div>
-      </Reveal>
+      </div>
+    </div>
+  </section>
 
-      <Reveal client:load>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          <div class="lg:col-span-4">
-            <h2 class="text-3xl md:text-4xl font-display text-soil sticky top-32">What it addresses</h2>
-          </div>
-          <div class="lg:col-span-8">
-            <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 text-lg text-soil-muted">
+  <!-- Section 4 — What it addresses -->
+  <section class="bg-sand py-section-y px-section-x">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-24">
+        <div class="lg:col-span-4">
+          <Reveal client:load>
+            <h2 class="sticky top-32">What it addresses.</h2>
+          </Reveal>
+        </div>
+        <div class="lg:col-span-8">
+          <Reveal client:load delay={0.1}>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
                 "Anxiety and chronic stress",
                 "Phobias and deep-seated fears",
@@ -72,39 +105,62 @@ const description = "Hypnotherapy with Miro Kloosterman. Subconscious work for a
                 "Confidence and self-esteem",
                 "Breaking mental loops"
               ].map(item => (
-                <li class="flex items-start gap-4">
-                  <div class="w-1.5 h-1.5 rounded-full bg-secondary mt-2.5 flex-shrink-0"></div>
-                  <span>{item}</span>
-                </li>
+                <div class="flex items-center gap-4">
+                  <div class="w-2 h-2 bg-gold rotate-45 flex-shrink-0"></div>
+                  <span class="font-body text-sm font-light text-charcoal">{item}</span>
+                </div>
               ))}
-            </ul>
-          </div>
+            </div>
+          </Reveal>
         </div>
-      </Reveal>
+      </div>
+    </div>
+  </section>
 
-      <Reveal client:load>
-        <div class="bg-surface-container-highest p-12 rounded-xl border-l-4 border-secondary shadow-tactile">
-          <h2 class="text-2xl font-display mb-8 text-soil">Things people get wrong about hypnosis</h2>
-          <div class="space-y-6 text-lg text-soil-muted">
-            <p><span class="font-bold text-soil">You don't lose control.</span> You remain aware, and you can accept or reject any suggestion.</p>
-            <p><span class="font-bold text-soil">You're not unconscious.</span> You are present the entire session and you remember what happened.</p>
-            <p><span class="font-bold text-soil">It's not only for people who are "easily suggestible."</span> It works on analytical and skeptical minds too.</p>
-          </div>
+  <!-- Section 5 — Misconceptions -->
+  <section class="bg-cream py-section-y px-section-x">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-24">
+        <div class="lg:col-span-4">
+          <Reveal client:load>
+            <h2 class="sticky top-32">Misconceptions.</h2>
+          </Reveal>
         </div>
-      </Reveal>
+        <div class="lg:col-span-8">
+          <Reveal client:load delay={0.1}>
+            <div class="bg-deep-forest p-12 grain space-y-8">
+              <h3 class="text-white">Things people get wrong about hypnosis</h3>
+              <div class="space-y-6 text-sand/80 font-light leading-relaxed">
+                <p><strong class="text-gold font-medium">You don't lose control.</strong> You remain aware, and you can accept or reject any suggestion.</p>
+                <p><strong class="text-gold font-medium">You're not unconscious.</strong> You are present the entire session and you remember what happened.</p>
+                <p><strong class="text-gold font-medium">It's not only for people who are "easily suggestible."</strong> It works on analytical and skeptical minds too.</p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Section 6 — Testimonial -->
+  <section class="bg-sand py-section-y px-section-x">
+    <div class="max-w-4xl mx-auto text-center">
       <Reveal client:load>
-        <div class="therapy-note max-w-3xl mx-auto">
-          <p class="text-2xl md:text-3xl font-display italic text-soil mb-8 leading-relaxed">"Our hypnotherapy sessions were deeply insightful and transformative, leaving me with more clarity and inner strength."</p>
-          <p class="font-hand text-4xl text-right text-primary">— Awa</p>
-        </div>
+        <blockquote class="pull-quote">
+          "Our hypnotherapy sessions were deeply insightful and transformative, leaving me with more clarity and inner strength."
+        </blockquote>
+        <p class="font-serif italic text-2xl text-deep-forest mt-8">— Awa</p>
       </Reveal>
+    </div>
+  </section>
 
+  <!-- Section 7 — Closing CTA -->
+  <section class="bg-deep-forest pt-section-y pb-16 px-section-x grain relative">
+    <div class="max-w-3xl mx-auto text-center">
       <Reveal client:load>
-        <div class="text-center bg-surface-container-low p-16 rounded-xl shadow-tactile">
-          <h2 class="text-4xl md:text-5xl font-display mb-8 text-soil">Ready to explore?</h2>
-          <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a free discovery call</a>
-        </div>
+        <h2 class="text-white mb-8">Ready to explore?</h2>
+        <p class="text-sand/60 text-xl font-light mb-16 leading-relaxed">The work starts with a thirty-minute discovery call. No pitch, no script, no pressure.</p>
+        <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a Discovery Call</a>
       </Reveal>
     </div>
   </section>

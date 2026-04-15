@@ -7,76 +7,94 @@ const description = "Book a free thirty-minute discovery call with Miro Klooster
 ---
 
 <Layout title={title} description={description}>
-  <section class="py-section-y px-section-x max-w-7xl mx-auto">
-    <Reveal client:load>
-      <h1 class="text-5xl md:text-7xl font-display mb-8 text-center">Let's talk.</h1>
-      <p class="text-xl md:text-2xl text-center max-w-3xl mx-auto mb-20 text-soil-muted">
-        The best way to start is a thirty-minute discovery call. It's free. No pitch, no pressure. Just a conversation about what's actually going on for you and whether I'm the right person to help.
-      </p>
-    </Reveal>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
-      <Reveal client:load delay={0.1}>
-        <div class="service-card h-full text-center">
-          <h3 class="mb-4">Book a discovery call</h3>
-          <p class="mb-8">Thirty minutes, free, on video. Pick a time that works for you.</p>
-          <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary w-full">Book now</a>
-        </div>
-      </Reveal>
-      <Reveal client:load delay={0.2}>
-        <div class="service-card h-full text-center">
-          <h3 class="mb-4">Send a message</h3>
-          <p class="mb-8">If you'd rather write first, use the form below. I usually reply within one to two days.</p>
-          <a href="#contact-form" class="btn-text">Scroll to form</a>
-        </div>
-      </Reveal>
-      <Reveal client:load delay={0.3}>
-        <div class="service-card h-full text-center">
-          <h3 class="mb-4">Email me directly</h3>
-          <p class="mb-8">info@mirokloosterman.com</p>
-          <p class="text-sm text-soil-muted">I read every message personally.</p>
+  <!-- Section 1 — Hero -->
+  <section class="bg-sand h-screen flex items-center pt-24 px-section-x">
+    <div class="max-w-7xl mx-auto">
+      <Reveal client:load>
+        <div class="max-w-3xl">
+          <span class="label">The First Step</span>
+          <h1 class="mb-12">Let's talk.</h1>
+          <p class="text-xl md:text-2xl font-light text-charcoal/80 leading-relaxed">
+            The best way to start is a thirty-minute discovery call. It's free. No pitch, no pressure. Just a conversation about what's actually going on for you and whether I'm the right person to help.
+          </p>
         </div>
       </Reveal>
     </div>
+  </section>
 
-    <div id="contact-form" class="max-w-3xl mx-auto bg-linen/30 p-12 md:p-20 rounded-2xl">
+  <!-- Section 2 — Contact Options -->
+  <section class="bg-cream py-section-y px-section-x">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          { title: "Book a discovery call", desc: "Thirty minutes, free, on video. Pick a time that works for you.", link: "https://tidycal.com/miro-kloosterman/15-minute-meeting", btn: "Book now" },
+          { title: "Send a message", desc: "If you'd rather write first, use the form below. I usually reply within one to two days.", link: "#contact-form", btn: "Scroll to form" },
+          { title: "Email me directly", desc: "info@mirokloosterman.com", sub: "I read every message personally.", btn: "Copy Email" }
+        ].map((opt, i) => (
+          <Reveal client:load delay={i * 0.1}>
+            <div class="service-card h-full flex flex-col">
+              <h3 class="text-white mb-6">{opt.title}</h3>
+              <p class="text-sand/60 font-light text-sm leading-relaxed mb-8">{opt.desc}</p>
+              {opt.sub && <p class="text-gold/60 text-xs font-bold uppercase tracking-widest mb-8">{opt.sub}</p>}
+              <a href={opt.link} class="btn-outline !border-gold/30 !text-gold mt-auto w-full text-center">{opt.btn}</a>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3 — Contact Form -->
+  <section id="contact-form" class="bg-sand py-section-y px-section-x">
+    <div class="max-w-3xl mx-auto">
       <Reveal client:load>
-        <h2 class="text-3xl md:text-4xl font-display mb-12 text-center">Send a message.</h2>
-        <form class="space-y-8">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="space-y-2">
-              <label for="name" class="text-sm font-medium uppercase tracking-widest text-soil-muted">Name</label>
-              <input type="text" id="name" name="name" required class="w-full bg-white border-none rounded-md p-4 focus:ring-2 focus:ring-terracotta outline-none" />
+        <div class="bg-cream p-12 md:p-20 shadow-tactile border border-gold/10">
+          <h2 class="text-center mb-12">Send a message.</h2>
+          <form class="space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="space-y-3">
+                <label for="name" class="label !mb-0">Name</label>
+                <input type="text" id="name" name="name" required class="w-full bg-sand/50 border-b border-gold/30 py-3 focus:border-gold outline-none font-body font-light transition-colors" />
+              </div>
+              <div class="space-y-3">
+                <label for="email" class="label !mb-0">Email</label>
+                <input type="email" id="email" name="email" required class="w-full bg-sand/50 border-b border-gold/30 py-3 focus:border-gold outline-none font-body font-light transition-colors" />
+              </div>
             </div>
-            <div class="space-y-2">
-              <label for="email" class="text-sm font-medium uppercase tracking-widest text-soil-muted">Email</label>
-              <input type="email" id="email" name="email" required class="w-full bg-white border-none rounded-md p-4 focus:ring-2 focus:ring-terracotta outline-none" />
+            <div class="space-y-3">
+              <label for="interest" class="label !mb-0">What are you interested in?</label>
+              <select id="interest" name="interest" class="w-full bg-sand/50 border-b border-gold/30 py-3 focus:border-gold outline-none font-body font-light transition-colors appearance-none">
+                <option>Not sure yet</option>
+                <option>Private Retreats</option>
+                <option>Modalities</option>
+                <option>Group Retreats</option>
+              </select>
             </div>
-          </div>
-          <div class="space-y-2">
-            <label for="interest" class="text-sm font-medium uppercase tracking-widest text-soil-muted">What are you interested in?</label>
-            <select id="interest" name="interest" class="w-full bg-white border-none rounded-md p-4 focus:ring-2 focus:ring-terracotta outline-none appearance-none">
-              <option>Not sure yet</option>
-              <option>Private Retreat</option>
-              <option>Individual Sessions</option>
-              <option>Group Retreats</option>
-            </select>
-          </div>
-          <div class="space-y-2">
-            <label for="message" class="text-sm font-medium uppercase tracking-widest text-soil-muted">What are you dealing with?</label>
-            <textarea id="message" name="message" rows="5" placeholder="The more you tell me, the better I can respond." class="w-full bg-white border-none rounded-md p-4 focus:ring-2 focus:ring-terracotta outline-none resize-none"></textarea>
-          </div>
-          <button type="submit" class="btn-primary w-full">Send</button>
-        </form>
+            <div class="space-y-3">
+              <label for="message" class="label !mb-0">What are you dealing with?</label>
+              <textarea id="message" name="message" rows="5" placeholder="The more you tell me, the better I can respond." class="w-full bg-sand/50 border-b border-gold/30 py-3 focus:border-gold outline-none font-body font-light transition-colors resize-none"></textarea>
+            </div>
+            <button type="submit" class="btn-primary w-full">Send Message</button>
+          </form>
+        </div>
       </Reveal>
     </div>
+  </section>
 
-    <div class="mt-32 text-center max-w-2xl mx-auto">
+  <!-- Section 4 — Language & Closing -->
+  <section class="bg-cream pt-section-y pb-16 px-section-x">
+    <div class="max-w-2xl mx-auto text-center">
       <Reveal client:load>
-        <h2 class="text-2xl font-display mb-6">In which language can we speak?</h2>
-        <p class="text-lg mb-12">I work primarily in English, and I'm Dutch by birth, so I'm happy to speak Dutch with Dutch clients. A dedicated Dutch version of this site is coming soon.</p>
-        <p class="text-lg italic mb-8">If you've read this far, thank you. Whatever you're dealing with — reach out. That's the hardest part, and after it, everything gets easier.</p>
-        <span class="font-hand text-4xl text-clay-dark">— Miro</span>
+        <h2 class="mb-8">In which language can we speak?</h2>
+        <p class="text-lg font-light text-charcoal/80 leading-relaxed mb-12">
+          I work primarily in English, and I'm Dutch by birth, so I'm happy to speak Dutch with Dutch clients. A dedicated Dutch version of this site is coming soon.
+        </p>
+        <p class="font-quote italic text-xl text-charcoal/60 mb-12">
+          "If you've read this far, thank you. Whatever you're dealing with — reach out. That's the hardest part, and after it, everything gets easier."
+        </p>
+        <div class="flex flex-col items-center">
+          <span class="font-serif italic text-4xl text-deep-forest">— Miro</span>
+        </div>
       </Reveal>
     </div>
   </section>

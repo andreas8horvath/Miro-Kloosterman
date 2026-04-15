@@ -7,230 +7,229 @@ const description = "Private retreats, breathwork, bodywork, and integrated heal
 ---
 
 <Layout title={title} description={description}>
-  <!-- Hero Section -->
-  <section class="relative min-h-screen flex items-center px-section-x py-24 overflow-hidden bg-[radial-gradient(circle_at_50%_50%,_var(--color-primary-container)_0%,_var(--color-surface)_100%)]">
-    <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-      <div class="lg:col-span-7 z-10">
-        <Reveal client:load>
-          <span class="text-sm font-medium tracking-[0.2em] uppercase text-soil-muted mb-8 block">Integrated Healing · Bali & Turkey</span>
-          <h1 class="text-6xl md:text-8xl lg:text-9xl font-display leading-[0.9] mb-12 text-soil">
-            Some people say you never fully recover.
-          </h1>
-          <div class="flex items-start gap-8 mb-12">
-            <div class="w-12 h-px bg-primary mt-4 flex-shrink-0"></div>
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-display italic text-primary/80">
-              I'm going to prove them wrong.
-            </h2>
-          </div>
-          <p class="text-lg md:text-xl text-soil-muted max-w-xl mb-12 leading-relaxed">
-            I'm Miro. I spent five years clawing my way out of Lyme disease, burnout, and grief — using every tool I could find. Nine of those tools became certifications. All of them became the work I do now, with people who are stuck in their body, their mind, or their life, and ready to find their way back.
+  <!-- Section 1 — Hero -->
+  <section class="relative h-screen flex items-center px-section-x pt-24 overflow-hidden grain bg-deep-forest">
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://picsum.photos/seed/miro-bali-hero/1920/1080" 
+        alt="Miro in Bali" 
+        class="object-cover w-full h-full opacity-50"
+        referrerpolicy="no-referrer"
+      />
+      <div class="absolute inset-0 bg-deep-forest/40"></div>
+    </div>
+    
+    <div class="max-w-7xl mx-auto w-full z-10">
+      <Reveal client:load>
+        <div class="max-w-3xl">
+          <span class="label !text-gold">Body, Mind & Soul Therapy · Bali</span>
+          <h1 class="text-white mb-8">Miro Kloosterman</h1>
+          <p class="font-body text-xl md:text-2xl font-light text-sand/80 mb-8 tracking-wide">
+            Retreat facilitator. Breathwork therapist. Healer.
           </p>
-          <div class="flex flex-col sm:flex-row gap-8 items-center">
-            <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a discovery call</a>
-            <a href="/about" class="btn-text">Read my story</a>
-          </div>
-        </Reveal>
-      </div>
-      <div class="lg:col-span-5 relative lg:translate-x-12">
-        <div class="aspect-[3/4] rounded-xl overflow-hidden shadow-tactile rotate-2 hover:rotate-0 transition-transform duration-700">
-          <img 
-            src="https://picsum.photos/seed/miro-hero/1200/1600" 
-            alt="Miro Kloosterman" 
-            class="object-cover w-full h-full scale-110 hover:scale-100 transition-transform duration-1000"
-            referrerpolicy="no-referrer"
-          />
-        </div>
-        <div class="absolute -bottom-12 -left-12 bg-surface-container-lowest p-8 rounded-xl shadow-tactile hidden lg:block max-w-xs">
-          <p class="font-hand text-3xl text-primary mb-2">"The body remembers what the mind tries to forget."</p>
-          <p class="text-xs uppercase tracking-widest text-soil-muted">Foundational Principle</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 2 — Recognition -->
-  <section class="bg-surface-container-low py-section-y px-section-x">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
-      <Reveal client:load>
-        <h2 class="text-5xl md:text-6xl font-display leading-tight text-soil">If you're here, something is asking for attention.</h2>
-      </Reveal>
-      <Reveal client:load delay={0.2}>
-        <div class="space-y-8 text-lg text-soil-muted">
-          <p>Most people don't book a retreat because everything is fine. They book because something isn't moving, and they've tried the things that usually work, and those things aren't working this time.</p>
-          <p>Maybe your body stopped cooperating and no bloodwork can tell you why. Maybe you've been running on willpower so long you forgot what rest feels like. Maybe grief is sitting in your chest and won't leave, even though your mind finished with it years ago. Maybe you've done yoga, therapy, breathwork, plant medicine — and something helped, but nothing moved the core thing.</p>
-          
-          <div class="therapy-note mt-12">
-            <p class="text-xl text-soil font-medium italic mb-4">"None of this is a failure. It's information. It usually means the work you need now isn't one more modality on top of the others — it's someone who can read what your body is actually doing and meet it with the right tool at the right time."</p>
-            <p class="font-hand text-3xl text-right text-primary">— Miro</p>
-          </div>
-          <p class="font-medium text-primary text-xl text-center pt-6">That's what I do.</p>
+          <p class="text-sand/60 text-lg max-w-xl mb-12 font-light">
+            I spent five years rebuilding my life from the foundation up after burnout and chronic illness. Now, I help others find their way back to themselves in the same room where I found my own healing.
+          </p>
+          <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a Free Discovery Call</a>
         </div>
       </Reveal>
     </div>
   </section>
 
-  <!-- Section 3 — The Work -->
-  <section class="py-section-y px-section-x max-w-7xl mx-auto">
-    <div class="mb-24 max-w-4xl">
+  <!-- Section 2 — The Story Hook -->
+  <section class="bg-sand py-section-y px-section-x">
+    <div class="max-w-4xl mx-auto text-center">
       <Reveal client:load>
-        <span class="text-sm font-medium tracking-widest uppercase text-primary mb-6 block">The Methodology</span>
-        <h2 class="text-5xl md:text-7xl font-display mb-10 text-soil">Nine modalities. One practice. Integrated in real time.</h2>
-        <p class="text-xl text-soil-muted leading-relaxed">
-          Most practitioners specialise in one or two things. I integrate nine. Not as a menu to choose from—as a single practice I draw on depending on what the body in front of me actually needs.
+        <blockquote class="mb-12">
+          <p class="font-display text-4xl md:text-6xl text-deep-forest leading-tight italic">
+            "Some people say you never fully recover. I was going to prove them wrong."
+          </p>
+        </blockquote>
+        <p class="font-body text-xs font-bold uppercase tracking-[2px] text-sage mb-12">
+          Miro Kloosterman, Story Magazine 2026
+        </p>
+        <div class="max-w-2xl mx-auto text-lg text-charcoal/80 mb-12 font-light leading-relaxed">
+          <p>The journey from a high-pressure acting career to a life of deep service wasn't a choice—it was a necessity. It was the only way to survive the collapse of a body and mind that had been pushed too far for too long.</p>
+        </div>
+        <a href="/about" class="btn-text">Read Miro's full story →</a>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- Section 3 — What Brings You Here -->
+  <section class="bg-deep-forest py-section-y px-section-x grain">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+      <Reveal client:load>
+        <h2 class="text-white mb-12">You don't have to walk this path alone.</h2>
+        <p class="text-sand/60 text-lg font-light leading-relaxed max-w-xl">
+          Healing isn't about collecting modalities. It's about finding the specific key that unlocks your unique system. Whether you're facing the wall of burnout or the weight of old grief, we meet it together with presence and precision.
         </p>
       </Reveal>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-      <Reveal client:load delay={0.1}>
-        <div class="service-card h-full">
-          <h3 class="text-3xl font-display">Private Retreat in Bali</h3>
-          <p class="text-soil-muted">Fully personalised. All-inclusive. Designed around what your body and your life actually need. This is the deepest work I offer.</p>
-          <a href="/retreat" class="btn-text mt-auto w-fit">Explore the retreat</a>
-        </div>
-      </Reveal>
       <Reveal client:load delay={0.2}>
-        <div class="service-card h-full lg:translate-y-12">
-          <h3 class="text-3xl font-display">Individual Sessions</h3>
-          <p class="text-soil-muted">Breathwork, bodywork, water therapy, hypnotherapy, coaching. In-person by arrangement or online from anywhere.</p>
-          <a href="/sessions" class="btn-text mt-auto w-fit">View sessions</a>
-        </div>
-      </Reveal>
-      <Reveal client:load delay={0.3}>
-        <div class="service-card h-full">
-          <h3 class="text-3xl font-display">Group Retreats</h3>
-          <p class="text-soil-muted">Occasional immersive retreats co-facilitated with Damla Yaku. Bali, Turkey, and other destinations. Small groups. Real depth.</p>
-          <a href="/group-retreats" class="btn-text mt-auto w-fit">See upcoming dates</a>
-        </div>
-      </Reveal>
-    </div>
-  </section>
-
-  <!-- Section 4 — The Pivot Story -->
-  <section class="bg-primary text-on-primary py-section-y px-section-x overflow-hidden">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
-      <div class="lg:col-span-5 order-2 lg:order-1 relative">
-        <div class="aspect-[4/5] rounded-xl overflow-hidden shadow-ambient -rotate-3">
-          <img 
-            src="https://picsum.photos/seed/miro-pivot/1000/1250" 
-            alt="Miro's Transformation" 
-            class="object-cover w-full h-full"
-            referrerpolicy="no-referrer"
-          />
-        </div>
-        <div class="absolute top-12 -right-12 bg-secondary p-8 rounded-xl shadow-tactile hidden lg:block">
-          <p class="text-on-secondary font-display text-2xl">From Dutch TV to<br/>Deep Healing</p>
-        </div>
-      </div>
-      <div class="lg:col-span-7 order-1 lg:order-2">
-        <Reveal client:load>
-          <h2 class="text-5xl md:text-7xl font-display text-on-primary mb-12 leading-tight">Before this, I was on Dutch television.</h2>
-          <div class="space-y-8 text-lg opacity-90 leading-relaxed">
-            <p>You might know my face from Goede Tijden, Slechte Tijden. I played Thijs Kramer from 2014 to 2017, performed in The Bodyguard musical, appeared in The Passion, and later on the cover of Men's Health magazine.</p>
-            <p>Between those chapters, my body stopped working.</p>
-            <p>Childhood illness I'd been ignoring. Years of unhealthy habits. My mother died when I was two. My brother Goran died of cardiac arrest at thirty-three, while I was still contractually locked into the show. Then a relationship ended. Then burnout. Then Lyme disease, and five years of being told I might never fully recover.</p>
-            <p>I left the show. I moved to Bali and began rebuilding from the foundation up — using the modalities I now offer to other people. Story magazine ran the full transformation in March this year.</p>
-          </div>
-          
-          <div class="mt-16 p-10 bg-surface-bright/10 backdrop-blur-sm rounded-xl border border-on-primary/10">
-            <p class="text-2xl font-display italic mb-6">"You can spend the rest of your life mourning, or you can decide to live."</p>
-            <p class="text-sm uppercase tracking-widest opacity-60">— Miro, Story Magazine, March 2026</p>
-          </div>
-          
-          <a href="/about" class="btn-text text-on-primary mt-12 block w-fit">Read the full story</a>
-        </Reveal>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 5 — Reviews -->
-  <section class="py-section-y px-section-x max-w-7xl mx-auto">
-    <div class="text-center mb-24">
-      <Reveal client:load>
-        <h2 class="text-5xl md:text-7xl font-display mb-8 text-soil">The word people use first is safe.</h2>
-        <p class="text-xl max-w-3xl mx-auto text-soil-muted leading-relaxed">
-          In more than thirty reviews across every service I offer, one word shows up again and again—and it shows up before "transformation," before "healing," before anything else.
-        </p>
-      </Reveal>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20">
-      <Reveal client:load delay={0.1}>
-        <div class="review-card h-full">
-          <p class="text-xl italic text-soil-muted leading-relaxed">"What I experienced with Miro was beyond any description. Like I'm leaving my body and then coming back again but as a different person. It really feels like a rebirth."</p>
-          <div class="mt-auto pt-8 flex items-center gap-4">
-            <div class="w-10 h-px bg-secondary"></div>
-            <p class="text-sm font-medium uppercase tracking-widest text-soil">Christopher · Breathwork</p>
-          </div>
-        </div>
-      </Reveal>
-      <Reveal client:load delay={0.2}>
-        <div class="review-card h-full">
-          <p class="text-xl italic text-soil-muted leading-relaxed">"After only one session, years of neck and shoulder tension was all gone. I finally feel like I can breathe again."</p>
-          <div class="mt-auto pt-8 flex items-center gap-4">
-            <div class="w-10 h-px bg-secondary"></div>
-            <p class="text-sm font-medium uppercase tracking-widest text-soil">Anna · Body Reset</p>
-          </div>
-        </div>
-      </Reveal>
-      <Reveal client:load delay={0.3}>
-        <div class="review-card h-full">
-          <p class="text-xl italic text-soil-muted leading-relaxed">"I met many shamans, healers, coaches. He is the cleanest energy one. A true master of his craft."</p>
-          <div class="mt-auto pt-8 flex items-center gap-4">
-            <div class="w-10 h-px bg-secondary"></div>
-            <p class="text-sm font-medium uppercase tracking-widest text-soil">Dragonheart · Breathwork</p>
-          </div>
-        </div>
-      </Reveal>
-    </div>
-    <div class="text-center">
-      <a href="/reviews" class="btn-text">Read more reviews</a>
-    </div>
-  </section>
-
-  <!-- Section 6 — Who This Is For -->
-  <section class="bg-surface-container-low py-section-y px-section-x">
-    <div class="max-w-5xl mx-auto">
-      <Reveal client:load>
-        <h2 class="text-5xl md:text-7xl font-display mb-16 text-center text-soil">This is for you if…</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10 mb-20">
+        <div class="flex flex-wrap gap-4">
           {[
-            "You've been stuck for longer than you want to admit",
-            "Your body is giving you signals and your doctor can't find anything",
-            "You've tried a lot already — therapy, yoga, breathwork — and something knows there's still a layer underneath",
-            "You're grieving something the rest of your life has finished with",
-            "You want depth, not another modality to collect",
-            "You want to do the real work, but only in a room that feels genuinely safe",
-            "You're ready to travel to Bali or Turkey, or you're ready to start online from wherever you are"
+            "Burnout & Exhaustion",
+            "Chronic Pain",
+            "Stored Trauma",
+            "Grief & Loss",
+            "Emotional Disconnection",
+            "Performance Pressure",
+            "Lyme Disease Recovery",
+            "Spiritual Crisis"
           ].map(item => (
-            <div class="flex items-start gap-6">
-              <div class="w-6 h-6 rounded-full bg-secondary/20 flex items-center justify-center mt-1 flex-shrink-0">
-                <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-              </div>
-              <p class="text-lg text-soil-muted leading-snug">{item}</p>
-            </div>
+            <span class="px-6 py-3 bg-sand text-sage font-body text-xs font-bold uppercase tracking-[1px]">
+              {item}
+            </span>
           ))}
         </div>
-        <div class="bg-surface-container-lowest p-12 md:p-16 rounded-xl shadow-tactile text-center max-w-3xl mx-auto">
-          <p class="text-2xl font-display italic mb-10 text-soil">"If you recognised yourself in more than a couple of those, the discovery call is the right next step. It's free. It's thirty minutes. No script, no pitch. Just a conversation about what's actually going on, and whether we're the right fit."</p>
-          <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a free discovery call</a>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- Section 4 — The Practice -->
+  <section class="bg-cream py-section-y px-section-x">
+    <div class="max-w-7xl mx-auto">
+      <Reveal client:load>
+        <span class="label">The Practice</span>
+        <h2 class="mb-24 max-w-3xl">A tailor-made strategy. No two people the same.</h2>
+      </Reveal>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          { name: "Private Retreats", desc: "A fully immersive, one-on-one healing journey in Bali.", href: "/retreats/private" },
+          { name: "Breathwork", desc: "Deep somatic release using the power of conscious breathing.", href: "/sessions/breathwork" },
+          { name: "Body Reset", desc: "Manual therapy to realign the physical and energetic body.", href: "/sessions/body-reset" },
+          { name: "Chi Core Massage", desc: "Abdominal work to release stored emotional tension.", href: "/sessions/chi-nei-tsang" },
+          { name: "Water Therapy", desc: "Aquatic healing for deep nervous system regulation.", href: "/sessions/water-therapy" },
+          { name: "Hypnotherapy", desc: "Subconscious reprogramming for lasting habit change.", href: "/sessions/hypnotherapy" }
+        ].map((service, i) => (
+          <Reveal client:load delay={i * 0.1} className="h-full">
+            <a href={service.href} class="service-card group h-full">
+              <h3 class="text-white group-hover:text-gold transition-colors">{service.name}</h3>
+              <p class="text-sand/60 font-light text-sm leading-relaxed">{service.desc}</p>
+              <span class="btn-text !text-gold mt-auto">Explore →</span>
+            </a>
+          </Reveal>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5 — Social Proof -->
+  <section class="bg-sand py-section-y px-section-x overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <Reveal client:load>
+        <span class="label">What Clients Say</span>
+        <h2 class="mb-8">Voices of Transformation.</h2>
+        <p class="text-lg font-light text-charcoal/60 max-w-2xl mb-16">
+          The true measure of this work isn't found in the modalities themselves, but in the quiet shifts and profound breakthroughs of those who walk through the door.
+        </p>
+      </Reveal>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-24 gap-y-16">
+        <Reveal client:load>
+          <div class="pull-quote">
+            "What I experienced with Miro was beyond any description. Like I'm leaving my body and then coming back again but as a different person. It really feels like a rebirth."
+          </div>
+          <p class="font-body text-xs font-bold uppercase tracking-[2px] text-charcoal/40 mt-6">Christopher · Breathwork</p>
+        </Reveal>
+        
+        <Reveal client:load delay={0.1}>
+          <div class="pull-quote">
+            "After only one session, years of neck and shoulder tension was all gone. I finally feel like I can breathe again."
+          </div>
+          <p class="font-body text-xs font-bold uppercase tracking-[2px] text-charcoal/40 mt-6">Anna · Body Reset</p>
+        </Reveal>
+
+        <Reveal client:load delay={0.2}>
+          <div class="pull-quote">
+            "During the first session I experienced the most intense crying in my whole life. It was grief of being a vanished twin. After this session I can say that my life shifted completely."
+          </div>
+          <p class="font-body text-xs font-bold uppercase tracking-[2px] text-charcoal/40 mt-6">Maria Johanna · Chi Core Release</p>
+        </Reveal>
+
+        <Reveal client:load delay={0.3}>
+          <div class="pull-quote">
+            "You are someone with a huge passion for his profession and a great love for his coachees. I recognize myself very well in your metaphor of the butterfly. Time to shine, Miro."
+          </div>
+          <p class="font-body text-xs font-bold uppercase tracking-[2px] text-charcoal/40 mt-6">Nathalie · Coaching</p>
+        </Reveal>
+      </div>
+
+      <div class="mt-24 text-center">
+        <Reveal client:load delay={0.4}>
+          <a href="/reviews" class="btn-primary">Read more reviews</a>
+        </Reveal>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6 — About Miro -->
+  <section class="py-section-y px-section-x bg-cream">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+      <div class="relative">
+        <img 
+          src="https://picsum.photos/seed/miro-about-teaser/1000/1200" 
+          alt="Miro Kloosterman" 
+          class="w-full aspect-[4/5] object-cover shadow-tactile"
+          referrerpolicy="no-referrer"
+        />
+      </div>
+      <Reveal client:load>
+        <span class="label">Meet Miro</span>
+        <h2 class="mb-8">The long way round.</h2>
+        <p class="text-lg font-light text-charcoal/80 leading-relaxed mb-12">
+          From the spotlight of Dutch television to the quiet presence of a healing room in Bali. My path was broken so it could be rebuilt with more integrity. I don't just teach these modalities—I lived them.
+        </p>
+        
+        <div class="flex flex-wrap items-center gap-12 opacity-30 grayscale mb-12">
+          <span class="font-display text-xl font-bold">Men's Health</span>
+          <span class="font-display text-xl font-bold">The Rake</span>
+          <span class="font-display text-xl font-bold">GTST</span>
+          <span class="font-display text-xl font-bold">Story</span>
+        </div>
+        
+        <a href="/about" class="btn-outline">Meet Miro →</a>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- Section 7 — Bali as Environment -->
+  <section class="relative py-section-y px-section-x overflow-hidden bg-deep-forest min-h-[80vh] flex items-center">
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://picsum.photos/seed/bali-landscape/1920/1080" 
+        alt="Bali Landscape" 
+        class="object-cover w-full h-full opacity-40"
+        referrerpolicy="no-referrer"
+      />
+    </div>
+    <div class="max-w-7xl mx-auto w-full z-10 text-center">
+      <Reveal client:load>
+        <h2 class="text-white text-6xl md:text-8xl mb-8">Healing has a place. That place is Bali.</h2>
+        <p class="text-sand/80 text-xl font-light max-w-2xl mx-auto mb-12">
+          The island's energy isn't just a backdrop—it's a participant in the work. The jungle, the water, and the ancient traditions of this land provide the container for your transformation.
+        </p>
+        <div class="flex flex-wrap justify-center gap-8 text-gold font-body text-[10px] font-bold uppercase tracking-[3px]">
+          <span>Rice Fields</span>
+          <span>Holy Water</span>
+          <span>Jungle Silence</span>
+          <span>Ancient Ceremony</span>
         </div>
       </Reveal>
     </div>
   </section>
 
-  <!-- Section 7 — Final Invitation -->
-  <section class="py-section-y px-section-x text-center max-w-4xl mx-auto">
-    <Reveal client:load>
-      <h2 class="text-5xl md:text-8xl font-display mb-12 text-soil leading-tight">Want to live your best life? I am here for you.</h2>
-      <p class="text-xl text-soil-muted mb-16 leading-relaxed">
-        The work I do is not for everyone. But if you're the person it's for, you probably already know. Reach out. Tell me what's going on. We'll figure out what to do next, together.
-      </p>
-      <div class="mb-16">
-        <p class="text-soil-muted text-sm uppercase tracking-widest mb-4">With Love,</p>
-        <span class="font-hand text-6xl text-primary">— Miro</span>
-      </div>
-      <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a free discovery call</a>
-    </Reveal>
+  <!-- Section 8 — CTA / Discovery Call -->
+  <section class="bg-deep-forest pt-section-y pb-16 px-section-x grain relative">
+    <div class="w-full text-center">
+      <div class="h-px w-32 bg-gold mx-auto mb-16"></div>
+      <Reveal client:load width="100%">
+        <h2 class="text-white mb-8">Ready to begin?</h2>
+        <p class="text-sand/60 text-xl font-light mb-16">Start with a free 15-minute discovery call.</p>
+        <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary !px-16 !py-6 !text-sm">Book Your Discovery Call</a>
+        <p class="text-sand/30 text-[10px] uppercase tracking-[2px] mt-8">No commitment. Just a conversation.</p>
+      </Reveal>
+    </div>
   </section>
 </Layout>

@@ -7,79 +7,118 @@ const description = "Life, lifestyle, and health coaching with twenty years of e
 ---
 
 <Layout title={title} description={description}>
-  <section class="py-section-y px-section-x max-w-5xl mx-auto">
-    <Reveal client:load>
-      <div class="mb-24">
-        <span class="text-sm font-medium tracking-[0.2em] uppercase text-soil-muted mb-8 block">Session Modality</span>
-        <h1 class="text-6xl md:text-8xl font-display mb-12 text-soil leading-tight">Coaching and Mentoring</h1>
-        <p class="text-xl md:text-2xl text-soil-muted max-w-3xl mb-12 leading-relaxed font-medium">
-          Twenty years of health, lifestyle, and personal development work — in one conversation at a time.
-        </p>
+  <!-- Section 1 — Hero -->
+  <section class="relative h-screen flex items-center px-section-x pt-24 overflow-hidden grain bg-deep-forest">
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://picsum.photos/seed/miro-coaching/1920/1080" 
+        alt="Coaching and Mentoring" 
+        class="object-cover w-full h-full opacity-40"
+        referrerpolicy="no-referrer"
+      />
+    </div>
+    <div class="max-w-7xl mx-auto w-full z-10">
+      <Reveal client:load>
+        <div class="max-w-3xl">
+          <span class="label !text-gold">Session Modality</span>
+          <h1 class="text-white mb-8">Coaching and Mentoring.</h1>
+          <p class="font-body text-xl md:text-2xl font-light text-sand/80 mb-8 tracking-wide">
+            Twenty years of health, lifestyle, and personal development work — in one conversation at a time.
+          </p>
+          <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a Discovery Call</a>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- Section 2 — The Work -->
+  <section class="bg-sand py-section-y px-section-x">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-24">
+        <div class="lg:col-span-4">
+          <Reveal client:load>
+            <h2 class="sticky top-32">What it is.</h2>
+          </Reveal>
+        </div>
+        <div class="lg:col-span-8 space-y-12">
+          <Reveal client:load delay={0.1}>
+            <div class="space-y-8 text-lg font-light text-charcoal/80 leading-relaxed">
+              <p>I've been a certified life coach since 2001. Over twenty years of working with people on what keeps them stuck — sometimes it's their body, sometimes it's their habits, sometimes it's the story they're telling themselves about what's possible.</p>
+              <p>Coaching sessions are available one-on-one, in-person when our paths cross, or online from anywhere. I also run workshops and group training for businesses, schools, and organisations on request.</p>
+            </div>
+          </Reveal>
+        </div>
       </div>
-    </Reveal>
+    </div>
+  </section>
 
-    <div class="space-y-32">
-      <Reveal client:load>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          <div class="lg:col-span-4">
-            <h2 class="text-3xl md:text-4xl font-display text-soil sticky top-32">What it is</h2>
-          </div>
-          <div class="lg:col-span-8 space-y-8 text-lg text-soil-muted leading-relaxed">
-            <p>I've been a certified life coach since 2001. Over twenty years of working with people on what keeps them stuck — sometimes it's their body, sometimes it's their habits, sometimes it's the story they're telling themselves about what's possible.</p>
-            <p>Coaching sessions are available one-on-one, in-person when our paths cross, or online from anywhere. I also run workshops and group training for businesses, schools, and organisations on request.</p>
-          </div>
+  <!-- Section 3 — What we work on -->
+  <section class="bg-cream py-section-y px-section-x">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-24">
+        <div class="lg:col-span-4">
+          <Reveal client:load>
+            <h2 class="sticky top-32">What we work on.</h2>
+          </Reveal>
         </div>
+        <div class="lg:col-span-8 space-y-12">
+          {[
+            { title: "Lifestyle and health", desc: "Sustainable changes that actually hold. Nutrition, movement, sleep, daily rhythm, stress patterns. I work with vegan and plant-based clients as well as clients transitioning toward that." },
+            { title: "Personal growth", desc: "Self-awareness, habit change, patterns that keep repeating, the gap between where you are and where you're trying to get." },
+            { title: "Integration", desc: "After a retreat, a breathwork intensive, a period of deep work — what do you actually do with what moved? How do you carry it into daily life without losing it?" },
+            { title: "Direction", desc: "When you know something needs to change but don't yet know what." }
+          ].map((item, i) => (
+            <Reveal client:load delay={i * 0.1}>
+              <div>
+                <span class="label !text-gold">{item.title}</span>
+                <p class="text-lg font-light text-charcoal/80 leading-relaxed mt-4">{item.desc}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4 — Workshops -->
+  <section class="bg-sand py-section-y px-section-x">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-24">
+        <div class="lg:col-span-4">
+          <Reveal client:load>
+            <h2 class="sticky top-32">Workshops and group training.</h2>
+          </Reveal>
+        </div>
+        <div class="lg:col-span-8">
+          <Reveal client:load delay={0.1}>
+            <p class="text-lg font-light text-charcoal/80 leading-relaxed">
+              I also run workshops for businesses, schools, and other organisations on topics including stress and burnout, breathwork basics, lifestyle foundations, and integrated wellbeing. These are custom-built for the group.
+            </p>
+          </Reveal>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5 — Testimonial -->
+  <section class="bg-cream py-section-y px-section-x">
+    <div class="max-w-4xl mx-auto text-center">
+      <Reveal client:load>
+        <blockquote class="pull-quote">
+          "You are someone with a huge passion for his profession and a great love for his coachees. I recognize myself very well in your metaphor of the butterfly. Time to shine, Miro."
+        </blockquote>
+        <p class="font-serif italic text-2xl text-deep-forest mt-8">— Nathalie</p>
       </Reveal>
+    </div>
+  </section>
 
+  <!-- Section 6 — Closing CTA -->
+  <section class="bg-deep-forest pt-section-y pb-16 px-section-x grain relative">
+    <div class="max-w-3xl mx-auto text-center">
       <Reveal client:load>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          <div class="lg:col-span-4">
-            <h2 class="text-3xl md:text-4xl font-display text-soil sticky top-32">What we work on</h2>
-          </div>
-          <div class="lg:col-span-8 space-y-12">
-            <div>
-              <h3 class="text-sm font-medium uppercase tracking-[0.2em] text-primary mb-4 block">Lifestyle and health</h3>
-              <p class="text-lg text-soil-muted leading-relaxed">Sustainable changes that actually hold. Nutrition, movement, sleep, daily rhythm, stress patterns. I work with vegan and plant-based clients as well as clients transitioning toward that.</p>
-            </div>
-            <div>
-              <h3 class="text-sm font-medium uppercase tracking-[0.2em] text-primary mb-4 block">Personal growth</h3>
-              <p class="text-lg text-soil-muted leading-relaxed">Self-awareness, habit change, patterns that keep repeating, the gap between where you are and where you're trying to get.</p>
-            </div>
-            <div>
-              <h3 class="text-sm font-medium uppercase tracking-[0.2em] text-primary mb-4 block">Integration</h3>
-              <p class="text-lg text-soil-muted leading-relaxed">After a retreat, a breathwork intensive, a period of deep work — what do you actually do with what moved? How do you carry it into daily life without losing it?</p>
-            </div>
-            <div>
-              <h3 class="text-sm font-medium uppercase tracking-[0.2em] text-primary mb-4 block">Direction</h3>
-              <p class="text-lg text-soil-muted leading-relaxed">When you know something needs to change but don't yet know what.</p>
-            </div>
-          </div>
-        </div>
-      </Reveal>
-
-      <Reveal client:load>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          <div class="lg:col-span-4">
-            <h2 class="text-3xl md:text-4xl font-display text-soil sticky top-32">Workshops and group training</h2>
-          </div>
-          <div class="lg:col-span-8">
-            <p class="text-lg text-soil-muted leading-relaxed">I also run workshops for businesses, schools, and other organisations on topics including stress and burnout, breathwork basics, lifestyle foundations, and integrated wellbeing. These are custom-built for the group.</p>
-          </div>
-        </div>
-      </Reveal>
-
-      <Reveal client:load>
-        <div class="therapy-note max-w-3xl mx-auto">
-          <p class="text-2xl md:text-3xl font-display italic text-soil mb-8 leading-relaxed">"You are someone with a huge passion for his profession and a great love for his coachees. I recognize myself very well in your metaphor of the butterfly. Time to shine, Miro."</p>
-          <p class="font-hand text-4xl text-right text-primary">— Nathalie</p>
-        </div>
-      </Reveal>
-
-      <Reveal client:load>
-        <div class="text-center bg-surface-container-low p-16 rounded-xl shadow-tactile">
-          <h2 class="text-4xl md:text-5xl font-display mb-8 text-soil">Ready to talk?</h2>
-          <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a free discovery call</a>
-        </div>
+        <h2 class="text-white mb-8">Ready to talk?</h2>
+        <p class="text-sand/60 text-xl font-light mb-16 leading-relaxed">The work starts with a thirty-minute discovery call. No pitch, no script, no pressure.</p>
+        <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a Discovery Call</a>
       </Reveal>
     </div>
   </section>

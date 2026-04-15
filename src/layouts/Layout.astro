@@ -1,6 +1,7 @@
 ---
 import '../index.css';
 import { getDomainInfo } from '../lib/domain';
+import { CookieBanner } from '../components/CookieBanner';
 
 interface Props {
 	title: string;
@@ -14,9 +15,26 @@ const { siteName, showStudio } = getDomainInfo(host);
 const navItems = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
-  { name: 'Retreat', href: '/retreat' },
-  { name: 'Sessions', href: '/sessions' },
-  { name: 'Group Retreats', href: '/group-retreats' },
+  { 
+    name: 'Retreats', 
+    href: '/retreats',
+    children: [
+      { name: 'Private Retreats', href: '/retreats/private' },
+      { name: 'Group Retreats', href: '/retreats/group' },
+    ]
+  },
+  { 
+    name: 'Modalities', 
+    href: '/sessions',
+    children: [
+      { name: 'Breathwork', href: '/sessions/breathwork' },
+      { name: 'Body Reset', href: '/sessions/body-reset' },
+      { name: 'Chi Nei Tsang', href: '/sessions/chi-nei-tsang' },
+      { name: 'Water Therapy', href: '/sessions/water-therapy' },
+      { name: 'Hypnotherapy', href: '/sessions/hypnotherapy' },
+      { name: 'Coaching', href: '/sessions/coaching' },
+    ]
+  },
   { name: 'Reviews', href: '/reviews' },
   { name: 'Contact', href: '/contact' },
 ];
@@ -39,19 +57,47 @@ const navItems = [
     <meta property="og:description" content={description} />
     <meta name="twitter:card" content="summary_large_image" />
 	</head>
-	<body class="bg-surface text-soil font-body antialiased selection:bg-primary/20">
-    <nav class="glass-nav sticky top-0 z-100">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+	<body class="bg-sand text-charcoal font-body antialiased selection:bg-gold/20">
+    <nav class="fixed top-0 left-0 w-full z-50 bg-sand/80 backdrop-blur-md transition-all duration-500">
+      <div class="max-w-7xl mx-auto px-section-x">
         <div class="flex justify-between h-24 items-center">
           <div class="flex-shrink-0">
-            <a href="/" class="font-display text-2xl font-medium text-primary tracking-tight">{siteName}</a>
+            <a href="/" class="font-display text-2xl text-deep-forest tracking-tight uppercase font-bold">{siteName}</a>
           </div>
-          <div class="hidden md:block">
-            <div class="ml-10 flex items-baseline space-x-10">
+          <div class="hidden lg:block">
+            <div class="flex items-center space-x-12">
               {navItems.map(item => (
-                <a href={item.href} class="text-sm font-medium hover:text-primary transition-colors tracking-wide">{item.name}</a>
+                <div class="relative group">
+                  <a href={item.href} class="nav-link flex items-center gap-1">
+                    {item.name}
+                    {item.children && (
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    )}
+                  </a>
+                  {item.children && (
+                    <div class="absolute left-0 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                      <div class="bg-cream shadow-tactile p-6 min-w-[200px] flex flex-col gap-4">
+                        {item.children.map(child => (
+                          <a href={child.href} class="font-body text-[10px] font-bold uppercase tracking-[2px] text-deep-forest hover:text-gold transition-colors">
+                            {child.name}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
+          </div>
+          <div class="lg:hidden">
+            <!-- Mobile menu button could go here -->
+            <button class="text-deep-forest">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -61,45 +107,58 @@ const navItems = [
 			<slot />
 		</main>
 
-    <footer class="bg-surface-container-highest text-soil py-24 px-6 mt-24">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16">
-        <div>
-          <h3 class="font-display text-2xl mb-8">Navigate</h3>
-          <ul class="space-y-4">
-            {navItems.map(item => (
-              <li><a href={item.href} class="hover:text-primary transition-colors">{item.name}</a></li>
-            ))}
-          </ul>
+    <CookieBanner client:load />
+
+    <footer class="bg-deep-forest text-sand pt-16 pb-16 px-section-x relative overflow-hidden grain">
+      <div class="max-w-7xl mx-auto">
+        <div class="h-px w-full bg-gold/30 mb-16"></div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24">
+          <div class="lg:col-span-4">
+            <a href="/" class="font-display text-3xl text-white tracking-tight uppercase font-bold mb-8 block">{siteName}</a>
+            <p class="text-sand/60 max-w-sm">Body, Mind & Soul Therapy. Grounded in Bali, available worldwide.</p>
+          </div>
+          
+          <div class="lg:col-span-5 grid grid-cols-2 gap-8">
+            <div>
+              <span class="label text-gold/60">Navigate</span>
+              <ul class="space-y-4">
+                {navItems.map(item => (
+                  <li><a href={item.href} class="text-sm hover:text-gold transition-colors">{item.name}</a></li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <span class="label text-gold/60">Modalities</span>
+              <ul class="space-y-4">
+                <li><a href="/sessions/breathwork" class="text-sm hover:text-gold transition-colors">Breathwork</a></li>
+                <li><a href="/sessions/body-reset" class="text-sm hover:text-gold transition-colors">Body Reset</a></li>
+                <li><a href="/sessions/chi-nei-tsang" class="text-sm hover:text-gold transition-colors">Chi Nei Tsang</a></li>
+                <li><a href="/sessions/water-therapy" class="text-sm hover:text-gold transition-colors">Water Therapy</a></li>
+                <li><a href="/sessions/hypnotherapy" class="text-sm hover:text-gold transition-colors">Hypnotherapy</a></li>
+                <li><a href="/sessions/coaching" class="text-sm hover:text-gold transition-colors">Coaching</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="lg:col-span-3">
+            <span class="label text-gold/60">Contact</span>
+            <p class="text-sm mb-8">info@mirokloosterman.com</p>
+            <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary w-full">Book a discovery call</a>
+          </div>
         </div>
-        <div>
-          <h3 class="font-display text-2xl mb-8">Modalities</h3>
-          <ul class="space-y-4">
-            <li><a href="/sessions/breathwork" class="hover:text-primary transition-colors">Breathwork</a></li>
-            <li><a href="/sessions/body-reset" class="hover:text-primary transition-colors">Body Reset</a></li>
-            <li><a href="/sessions/chi-nei-tsang" class="hover:text-primary transition-colors">Chi Nei Tsang</a></li>
-            <li><a href="/sessions/water-therapy" class="hover:text-primary transition-colors">Water Therapy</a></li>
-            <li><a href="/sessions/hypnotherapy" class="hover:text-primary transition-colors">Hypnotherapy</a></li>
-            <li><a href="/sessions/coaching" class="hover:text-primary transition-colors">Coaching</a></li>
-          </ul>
+
+        <div class="flex flex-col md:flex-row justify-between items-center gap-8 pt-12 border-t border-white/5 text-[10px] uppercase tracking-[2px] text-sand/40">
+          <div class="text-center md:text-left">
+            <p>© {siteName} · Body, Mind & Soul Therapy · Bali</p>
+            <p class="mt-2">Also at bodymindandsoultherapy.com</p>
+          </div>
+          <div class="flex gap-8">
+            <a href="/cookies" class="hover:text-gold transition-colors">Cookies</a>
+            <a href="/privacy" class="hover:text-gold transition-colors">Privacy</a>
+            <a href="/imprint" class="hover:text-gold transition-colors">Imprint</a>
+          </div>
         </div>
-        <div>
-          <h3 class="font-display text-2xl mb-8">Find me</h3>
-          <ul class="space-y-4">
-            <li><a href="#" class="hover:text-primary transition-colors">Instagram</a></li>
-            <li><a href="#" class="hover:text-primary transition-colors">Facebook</a></li>
-            <li><a href="#" class="hover:text-primary transition-colors">TikTok</a></li>
-            <li><a href="#" class="hover:text-primary transition-colors">YouTube</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-display text-2xl mb-8">Contact</h3>
-          <p class="mb-4 opacity-80">Based in Bali and Turkey<br/>Available worldwide</p>
-          <p class="mb-8 font-medium">info@mirokloosterman.com</p>
-          <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary w-full">Book a discovery call</a>
-        </div>
-      </div>
-      <div class="max-w-7xl mx-auto mt-24 pt-10 border-t border-soil/10 text-sm opacity-60 flex flex-col md:flex-row justify-between items-center gap-6">
-        <p>© 2026 {siteName} · Body, Mind & Soul Therapy {showStudio && <span> · <a href="/studio" class="hover:text-primary">Actor & Model</a></span>} · <a href="/privacy" class="hover:text-primary">Privacy Policy</a> · <a href="/imprint" class="hover:text-primary">Imprint</a></p>
       </div>
     </footer>
 	</body>

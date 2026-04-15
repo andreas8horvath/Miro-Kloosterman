@@ -1,0 +1,165 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Reveal } from '../../components/Reveal';
+
+const title = "Private Retreat — Body, Mind & Soul Therapy";
+const description = "A fully personalised one-on-one healing journey in Bali, Turkey, or where you are. Nine integrated modalities, tailored to your body and your life.";
+---
+
+<Layout title={title} description={description}>
+  <!-- Section 1 — Hero -->
+  <section class="relative h-screen flex items-center px-section-x pt-24 overflow-hidden grain bg-deep-forest">
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://picsum.photos/seed/miro-retreat-hero/1920/1080" 
+        alt="Private Retreat in Bali" 
+        class="object-cover w-full h-full opacity-40"
+        referrerpolicy="no-referrer"
+      />
+    </div>
+    <div class="max-w-7xl mx-auto w-full z-10">
+      <Reveal client:load>
+        <div class="max-w-3xl">
+          <span class="label !text-gold">One Practitioner · One Room · One You</span>
+          <h1 class="text-white mb-8">The Private Retreat.</h1>
+          <p class="font-body text-xl md:text-2xl font-light text-sand/80 mb-8 tracking-wide">
+            A fully personalised one-on-one healing journey. Designed for the person you actually are.
+          </p>
+          <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a Discovery Call</a>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- Section 2 — The Invitation -->
+  <section class="bg-sand py-section-y px-section-x">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
+      <div class="lg:col-span-7">
+        <Reveal client:load>
+          <h2 class="mb-12">No two people are the same. Neither are two retreats.</h2>
+          <div class="space-y-8 text-lg font-light text-charcoal/80 leading-relaxed">
+            <p>I don't run a standard program. I never have. Before you arrive — or before I arrive — we spend time together, sometimes weeks, understanding what you're actually dealing with, what your body is doing, what your life looks like, and what you're ready for. Only then do I start building your retreat.</p>
+            <p>By the time the first day begins, the program is already designed around you. And it keeps adjusting as we go, because the body in front of me on day four is not the same body I met on day one.</p>
+            <p>The support doesn't end when you leave — or when I do. I stay with you for at least a month afterwards, usually longer, while you integrate what moved and carry the work back into your real life.</p>
+          </div>
+        </Reveal>
+      </div>
+      <div class="lg:col-span-5 relative">
+        <img 
+          src="https://picsum.photos/seed/retreat-bali-space/1000/1200" 
+          alt="Retreat Space" 
+          class="w-full aspect-[4/5] object-cover shadow-tactile"
+          referrerpolicy="no-referrer"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3 — Where -->
+  <section class="bg-cream py-section-y px-section-x">
+    <div class="max-w-7xl mx-auto">
+      <Reveal client:load>
+        <span class="label">The Environment</span>
+        <h2 class="mb-24">Where the work happens.</h2>
+      </Reveal>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          { name: "Bali", desc: "Most of this practice grew up here. Bali holds the work in a particular way — the land, the water, the pace, the culture around healing. For clients who want the full immersion, Bali is still the first place I'd recommend." },
+          { name: "Turkey", desc: "I also run private retreats in Turkey, where my partner Damla Yaku is based. Different landscape, different quality of stillness, same depth of work. When water therapy is central, Turkey often becomes the right choice." },
+          { name: "Where You Are", desc: "For private clients who can't travel — or who need the work to happen in their own environment — I travel. I've held retreats in villas, homes, and locations around the world when the fit is right and the costs are covered." }
+        ].map((loc, i) => (
+          <Reveal client:load delay={i * 0.1}>
+            <div class="service-card">
+              <h3 class="text-white mb-6">{loc.name}</h3>
+              <p class="text-sand/60 font-light text-sm leading-relaxed">{loc.desc}</p>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+      
+      <Reveal client:load>
+        <p class="pull-quote text-center mt-24 max-w-3xl mx-auto">
+          "Duration is the same story — it's built around you. Some clients need three days. Some need two weeks. Some need something longer. We figure that out together."
+        </p>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- Section 4 — The Modalities -->
+  <section class="bg-sand py-section-y px-section-x">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-24">
+        <div class="lg:col-span-5">
+          <Reveal client:load>
+            <h2 class="mb-12">The work itself.</h2>
+            <p class="text-lg font-light text-charcoal/80 leading-relaxed mb-12">
+              Every retreat draws from the nine modalities I've trained in. Which ones you experience depends entirely on what you need. A typical retreat includes a combination of:
+            </p>
+          </Reveal>
+        </div>
+        <div class="lg:col-span-7">
+          <Reveal client:load delay={0.2}>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {[
+                "Health and lifestyle coaching",
+                "Detoxing and nutrition work",
+                "Breathwork (trauma-release)",
+                "Body Reset therapy",
+                "Chi Core Release massage",
+                "Intuitive massage",
+                "Water Therapy",
+                "Reiki",
+                "Hypnotherapy",
+                "Inner child work"
+              ].map(item => (
+                <div class="flex items-center gap-4">
+                  <div class="w-2 h-2 bg-gold rotate-45 flex-shrink-0"></div>
+                  <span class="font-body text-sm font-light text-charcoal">{item}</span>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5 — Who This Is For -->
+  <section class="bg-cream py-section-y px-section-x">
+    <div class="max-w-4xl mx-auto">
+      <Reveal client:load>
+        <h2 class="text-center mb-24">This is for you if…</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+          {[
+            "You are dealing with something deep and know a weekend workshop won't touch it",
+            "You want a program designed around your actual body, not a pre-built curriculum",
+            "You've been carrying chronic illness, grief, burnout, or trauma",
+            "You want privacy and one-on-one attention, not a group container",
+            "You can travel to Bali or Turkey — or you need the work to come to you",
+            "The length, the place, and the depth can all be shaped around what you need"
+          ].map(item => (
+            <div class="flex items-start gap-6">
+              <div class="w-1.5 h-1.5 bg-gold rounded-full mt-2.5 flex-shrink-0"></div>
+              <p class="text-lg font-light text-charcoal/80 leading-relaxed">{item}</p>
+            </div>
+          ))}
+        </div>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- Section 6 — Investment -->
+  <section class="bg-deep-forest pt-section-y pb-16 px-section-x grain relative">
+    <div class="max-w-3xl mx-auto text-center">
+      <Reveal client:load>
+        <span class="label !text-gold">Investment</span>
+        <h2 class="text-white mb-8">A bespoke commitment.</h2>
+        <p class="text-sand/60 text-xl font-light mb-16 leading-relaxed">
+          Every private retreat is built from scratch, so the investment is different for every client. It depends on the length of your stay, the depth of the work, where we run it, what your body and situation call for, and what's possible for you.
+        </p>
+        <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a Discovery Call</a>
+      </Reveal>
+    </div>
+  </section>
+</Layout>

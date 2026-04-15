@@ -1,0 +1,65 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Reveal } from '../../components/Reveal';
+
+const title = "Retreats — Private and Group Healing Journeys";
+const description = "Deep immersion into healing. Private one-on-one retreats tailored to your needs, or small group journeys co-facilitated with Damla Yaku.";
+
+const retreatTypes = [
+  {
+    title: "Private Retreats",
+    description: "A fully personalised one-on-one healing journey in Bali, Turkey, or where you are. Nine integrated modalities, tailored to your body and your life.",
+    href: "/retreats/private"
+  },
+  {
+    title: "Group Retreats",
+    description: "Occasional small-group healing retreats in Bali, Turkey, and other destinations — co-facilitated with Damla Yaku. Join the waitlist.",
+    href: "/retreats/group"
+  }
+];
+---
+
+<Layout title={title} description={description}>
+  <!-- Section 1 — Hero -->
+  <section class="bg-sand h-screen flex items-center pt-24 px-section-x">
+    <div class="max-w-7xl mx-auto">
+      <Reveal client:load>
+        <div class="max-w-3xl">
+          <span class="label">Deep Immersion</span>
+          <h1 class="mb-12">Retreats.</h1>
+          <p class="text-xl md:text-2xl font-light text-charcoal/80 leading-relaxed">
+            Time and space to go deeper. Whether alone in a tailored one-on-one container, or held within the collective energy of a small group.
+          </p>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- Section 2 — Retreats Grid -->
+  <section class="bg-cream py-section-y px-section-x">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {retreatTypes.map((retreat, index) => (
+          <Reveal client:load delay={index * 0.1} className="h-full">
+            <a href={retreat.href} class="service-card group h-full">
+              <h3 class="text-white group-hover:text-gold transition-colors">{retreat.title}</h3>
+              <p class="text-sand/60 font-light text-sm leading-relaxed">{retreat.description}</p>
+              <span class="btn-text !text-gold mt-auto">View details →</span>
+            </a>
+          </Reveal>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3 — Closing CTA -->
+  <section class="bg-deep-forest py-section-y px-section-x grain relative">
+    <div class="max-w-3xl mx-auto text-center">
+      <Reveal client:load>
+        <h2 class="text-white mb-8">Not sure which path to take?</h2>
+        <p class="text-sand/60 text-xl font-light mb-16 leading-relaxed">The best way to find out is a short conversation. We can discuss your current situation and see which container feels most supportive for your journey.</p>
+        <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a free discovery call</a>
+      </Reveal>
+    </div>
+  </section>
+</Layout>

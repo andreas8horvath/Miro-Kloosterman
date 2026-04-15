@@ -44,56 +44,73 @@ const allReviews = [
 ---
 
 <Layout title={title} description={description}>
-  <section class="py-section-y px-section-x max-w-7xl mx-auto">
-    <Reveal client:load>
-      <div class="text-center mb-32">
-        <span class="text-sm font-medium tracking-[0.2em] uppercase text-soil-muted mb-8 block">Client Experiences</span>
-        <h1 class="text-6xl md:text-8xl font-display mb-12 text-soil leading-tight">The word people use first is safe.</h1>
-        <p class="text-xl md:text-2xl text-soil-muted max-w-3xl mx-auto leading-relaxed">
-          I've kept almost every review clients have written me over the years. Reading them back, one pattern is impossible to miss — the first thing people describe is the safety of the room.
-        </p>
-      </div>
-    </Reveal>
+  <!-- Section 1 — Hero -->
+  <section class="bg-sand h-screen flex items-center pt-24 px-section-x">
+    <div class="max-w-7xl mx-auto">
+      <Reveal client:load>
+        <div class="max-w-3xl">
+          <span class="label">Client Experiences</span>
+          <h1 class="mb-12">The word people use first is safe.</h1>
+          <p class="text-xl md:text-2xl font-light text-charcoal/80 leading-relaxed">
+            I've kept almost every review clients have written me over the years. Reading them back, one pattern is impossible to miss — the first thing people describe is the safety of the room.
+          </p>
+        </div>
+      </Reveal>
+    </div>
+  </section>
 
-    <div class="space-y-20 mb-40">
+  <!-- Section 2 — Featured Reviews -->
+  <section class="bg-cream py-section-y px-section-x">
+    <div class="max-w-7xl mx-auto space-y-24">
       {featuredReviews.map((review, index) => (
         <Reveal client:load delay={index * 0.1}>
-          <div class={`review-card max-w-5xl mx-auto ${index % 2 === 1 ? 'lg:translate-x-12' : 'lg:-translate-x-12'}`}>
-            <blockquote class="text-3xl md:text-4xl font-display italic leading-relaxed text-soil">"{review.quote}"</blockquote>
-            <div class="mt-12 flex items-center gap-6">
-              <div class="w-12 h-px bg-secondary"></div>
-              <div class="flex flex-col">
-                <span class="font-medium text-soil">{review.name}</span>
-                <span class="text-soil-muted font-medium uppercase tracking-widest text-xs">{review.modality}</span>
+          <div class={`max-w-4xl mx-auto ${index % 2 === 1 ? 'lg:ml-auto lg:mr-0' : 'lg:mr-auto lg:ml-0'}`}>
+            <div class="review-card">
+              <blockquote class="pull-quote !text-deep-forest">"{review.quote}"</blockquote>
+              <div class="mt-12 flex items-center gap-6">
+                <div class="w-12 h-px bg-gold"></div>
+                <div class="flex flex-col">
+                  <span class="font-body text-sm font-bold uppercase tracking-[2px] text-charcoal">{review.name}</span>
+                  <span class="font-body text-[10px] font-bold uppercase tracking-[2px] text-gold">{review.modality}</span>
+                </div>
               </div>
             </div>
           </div>
         </Reveal>
       ))}
     </div>
+  </section>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-32">
-      {allReviews.map((review, index) => (
-        <Reveal client:load delay={index * 0.05}>
-          <div class="review-card h-full">
-            <blockquote class="text-xl italic leading-relaxed text-soil-muted">"{review.quote}"</blockquote>
-            <div class="mt-auto pt-10 flex items-center gap-4">
-              <div class="w-8 h-px bg-secondary/40"></div>
-              <div class="flex flex-col">
-                <span class="font-medium text-soil text-sm">{review.name}</span>
-                <span class="text-soil-muted font-medium text-[10px] uppercase tracking-widest">{review.modality}</span>
+  <!-- Section 3 — All Reviews Grid -->
+  <section class="bg-sand py-section-y px-section-x">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {allReviews.map((review, index) => (
+          <Reveal client:load delay={index * 0.05}>
+            <div class="bg-cream p-12 shadow-tactile flex flex-col h-full">
+              <blockquote class="font-quote italic text-lg text-charcoal/80 leading-relaxed mb-12">"{review.quote}"</blockquote>
+              <div class="mt-auto flex items-center gap-4">
+                <div class="w-8 h-px bg-gold/30"></div>
+                <div class="flex flex-col">
+                  <span class="font-body text-xs font-bold uppercase tracking-[1px] text-charcoal">{review.name}</span>
+                  <span class="font-body text-[9px] font-bold uppercase tracking-[1px] text-gold">{review.modality}</span>
+                </div>
               </div>
             </div>
-          </div>
-        </Reveal>
-      ))}
-    </div>
-
-    <Reveal client:load>
-      <div class="text-center bg-surface-container-low p-16 rounded-xl shadow-tactile max-w-4xl mx-auto">
-        <h2 class="text-4xl md:text-5xl font-display mb-8 text-soil">Ready to start your own?</h2>
-        <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a free discovery call</a>
+          </Reveal>
+        ))}
       </div>
-    </Reveal>
+    </div>
+  </section>
+
+  <!-- Section 4 — Closing CTA -->
+  <section class="bg-deep-forest pt-section-y pb-16 px-section-x grain relative">
+    <div class="max-w-3xl mx-auto text-center">
+      <Reveal client:load>
+        <h2 class="text-white mb-8">Ready to start your own?</h2>
+        <p class="text-sand/60 text-xl font-light mb-16 leading-relaxed">The work starts with a thirty-minute discovery call. No pitch, no script, no pressure.</p>
+        <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a free discovery call</a>
+      </Reveal>
+    </div>
   </section>
 </Layout>

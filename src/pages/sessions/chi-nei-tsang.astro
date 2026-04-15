@@ -7,89 +7,145 @@ const description = "Chi Nei Tsang — a belly and organ massage that reaches st
 ---
 
 <Layout title={title} description={description}>
-  <section class="py-section-y px-section-x max-w-5xl mx-auto">
-    <Reveal client:load>
-      <div class="mb-24">
-        <span class="text-sm font-medium tracking-[0.2em] uppercase text-soil-muted mb-8 block">Session Modality</span>
-        <h1 class="text-6xl md:text-8xl font-display mb-12 text-soil leading-tight">Chi Core Release Massage</h1>
-        <p class="text-xl md:text-2xl text-soil-muted max-w-3xl mb-12 leading-relaxed font-medium">
-          Also called Chi Nei Tsang. A belly and organ massage that works with stored emotion as directly as any modality I've ever trained in.
-        </p>
-      </div>
-    </Reveal>
-
-    <div class="space-y-32">
+  <!-- Section 1 — Hero -->
+  <section class="relative h-screen flex items-center px-section-x pt-24 overflow-hidden grain bg-deep-forest">
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://picsum.photos/seed/miro-chi-nei-tsang/1920/1080" 
+        alt="Chi Core Release Massage" 
+        class="object-cover w-full h-full opacity-40"
+        referrerpolicy="no-referrer"
+      />
+    </div>
+    <div class="max-w-7xl mx-auto w-full z-10">
       <Reveal client:load>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          <div class="lg:col-span-4">
-            <h2 class="text-3xl md:text-4xl font-display text-soil sticky top-32">What it is</h2>
-          </div>
-          <div class="lg:col-span-8">
-            <p class="text-lg text-soil-muted leading-relaxed">Chi Nei Tsang is an old practice. The belly holds emotion — grief, fear, old trauma, the things the mind has moved past but the body is still carrying. A Chi Core Release session works with that directly. Gentle pressure on specific points, attentive bodywork, and the kind of holding that lets a client actually feel what they've been carrying without getting overwhelmed by it.</p>
-            <p class="text-lg text-soil-muted leading-relaxed mt-6">Most sessions run around ninety minutes. Longer sessions are available when the work calls for it.</p>
-          </div>
+        <div class="max-w-3xl">
+          <span class="label !text-gold">Session Modality</span>
+          <h1 class="text-white mb-8">Chi Core Release Massage.</h1>
+          <p class="font-body text-xl md:text-2xl font-light text-sand/80 mb-8 tracking-wide">
+            Also called Chi Nei Tsang. A belly and organ massage that works with stored emotion as directly as any modality I've ever trained in.
+          </p>
+          <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a Discovery Call</a>
         </div>
       </Reveal>
+    </div>
+  </section>
 
-      <Reveal client:load>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          <div class="lg:col-span-4">
-            <h2 class="text-3xl md:text-4xl font-display text-soil sticky top-32">What happens</h2>
-          </div>
-          <div class="lg:col-span-8 space-y-8 text-lg text-soil-muted leading-relaxed">
+  <!-- Section 2 — The Work -->
+  <section class="bg-sand py-section-y px-section-x">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-24">
+        <div class="lg:col-span-4">
+          <Reveal client:load>
+            <h2 class="sticky top-32">What it is.</h2>
+          </Reveal>
+        </div>
+        <div class="lg:col-span-8 space-y-12">
+          <Reveal client:load delay={0.1}>
+            <div class="space-y-8 text-lg font-light text-charcoal/80 leading-relaxed">
+              <p>Chi Nei Tsang is an old practice. The belly holds emotion — grief, fear, old trauma, the things the mind has moved past but the body is still carrying. A Chi Core Release session works with that directly. Gentle pressure on specific points, attentive bodywork, and the kind of holding that lets a client actually feel what they've been carrying without getting overwhelmed by it.</p>
+              <p>Most sessions run around ninety minutes. Longer sessions are available when the work calls for it.</p>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3 — What happens -->
+  <section class="bg-cream py-section-y px-section-x">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-24">
+        <div class="lg:col-span-4">
+          <Reveal client:load>
+            <h2 class="sticky top-32">What happens.</h2>
+          </Reveal>
+        </div>
+        <div class="lg:col-span-8 space-y-8 text-lg font-light text-charcoal/80 leading-relaxed">
+          <Reveal client:load delay={0.1}>
             <p>We start slowly. I explain what I'm doing before I do it. You stay fully clothed or dressed as you're comfortable — we work through the belly, specific pressure points, and whatever the session opens up.</p>
             <p>Emotional release is common. Crying, sometimes laughter, sometimes a kind of physical lightness that's hard to describe in advance. Some clients experience memories surfacing. Some feel nothing emotional in the session and notice something shifting days later. All of that is normal. Nothing is required of you except to be there.</p>
             <p>After the bodywork, we sit. We talk about what came up if you want to, or we stay quiet. I don't rush the end of a session.</p>
-          </div>
+          </Reveal>
         </div>
-      </Reveal>
+      </div>
+    </div>
+  </section>
 
-      <Reveal client:load>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          <div class="lg:col-span-4">
-            <h2 class="text-3xl md:text-4xl font-display text-soil sticky top-32">What it addresses</h2>
-          </div>
-          <div class="lg:col-span-8">
+  <!-- Section 4 — What it addresses -->
+  <section class="bg-sand py-section-y px-section-x">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-24">
+        <div class="lg:col-span-4">
+          <Reveal client:load>
+            <h2 class="sticky top-32">What it addresses.</h2>
+          </Reveal>
+        </div>
+        <div class="lg:col-span-8">
+          <Reveal client:load delay={0.1}>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div>
-                <h3 class="text-sm font-medium uppercase tracking-[0.2em] text-primary mb-8 block">Physical</h3>
-                <ul class="space-y-4 text-lg text-soil-muted">
-                  <li class="flex items-center gap-3"><div class="w-1 h-1 rounded-full bg-secondary"></div>Supports the detox system</li>
-                  <li class="flex items-center gap-3"><div class="w-1 h-1 rounded-full bg-secondary"></div>Improves breathing</li>
-                  <li class="flex items-center gap-3"><div class="w-1 h-1 rounded-full bg-secondary"></div>Reduces chronic pain</li>
-                  <li class="flex items-center gap-3"><div class="w-1 h-1 rounded-full bg-secondary"></div>Improves lymphatic flow</li>
-                  <li class="flex items-center gap-3"><div class="w-1 h-1 rounded-full bg-secondary"></div>Strengthens the immune system</li>
-                  <li class="flex items-center gap-3"><div class="w-1 h-1 rounded-full bg-secondary"></div>Stimulates organ function</li>
-                </ul>
+                <span class="label !text-gold">Physical</span>
+                <div class="space-y-4 mt-8">
+                  {[
+                    "Supports the detox system",
+                    "Improves breathing",
+                    "Reduces chronic pain",
+                    "Improves lymphatic flow",
+                    "Strengthens the immune system",
+                    "Stimulates organ function"
+                  ].map(item => (
+                    <div class="flex items-center gap-4">
+                      <div class="w-1.5 h-1.5 bg-gold rounded-full flex-shrink-0"></div>
+                      <span class="font-body text-sm font-light text-charcoal">{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
               <div>
-                <h3 class="text-sm font-medium uppercase tracking-[0.2em] text-primary mb-8 block">Emotional</h3>
-                <ul class="space-y-4 text-lg text-soil-muted">
-                  <li class="flex items-center gap-3"><div class="w-1 h-1 rounded-full bg-secondary"></div>Balances emotions</li>
-                  <li class="flex items-center gap-3"><div class="w-1 h-1 rounded-full bg-secondary"></div>Releases stuck grief</li>
-                  <li class="flex items-center gap-3"><div class="w-1 h-1 rounded-full bg-secondary"></div>Increases self-awareness</li>
-                  <li class="flex items-center gap-3"><div class="w-1 h-1 rounded-full bg-secondary"></div>Relieves deep-seated tensions</li>
-                  <li class="flex items-center gap-3"><div class="w-1 h-1 rounded-full bg-secondary"></div>Improves sleep</li>
-                  <li class="flex items-center gap-3"><div class="w-1 h-1 rounded-full bg-secondary"></div>Restores vitality</li>
-                </ul>
+                <span class="label !text-gold">Emotional</span>
+                <div class="space-y-4 mt-8">
+                  {[
+                    "Balances emotions",
+                    "Releases stuck grief",
+                    "Increases self-awareness",
+                    "Relieves deep-seated tensions",
+                    "Improves sleep",
+                    "Restores vitality"
+                  ].map(item => (
+                    <div class="flex items-center gap-4">
+                      <div class="w-1.5 h-1.5 bg-gold rounded-full flex-shrink-0"></div>
+                      <span class="font-body text-sm font-light text-charcoal">{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
-      </Reveal>
+      </div>
+    </div>
+  </section>
 
+  <!-- Section 5 — Testimonial -->
+  <section class="bg-cream py-section-y px-section-x">
+    <div class="max-w-4xl mx-auto text-center">
       <Reveal client:load>
-        <div class="therapy-note max-w-3xl mx-auto">
-          <p class="text-2xl md:text-3xl font-display italic text-soil mb-8 leading-relaxed">"During the first session I experienced the most intense crying in my whole life. It was grief of being a vanished twin. After this session I can say that my life shifted completely."</p>
-          <p class="font-hand text-4xl text-right text-primary">— Maria Johanna</p>
-        </div>
+        <blockquote class="pull-quote">
+          "During the first session I experienced the most intense crying in my whole life. It was grief of being a vanished twin. After this session I can say that my life shifted completely."
+        </blockquote>
+        <p class="font-serif italic text-2xl text-deep-forest mt-8">— Maria Johanna</p>
       </Reveal>
+    </div>
+  </section>
 
+  <!-- Section 6 — Closing CTA -->
+  <section class="bg-deep-forest pt-section-y pb-16 px-section-x grain relative">
+    <div class="max-w-3xl mx-auto text-center">
       <Reveal client:load>
-        <div class="text-center bg-surface-container-low p-16 rounded-xl shadow-tactile">
-          <h2 class="text-4xl md:text-5xl font-display mb-8 text-soil">Ready to release?</h2>
-          <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a free discovery call</a>
-        </div>
+        <h2 class="text-white mb-8">Ready to release?</h2>
+        <p class="text-sand/60 text-xl font-light mb-16 leading-relaxed">The work starts with a thirty-minute discovery call. No pitch, no script, no pressure.</p>
+        <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a Discovery Call</a>
       </Reveal>
     </div>
   </section>

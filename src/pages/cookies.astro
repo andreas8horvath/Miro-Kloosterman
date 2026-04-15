@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Reveal } from '../components/Reveal';
+
+const title = "Cookie Policy — Body, Mind & Soul Therapy";
+const description = "Cookie Policy for Miro Kloosterman's Body, Mind & Soul Therapy.";
+---
+
+<Layout title={title} description={description}>
+  <section class="bg-sand h-screen flex items-center pt-24 px-section-x">
+    <div class="max-w-4xl mx-auto">
+      <Reveal client:load>
+        <span class="label !text-gold mb-8 block">Legal</span>
+        <h1 class="mb-16">Cookie Policy.</h1>
+        <div class="space-y-12 text-lg font-light text-charcoal/80 leading-relaxed max-h-[50vh] overflow-y-auto pr-8 custom-scrollbar">
+          <div>
+            <h3 class="text-deep-forest mb-4">1. What are cookies?</h3>
+            <p>Cookies are small text files that are stored on your computer or mobile device when you visit a website. They are widely used to make websites work, or work more efficiently, as well as to provide information to the owners of the site.</p>
+          </div>
+
+          <div>
+            <h3 class="text-deep-forest mb-4">2. How we use cookies</h3>
+            <p>We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+          </div>
+
+          <div>
+            <h3 class="text-deep-forest mb-4">3. Types of cookies we use</h3>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Essential Cookies:</strong> These are necessary for the website to function and cannot be switched off in our systems.</li>
+              <li><strong>Analytical Cookies:</strong> These allow us to count visits and traffic sources so we can measure and improve the performance of our site.</li>
+              <li><strong>Functional Cookies:</strong> These enable the website to provide enhanced functionality and personalisation.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-deep-forest mb-4">4. Managing your preferences</h3>
+            <p>You can change your cookie preferences at any time by clicking on the cookie settings in your browser or through our cookie banner.</p>
+          </div>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #C9A84C;
+    border-radius: 2px;
+  }
+</style>

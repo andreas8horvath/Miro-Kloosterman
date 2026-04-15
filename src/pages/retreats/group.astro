@@ -1,0 +1,119 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Reveal } from '../../components/Reveal';
+
+const title = "Group Retreats — With Miro Kloosterman and Damla Yaku";
+const description = "Occasional small-group healing retreats in Bali, Turkey, and other destinations — co-facilitated with Damla Yaku. Join the waitlist.";
+---
+
+<Layout title={title} description={description}>
+  <!-- Section 1 — Hero -->
+  <section class="relative h-screen flex items-center px-section-x pt-24 overflow-hidden grain bg-deep-forest">
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://picsum.photos/seed/miro-group-retreat/1920/1080" 
+        alt="Group Retreat" 
+        class="object-cover w-full h-full opacity-40"
+        referrerpolicy="no-referrer"
+      />
+    </div>
+    <div class="max-w-7xl mx-auto w-full z-10">
+      <Reveal client:load>
+        <div class="max-w-3xl">
+          <span class="label !text-gold">The Collective</span>
+          <h1 class="text-white mb-8">Group Retreats.</h1>
+          <p class="font-body text-xl md:text-2xl font-light text-sand/80 mb-8 tracking-wide">
+            Occasional immersive retreats in Bali, Turkey, and other destinations. Small groups. Two practitioners. Real depth.
+          </p>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- Section 2 — The Container -->
+  <section class="bg-cream py-section-y px-section-x">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
+      <div class="lg:col-span-7">
+        <Reveal client:load>
+          <h2 class="mb-12">Two practitioners. One container. Several places in the world.</h2>
+          <div class="space-y-8 text-lg font-light text-charcoal/80 leading-relaxed">
+            <p>A few times a year, Damla and I run a retreat together. Most often in Bali or Turkey, sometimes in other destinations when the right opportunity opens up. These are small, immersive, and built around breathwork, bodywork, water, and the kind of integration that only happens when you give it several full days in a row.</p>
+            <p>When we work together, you get two practitioners in the room — each with our own lineage, our own way of reading what's happening, and a shared commitment to holding the container safely for everyone in it. Group work has a particular kind of power that one-on-one work doesn't, especially when the group is small and the container is tight.</p>
+            <p>Locations and dates open throughout the year. Retreats fill from the waitlist before they're ever publicly announced — so if you want to be there, get on the list.</p>
+          </div>
+        </Reveal>
+      </div>
+      <div class="lg:col-span-5">
+        <img 
+          src="https://picsum.photos/seed/group-retreat-bali/1000/1200" 
+          alt="Group Retreat" 
+          class="w-full aspect-[4/5] object-cover shadow-tactile"
+          referrerpolicy="no-referrer"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3 — Waitlist Form -->
+  <section class="bg-sand py-section-y px-section-x">
+    <div class="max-w-3xl mx-auto">
+      <Reveal client:load>
+        <div class="bg-cream p-12 md:p-20 shadow-tactile border border-gold/10">
+          <h2 class="text-center mb-8">The next retreat.</h2>
+          <p class="text-center font-light text-charcoal/80 mb-12">We are currently planning our next immersive experiences. Join the waitlist to be the first to know when dates and locations are released.</p>
+          <form class="space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="space-y-3">
+                <label for="name" class="label !mb-0">Name</label>
+                <input type="text" id="name" name="name" required class="w-full bg-sand/50 border-b border-gold/30 py-3 focus:border-gold outline-none font-body font-light transition-colors" />
+              </div>
+              <div class="space-y-3">
+                <label for="email" class="label !mb-0">Email</label>
+                <input type="email" id="email" name="email" required class="w-full bg-sand/50 border-b border-gold/30 py-3 focus:border-gold outline-none font-body font-light transition-colors" />
+              </div>
+            </div>
+            <div class="space-y-3">
+              <label for="goal" class="label !mb-0">What are you hoping to find in a retreat?</label>
+              <textarea id="goal" name="goal" rows="3" class="w-full bg-sand/50 border-b border-gold/30 py-3 focus:border-gold outline-none font-body font-light transition-colors resize-none"></textarea>
+            </div>
+            <button type="submit" class="btn-primary w-full">Join the Waitlist</button>
+          </form>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- Section 4 — Who This Is For -->
+  <section class="bg-cream py-section-y px-section-x">
+    <div class="max-w-4xl mx-auto">
+      <Reveal client:load>
+        <h2 class="text-center mb-24">Group retreats are for you if…</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+          {[
+            "You want depth, but you also want the particular power that comes from working alongside other people doing the same work",
+            "You've done individual sessions before and you're ready for the next layer",
+            "You want two practitioners holding the space, not one",
+            "You're comfortable in a small group container (we cap attendance on purpose)",
+            "You want to travel for the work"
+          ].map(item => (
+            <div class="flex items-start gap-6">
+              <div class="w-1.5 h-1.5 bg-gold rounded-full mt-2.5 flex-shrink-0"></div>
+              <p class="text-lg font-light text-charcoal/80 leading-relaxed">{item}</p>
+            </div>
+          ))}
+        </div>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- Section 5 — Closing CTA -->
+  <section class="bg-deep-forest pt-section-y pb-16 px-section-x grain relative">
+    <div class="max-w-3xl mx-auto text-center">
+      <Reveal client:load>
+        <h2 class="text-white mb-8">Not sure where to start?</h2>
+        <p class="text-sand/60 text-xl font-light mb-16 leading-relaxed">The work starts with a thirty-minute discovery call. No pitch, no script, no pressure.</p>
+        <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a free discovery call</a>
+      </Reveal>
+    </div>
+  </section>
+</Layout>

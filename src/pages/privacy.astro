@@ -7,19 +7,32 @@ const description = "Privacy Policy for Miro Kloosterman's Body, Mind & Soul The
 ---
 
 <Layout title={title} description={description}>
-  <section class="py-section-y px-section-x max-w-4xl mx-auto">
-    <Reveal client:load>
-      <h1 class="text-4xl md:text-5xl font-display mb-12">Privacy Policy</h1>
-      <div class="prose prose-soil max-w-none space-y-6 text-lg">
-        <p>Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your personal information when you use our website and services.</p>
-        <h2 class="text-2xl font-display mt-10">1. Information We Collect</h2>
-        <p>We may collect personal information such as your name, email address, and any other information you provide when you contact us or book a session.</p>
-        <h2 class="text-2xl font-display mt-10">2. How We Use Your Information</h2>
-        <p>We use your information to provide and improve our services, communicate with you, and process your bookings.</p>
-        <h2 class="text-2xl font-display mt-10">3. Data Protection</h2>
-        <p>We take reasonable measures to protect your personal information from unauthorized access, use, or disclosure.</p>
-        <p class="mt-12 text-soil-muted italic">This is a placeholder policy. Miro Kloosterman will finalize the full legal text.</p>
-      </div>
-    </Reveal>
+  <section class="bg-sand h-screen flex items-center pt-24 px-section-x">
+    <div class="max-w-4xl mx-auto">
+      <Reveal client:load>
+        <span class="label !text-gold mb-8 block">Legal</span>
+        <h1 class="mb-16">Privacy Policy.</h1>
+        <div class="space-y-12 text-lg font-light text-charcoal/80 leading-relaxed">
+          <p>Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your personal information when you use our website and services.</p>
+          
+          <div class="space-y-6">
+            <h2 class="text-2xl font-serif text-deep-forest">1. Information We Collect</h2>
+            <p>We may collect personal information such as your name, email address, and any other information you provide when you contact us or book a session.</p>
+          </div>
+
+          <div class="space-y-6">
+            <h2 class="text-2xl font-serif text-deep-forest">2. How We Use Your Information</h2>
+            <p>We use your information to provide and improve our services, communicate with you, and process your bookings.</p>
+          </div>
+
+          <div class="space-y-6">
+            <h2 class="text-2xl font-serif text-deep-forest">3. Data Protection</h2>
+            <p>We take reasonable measures to protect your personal information from unauthorized access, use, or disclosure.</p>
+          </div>
+
+          <p class="mt-24 text-sm italic opacity-60">This is a placeholder policy. Miro Kloosterman will finalize the full legal text.</p>
+        </div>
+      </Reveal>
+    </div>
   </section>
 </Layout>

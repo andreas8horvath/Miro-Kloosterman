@@ -2,8 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import { Reveal } from '../../components/Reveal';
 
-const title = "Individual Sessions — Breathwork, Bodywork, Water Therapy, Hypnotherapy";
-const description = "Individual healing sessions with Miro Kloosterman. Breathwork, bodywork, water therapy, hypnotherapy, coaching. In-person or online.";
+const title = "Modalities — Breathwork, Bodywork, Water Therapy, Hypnotherapy";
+const description = "Individual healing modalities with Miro Kloosterman. Breathwork, bodywork, water therapy, hypnotherapy, coaching. In-person or online.";
 
 const sessions = [
   {
@@ -40,38 +40,46 @@ const sessions = [
 ---
 
 <Layout title={title} description={description}>
-  <section class="py-section-y px-section-x max-w-7xl mx-auto">
-    <Reveal client:load>
-      <div class="text-center mb-24">
-        <span class="text-sm font-medium tracking-[0.2em] uppercase text-soil-muted mb-8 block">One-on-One Support</span>
-        <h1 class="text-6xl md:text-8xl font-display mb-12 text-soil leading-tight">Individual sessions.</h1>
-        <p class="text-xl md:text-2xl text-soil-muted max-w-3xl mx-auto mb-12 leading-relaxed">
-          A place to start. Or a regular practice. In-person when our paths cross, or online from anywhere.
-        </p>
-        <p class="text-lg max-w-2xl mx-auto text-soil-muted">
-          If you're not ready for a full retreat, or if you want to work with me from wherever you are, individual sessions are how most people begin. Each modality below is a different entry point into the same underlying work.
-        </p>
-      </div>
-    </Reveal>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-      {sessions.map((session, index) => (
-        <Reveal client:load delay={index * 0.1}>
-          <div class={`service-card h-full ${index % 3 === 1 ? 'lg:translate-y-12' : ''}`}>
-            <h3 class="text-3xl font-display">{session.title}</h3>
-            <p class="text-soil-muted">{session.description}</p>
-            <a href={session.href} class="btn-text mt-auto w-fit">Learn more</a>
-          </div>
-        </Reveal>
-      ))}
+  <!-- Section 1 — Hero -->
+  <section class="bg-sand h-screen flex items-center pt-24 px-section-x">
+    <div class="max-w-7xl mx-auto">
+      <Reveal client:load>
+        <div class="max-w-3xl">
+          <span class="label">One-on-One Support</span>
+          <h1 class="mb-12">Modalities.</h1>
+          <p class="text-xl md:text-2xl font-light text-charcoal/80 leading-relaxed">
+            A place to start. Or a regular practice. In-person when our paths cross, or online from anywhere.
+          </p>
+        </div>
+      </Reveal>
     </div>
+  </section>
 
-    <Reveal client:load>
-      <div class="mt-48 bg-surface-container-low p-16 rounded-xl text-center shadow-tactile">
-        <h2 class="text-4xl md:text-5xl font-display mb-8 text-soil">Not sure which session is right?</h2>
-        <p class="text-xl text-soil-muted mb-12 max-w-xl mx-auto leading-relaxed">Most people aren't. That's what the discovery call is for. Tell me what's going on and I'll tell you honestly where I'd start.</p>
-        <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a free discovery call</a>
+  <!-- Section 2 — Sessions Grid -->
+  <section class="bg-cream py-section-y px-section-x">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {sessions.map((session, index) => (
+          <Reveal client:load delay={index * 0.1} className="h-full">
+            <a href={session.href} class="service-card group h-full">
+              <h3 class="text-white group-hover:text-gold transition-colors">{session.title}</h3>
+              <p class="text-sand/60 font-light text-sm leading-relaxed">{session.description}</p>
+              <span class="btn-text !text-gold mt-auto">Learn more →</span>
+            </a>
+          </Reveal>
+        ))}
       </div>
-    </Reveal>
+    </div>
+  </section>
+
+  <!-- Section 3 — Closing CTA -->
+  <section class="bg-deep-forest py-section-y px-section-x grain relative">
+    <div class="max-w-3xl mx-auto text-center">
+      <Reveal client:load>
+        <h2 class="text-white mb-8">Not sure which session is right?</h2>
+        <p class="text-sand/60 text-xl font-light mb-16 leading-relaxed">Most people aren't. That's what the discovery call is for. Tell me what's going on and I'll tell you honestly where I'd start.</p>
+        <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary">Book a free discovery call</a>
+      </Reveal>
+    </div>
   </section>
 </Layout>
