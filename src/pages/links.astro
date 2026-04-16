@@ -25,8 +25,8 @@ const links = [
   },
   { 
     name: "Story Magazine article", 
-    href: "#",
-    badge: "Soon"
+    href: "https://www.story.nl/showbizz/opmerkelijke-transformatie-gtst-hunk-miro-kloosterman~01ffcc1",
+    badge: "Read Article"
   }
 ];
 ---
@@ -52,14 +52,14 @@ const links = [
       </Reveal>
 
       <!-- Links Section -->
-      <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-4 w-full">
         {links.map((link, i) => (
-          <Reveal client:load delay={i * 0.1}>
+          <Reveal client:load delay={i * 0.1} width="100%">
             <a 
               href={link.href}
               target={link.href.startsWith('http') ? '_blank' : '_self'}
               class:list={[
-                "group relative w-full py-5 px-8 flex justify-between items-center transition-all duration-500",
+                "group relative w-full py-5 px-8 flex justify-between items-center transition-all duration-500 rounded-sm",
                 link.primary 
                   ? "bg-deep-forest text-sand hover:bg-gold hover:text-deep-forest shadow-tactile" 
                   : "bg-cream text-deep-forest border border-gold/10 hover:border-gold hover:shadow-tactile"
