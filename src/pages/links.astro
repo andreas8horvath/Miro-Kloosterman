@@ -1,0 +1,106 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Reveal } from '../components/Reveal';
+
+const title = "Miro Kloosterman — Links";
+const description = "Resources and booking for Miro Kloosterman's Body, Mind & Soul Therapy.";
+
+const links = [
+  { 
+    name: "Book a free discovery call", 
+    href: "https://tidycal.com/miro-kloosterman/15-minute-meeting",
+    primary: true 
+  },
+  { 
+    name: "Private Retreats", 
+    href: "/retreats/private" 
+  },
+  { 
+    name: "Read my story", 
+    href: "/about" 
+  },
+  { 
+    name: "Group Retreat waitlist", 
+    href: "/retreats/group" 
+  },
+  { 
+    name: "Story Magazine article", 
+    href: "#",
+    badge: "Soon"
+  }
+];
+---
+
+<Layout title={title} description={description} hideNav={true} hideFooter={true}>
+  <div class="min-h-screen bg-sand px-6 pt-20 pb-20 flex flex-col items-center grain">
+    <div class="max-w-[420px] w-full mx-auto">
+      
+      <!-- Profile Section -->
+      <Reveal client:load>
+        <div class="flex flex-col items-center mb-12">
+          <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-gold/20 mb-6 bg-deep-forest">
+            <img 
+              src="https://picsum.photos/seed/miro-profile/200/200" 
+              alt="Miro Kloosterman" 
+              class="w-full h-full object-cover"
+              referrerpolicy="no-referrer"
+            />
+          </div>
+          <h1 class="text-3xl md:text-3xl font-display text-deep-forest mb-2">Miro Kloosterman</h1>
+          <p class="text-sm font-body uppercase tracking-[3px] text-sage font-bold">Body, Mind & Soul</p>
+        </div>
+      </Reveal>
+
+      <!-- Links Section -->
+      <div class="flex flex-col gap-4">
+        {links.map((link, i) => (
+          <Reveal client:load delay={i * 0.1}>
+            <a 
+              href={link.href}
+              target={link.href.startsWith('http') ? '_blank' : '_self'}
+              class:list={[
+                "group relative w-full py-5 px-8 flex justify-between items-center transition-all duration-500",
+                link.primary 
+                  ? "bg-deep-forest text-sand hover:bg-gold hover:text-deep-forest shadow-tactile" 
+                  : "bg-cream text-deep-forest border border-gold/10 hover:border-gold hover:shadow-tactile"
+              ]}
+            >
+              <div class="flex flex-col">
+                <span class="font-body text-xs font-bold uppercase tracking-[2px]">
+                  {link.name}
+                </span>
+                {link.badge && (
+                  <span class="text-[8px] uppercase tracking-widest text-gold mt-1 font-bold">
+                    {link.badge}
+                  </span>
+                )}
+              </div>
+              <span class="text-lg opacity-40 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300">→</span>
+            </a>
+          </Reveal>
+        ))}
+      </div>
+
+      <!-- Footer Info -->
+      <Reveal client:load delay={0.8}>
+        <div class="mt-20 text-center">
+          <p class="text-[10px] uppercase tracking-[2px] text-charcoal/40 mb-8 leading-relaxed">
+            Bali · Worldwide · Online
+          </p>
+          <div class="flex justify-center gap-8">
+            <a href="/" class="nav-link text-[10px]">Website</a>
+            <a href="/contact" class="nav-link text-[10px]">Contact</a>
+          </div>
+        </div>
+      </Reveal>
+
+    </div>
+  </div>
+</Layout>
+
+<style>
+  /* Extra refinement for the links page layout */
+  :global(body) {
+    overflow-x: hidden;
+  }
+</style>

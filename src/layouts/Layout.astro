@@ -7,9 +7,11 @@ import { MobileMenu } from '../components/MobileMenu';
 interface Props {
 	title: string;
 	description: string;
+  hideNav?: boolean;
+  hideFooter?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, hideNav = false, hideFooter = false } = Astro.props;
 const host = ''; // Static build
 const { siteName, showStudio } = getDomainInfo(host);
 
@@ -59,7 +61,8 @@ const navItems = [
     <meta name="twitter:card" content="summary_large_image" />
 	</head>
 	<body class="bg-sand text-charcoal font-body antialiased selection:bg-gold/20">
-    <nav class="fixed top-0 left-0 w-full z-50 bg-sand/80 backdrop-blur-md transition-all duration-500">
+    {!hideNav && (
+      <nav class="fixed top-0 left-0 w-full z-50 bg-sand/80 backdrop-blur-md transition-all duration-500">
       <div class="max-w-7xl mx-auto px-section-x">
         <div class="flex justify-between h-24 items-center">
           <div class="flex-shrink-0">
@@ -98,6 +101,7 @@ const navItems = [
         </div>
       </div>
     </nav>
+    )}
 
 		<main>
 			<slot />
@@ -105,7 +109,8 @@ const navItems = [
 
     <CookieBanner client:load />
 
-    <footer class="bg-deep-forest text-sand pt-16 pb-16 px-section-x relative overflow-hidden grain">
+    {!hideFooter && (
+      <footer class="bg-deep-forest text-sand pt-16 pb-16 px-section-x relative overflow-hidden grain">
       <div class="max-w-7xl mx-auto">
         <div class="h-px w-full bg-gold/30 mb-16"></div>
         
@@ -157,5 +162,6 @@ const navItems = [
         </div>
       </div>
     </footer>
+    )}
 	</body>
 </html>
