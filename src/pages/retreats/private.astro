@@ -65,14 +65,24 @@ const description = "A fully personalised one-on-one healing journey in Bali, Tu
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         {[
-          { name: "Bali", desc: "Most of this practice grew up here. Bali holds the work in a particular way — the land, the water, the pace, the culture around healing. For clients who want the full immersion, Bali is still the first place I'd recommend." },
-          { name: "Turkey", desc: "I also run private retreats in Turkey, where my partner Damla Yaku is based. Different landscape, different quality of stillness, same depth of work. When water therapy is central, Turkey often becomes the right choice." },
-          { name: "Where You Are", desc: "For private clients who can't travel — or who need the work to happen in their own environment — I travel. I've held retreats in villas, homes, and locations around the world when the fit is right and the costs are covered." }
+          { name: "Bali", img: "retreat-bali", desc: "Most of this practice grew up here. Bali holds the work in a particular way — the land, the water, the pace, the culture around healing. For clients who want the full immersion, Bali is still the first place I'd recommend." },
+          { name: "Turkey", img: "retreat-turkey", desc: "I also run private retreats in Turkey, where my partner Damla Yaku is based. Different landscape, different quality of stillness, same depth of work. When water therapy is central, Turkey often becomes the right choice." },
+          { name: "Where You Are", img: "retreat-global", desc: "For private clients who can't travel — or who need the work to happen in their own environment — I travel. I've held retreats in villas, homes, and locations around the world when the fit is right and the costs are covered." }
         ].map((loc, i) => (
           <Reveal client:load delay={i * 0.1}>
-            <div class="service-card">
-              <h3 class="text-white mb-6">{loc.name}</h3>
-              <p class="text-sand/60 font-light text-sm leading-relaxed">{loc.desc}</p>
+            <div class="service-card h-full relative overflow-hidden group">
+              <div class="absolute inset-0 z-0 opacity-10 group-hover:opacity-30 transition-opacity duration-700">
+                <img 
+                  src={`https://picsum.photos/seed/${loc.img}/600/800`} 
+                  alt={loc.name}
+                  class="w-full h-full object-cover grayscale"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+              <div class="relative z-10">
+                <h3 class="text-white mb-6 group-hover:text-gold transition-colors">{loc.name}</h3>
+                <p class="text-sand/60 font-light text-sm leading-relaxed">{loc.desc}</p>
+              </div>
             </div>
           </Reveal>
         ))}

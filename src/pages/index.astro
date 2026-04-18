@@ -38,21 +38,33 @@ const description = "Private retreats, breathwork, bodywork, and integrated heal
 
   <!-- Section 2 — The Story Hook -->
   <section class="bg-sand py-section-y px-section-x">
-    <div class="max-w-4xl mx-auto text-center">
-      <Reveal client:load>
-        <blockquote class="mb-12">
-          <p class="font-display text-4xl md:text-6xl text-deep-forest leading-tight italic">
-            "Some people say you never fully recover. I was going to prove them wrong."
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+      <div class="order-2 lg:order-1">
+        <Reveal client:load>
+          <blockquote class="mb-12">
+            <p class="font-display text-4xl md:text-6xl text-deep-forest leading-tight italic">
+              "Some people say you never fully recover. I was going to prove them wrong."
+            </p>
+          </blockquote>
+          <p class="font-body text-xs font-bold uppercase tracking-[2px] text-sage mb-12">
+            Miro Kloosterman, Story Magazine 2026
           </p>
-        </blockquote>
-        <p class="font-body text-xs font-bold uppercase tracking-[2px] text-sage mb-12">
-          Miro Kloosterman, Story Magazine 2026
-        </p>
-        <div class="max-w-2xl mx-auto text-lg text-charcoal/80 mb-12 font-light leading-relaxed">
-          <p>The journey from a high-pressure acting career to a life of deep service wasn't a choice—it was a necessity. It was the only way to survive the collapse of a body and mind that had been pushed too far for too long.</p>
-        </div>
-        <a href="/about" class="btn-text">Read Miro's full story →</a>
-      </Reveal>
+          <div class="max-w-2xl text-lg text-charcoal/80 mb-12 font-light leading-relaxed">
+            <p>The journey from a high-pressure acting career to a life of deep service wasn't a choice—it was a necessity. It was the only way to survive the collapse of a body and mind that had been pushed too far for too long.</p>
+          </div>
+          <a href="/about" class="btn-text">Read Miro's full story →</a>
+        </Reveal>
+      </div>
+      <div class="order-1 lg:order-2 relative">
+        <Reveal client:load delay={0.2}>
+          <img 
+            src="https://picsum.photos/seed/miro-portrait-bw/800/1000?grayscale" 
+            alt="Miro Kloosterman Portrait" 
+            class="w-full aspect-[4/5] object-cover shadow-tactile grayscale contrast-125"
+            referrerpolicy="no-referrer"
+          />
+        </Reveal>
+      </div>
     </div>
   </section>
 
@@ -96,18 +108,28 @@ const description = "Private retreats, breathwork, bodywork, and integrated heal
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {[
-          { name: "Private Retreats", desc: "A fully immersive, one-on-one healing journey in Bali.", href: "/retreats/private" },
-          { name: "Breathwork", desc: "Deep somatic release using the power of conscious breathing.", href: "/sessions/breathwork" },
-          { name: "Body Reset", desc: "Manual therapy to realign the physical and energetic body.", href: "/sessions/body-reset" },
-          { name: "Chi Core Massage", desc: "Abdominal work to release stored emotional tension.", href: "/sessions/chi-nei-tsang" },
-          { name: "Water Therapy", desc: "Aquatic healing for deep nervous system regulation.", href: "/sessions/water-therapy" },
-          { name: "Hypnotherapy", desc: "Subconscious reprogramming for lasting habit change.", href: "/sessions/hypnotherapy" }
+          { name: "Private Retreats", desc: "A fully immersive, one-on-one healing journey.", href: "/retreats/private", img: "retreat-bali" },
+          { name: "Breathwork", desc: "Deep somatic release using the power of conscious breathing.", href: "/sessions/breathwork", img: "breathwork-therapy" },
+          { name: "Body Reset", desc: "Manual therapy to realign the physical and energetic body.", href: "/sessions/body-reset", img: "bodywork-detail" },
+          { name: "Chi Core Massage", desc: "Abdominal work to release stored emotional tension.", href: "/sessions/chi-nei-tsang", img: "abdominal-massage" },
+          { name: "Water Therapy", desc: "Aquatic healing for deep nervous system regulation.", href: "/sessions/water-therapy", img: "water-healing" },
+          { name: "Hypnotherapy", desc: "Subconscious reprogramming for lasting habit change.", href: "/sessions/hypnotherapy", img: "subconscious-mind" }
         ].map((service, i) => (
           <Reveal client:load delay={i * 0.1} className="h-full">
-            <a href={service.href} class="service-card group h-full">
-              <h3 class="text-white group-hover:text-gold transition-colors">{service.name}</h3>
-              <p class="text-sand/60 font-light text-sm leading-relaxed">{service.desc}</p>
-              <span class="btn-text !text-gold mt-auto">Explore →</span>
+            <a href={service.href} class="service-card group h-full relative overflow-hidden">
+              <div class="absolute inset-0 z-0 opacity-20 group-hover:opacity-40 transition-opacity duration-700">
+                <img 
+                  src={`https://picsum.photos/seed/${service.img}/600/800`} 
+                  alt={service.name}
+                  class="w-full h-full object-cover grayscale"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+              <div class="relative z-10 h-full flex flex-col">
+                <h3 class="text-white group-hover:text-gold transition-colors">{service.name}</h3>
+                <p class="text-sand/60 font-light text-sm leading-relaxed mb-8">{service.desc}</p>
+                <span class="btn-text !text-gold mt-auto">Explore →</span>
+              </div>
             </a>
           </Reveal>
         ))}
@@ -169,7 +191,7 @@ const description = "Private retreats, breathwork, bodywork, and integrated heal
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
       <div class="relative">
         <img 
-          src="https://picsum.photos/seed/miro-about-teaser/1000/1200" 
+          src="https://res.cloudinary.com/dt806m3nm/image/upload/v1776505357/4-1920w.jpg_uiikl9.webp" 
           alt="Miro Kloosterman" 
           class="w-full aspect-[4/5] object-cover shadow-tactile"
           referrerpolicy="no-referrer"

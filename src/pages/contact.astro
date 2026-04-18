@@ -8,8 +8,8 @@ const description = "Book a free thirty-minute discovery call with Miro Klooster
 
 <Layout title={title} description={description}>
   <!-- Section 1 — Hero -->
-  <section class="bg-sand h-screen flex items-center pt-24 px-section-x">
-    <div class="max-w-7xl mx-auto">
+  <section class="bg-sand h-screen flex items-center pt-24 px-section-x overflow-hidden">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center w-full">
       <Reveal client:load>
         <div class="max-w-3xl">
           <span class="label">The First Step</span>
@@ -19,6 +19,16 @@ const description = "Book a free thirty-minute discovery call with Miro Klooster
           </p>
         </div>
       </Reveal>
+      <div class="hidden lg:block">
+        <Reveal client:load delay={0.2}>
+          <img 
+            src="https://picsum.photos/seed/miro-contact/800/1000" 
+            alt="Miro Kloosterman" 
+            class="w-full aspect-[4/5] object-cover shadow-tactile"
+            referrerpolicy="no-referrer"
+          />
+        </Reveal>
+      </div>
     </div>
   </section>
 

@@ -41,12 +41,30 @@ const description = "Transformative breathwork — conscious connected breathing
           </Reveal>
         </div>
         <div class="lg:col-span-8 space-y-12">
-          <Reveal client:load delay={0.1}>
-            <div class="space-y-8 text-lg font-light text-charcoal/80 leading-relaxed">
-              <p>In-person, I bring bodywork and every modality I've trained in into the same session. Breath and touch and sound, all at once. This is what clients tend to mean when they say they've done breathwork elsewhere and never felt anything like this.</p>
-              <p>Online, I work with breath alongside specialised hypnotherapy. The depth is different but the work is still real, and for many clients being at home in their own space lets them go somewhere they wouldn't in a studio.</p>
-            </div>
-          </Reveal>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <Reveal client:load delay={0.1}>
+              <img 
+                src="https://picsum.photos/seed/breath-one/800/600" 
+                alt="Focused deep breathing environment" 
+                class="w-full aspect-video object-cover shadow-tactile mb-8"
+                referrerpolicy="no-referrer"
+              />
+              <div class="space-y-8 text-lg font-light text-charcoal/80 leading-relaxed">
+                <p>In-person, I bring bodywork and every modality I've trained in into the same session. Breath and touch and sound, all at once. This is what clients tend to mean when they say they've done breathwork elsewhere and never felt anything like this.</p>
+              </div>
+            </Reveal>
+            <Reveal client:load delay={0.2}>
+              <img 
+                src="https://picsum.photos/seed/breath-two/800/600" 
+                alt="Peaceful home session setup" 
+                class="w-full aspect-video object-cover shadow-tactile mb-8"
+                referrerpolicy="no-referrer"
+              />
+              <div class="space-y-8 text-lg font-light text-charcoal/80 leading-relaxed">
+                <p>Online, I work with breath alongside specialised hypnotherapy. The depth is different but the work is still real, and for many clients being at home in their own space lets them go somewhere they wouldn't in a studio.</p>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </div>
     </div>
