@@ -13,7 +13,7 @@ interface Props {
 
 const { title, description, hideNav = false, hideFooter = false } = Astro.props;
 const host = ''; // Static build
-const { siteName, showStudio } = getDomainInfo(host);
+const { siteName } = getDomainInfo(host);
 
 const navItems = [
   { name: 'Home', href: '/' },
@@ -117,7 +117,7 @@ const navItems = [
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24">
           <div class="lg:col-span-4">
             <a href="/" class="font-display text-3xl text-white tracking-tight uppercase font-bold mb-8 block">{siteName}</a>
-            <p class="text-sand/60 max-w-sm">Body, Mind & Soul Therapy. Grounded in Bali, available worldwide.</p>
+            <p class="text-sand/60 max-w-sm">Body, Mind & Soul Therapy. Available worldwide.</p>
           </div>
           
           <div class="lg:col-span-5 grid grid-cols-2 gap-8">
@@ -151,7 +151,7 @@ const navItems = [
 
         <div class="flex flex-col md:flex-row justify-between items-center gap-8 pt-12 border-t border-white/5 text-[10px] uppercase tracking-[2px] text-sand/40">
           <div class="text-center md:text-left">
-            <p>© {siteName} · Body, Mind & Soul Therapy · Bali</p>
+            <p>© {siteName} · Body, Mind & Soul Therapy</p>
             <p class="mt-2">Also at bodymindandsoultherapy.com</p>
           </div>
           <div class="flex gap-8">
