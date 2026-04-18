@@ -23,9 +23,15 @@
   --font-body: 'Poppins', sans-serif;
   --font-quote: 'Lora', serif;
 
-  /* Spacing */
-  --spacing-section-y: clamp(5rem, 10vw + 1rem, 12rem);
-  --spacing-section-x: clamp(1.5rem, 5vw, 4rem);
+  /* Spacing - Golden Ratio Scale (approx) */
+  --spacing-section-y: clamp(6.875rem, 10vw + 1rem, 11rem); /* ~110px to ~176px */
+  --spacing-section-x: clamp(2.625rem, 5vw, 4.25rem);      /* ~42px to ~68px */
+  --spacing-golden-1: 1rem;      /* 16px */
+  --spacing-golden-2: 1.625rem;  /* 26px */
+  --spacing-golden-3: 2.625rem;  /* 42px */
+  --spacing-golden-4: 4.25rem;   /* 68px */
+  --spacing-golden-5: 6.875rem;  /* 110px */
+  --spacing-golden-6: 11rem;     /* 176px */
 
   /* Radius - Restrained */
   --radius-sm: 4px;
@@ -48,15 +54,24 @@
   }
 
   h1 {
-    @apply text-5xl md:text-7xl lg:text-8xl leading-[1.1];
+    @apply text-6xl md:text-7xl lg:text-[7.5rem] leading-[1.05]; /* lg: ~120px */
   }
 
   h2 {
-    @apply text-4xl md:text-5xl leading-tight;
+    @apply text-4xl md:text-[5rem] leading-[1.1]; /* md: ~80px (120 / 1.5) or approx golden */
+    /* Let's refine based on golden scale from h3 */
+  }
+
+  h1 {
+    font-size: clamp(3rem, 7vw, 6.875rem); /* ~48px to 110px */
+  }
+
+  h2 {
+    font-size: clamp(2rem, 5vw, 4.25rem);    /* ~32px to 68px */
   }
 
   h3 {
-    @apply text-2xl md:text-3xl;
+    font-size: clamp(1.5rem, 3vw, 2.625rem);  /* ~24px to 42px */
   }
 
   p {
@@ -104,7 +119,11 @@
   }
 
   .service-card {
-    @apply bg-deep-forest p-12 flex flex-col gap-8 transition-all duration-700 hover:shadow-tactile hover:-translate-y-2;
+    @apply bg-deep-forest p-12 flex flex-col gap-12 transition-all duration-700 hover:shadow-tactile hover:-translate-y-2;
+  }
+
+  .service-card h3 {
+    @apply text-xl md:text-3xl mb-0;
   }
 
   .review-card {

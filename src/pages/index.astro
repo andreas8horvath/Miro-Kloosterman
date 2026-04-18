@@ -38,11 +38,11 @@ const description = "Private retreats, breathwork, bodywork, and integrated heal
 
   <!-- Section 2 — The Story Hook -->
   <section class="bg-sand py-section-y px-section-x">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-      <div class="order-2 lg:order-1">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
+      <div class="lg:col-span-7 order-2 lg:order-1">
         <Reveal client:load>
           <blockquote class="mb-12">
-            <p class="font-display text-4xl md:text-6xl text-deep-forest leading-tight italic">
+            <p class="font-display text-4xl md:text-5xl text-deep-forest leading-tight italic">
               "Some people say you never fully recover. I was going to prove them wrong."
             </p>
           </blockquote>
@@ -55,7 +55,7 @@ const description = "Private retreats, breathwork, bodywork, and integrated heal
           <a href="/about" class="btn-text">Read Miro's full story →</a>
         </Reveal>
       </div>
-      <div class="order-1 lg:order-2 relative">
+      <div class="lg:col-span-5 order-1 lg:order-2 relative">
         <Reveal client:load delay={0.2}>
           <img 
             src="https://res.cloudinary.com/dt806m3nm/image/upload/v1776529851/Bildschirmfoto_2026-04-18_um_23.09.30_gizmfz.png" 
@@ -70,31 +70,35 @@ const description = "Private retreats, breathwork, bodywork, and integrated heal
 
   <!-- Section 3 — What Brings You Here -->
   <section class="bg-deep-forest py-section-y px-section-x grain">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-      <Reveal client:load>
-        <h2 class="text-white mb-12">You don't have to walk this path alone.</h2>
-        <p class="text-sand/60 text-lg font-light leading-relaxed max-w-xl">
-          Healing isn't about collecting modalities. It's about finding the specific key that unlocks your unique system. Whether you're facing the wall of burnout or the weight of old grief, we meet it together with presence and precision.
-        </p>
-      </Reveal>
-      <Reveal client:load delay={0.2}>
-        <div class="flex flex-wrap gap-4">
-          {[
-            "Burnout & Exhaustion",
-            "Chronic Pain",
-            "Stored Trauma",
-            "Grief & Loss",
-            "Emotional Disconnection",
-            "Performance Pressure",
-            "Lyme Disease Recovery",
-            "Spiritual Crisis"
-          ].map(item => (
-            <span class="px-6 py-3 bg-sand text-sage font-body text-xs font-bold uppercase tracking-[1px]">
-              {item}
-            </span>
-          ))}
-        </div>
-      </Reveal>
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
+      <div class="lg:col-span-7">
+        <Reveal client:load>
+          <h2 class="text-white mb-12">You don't have to walk this path alone.</h2>
+          <p class="text-sand/60 text-lg font-light leading-relaxed max-w-xl">
+            Healing isn't about collecting modalities. It's about finding the specific key that unlocks your unique system. Whether you're facing the wall of burnout or the weight of old grief, we meet it together with presence and precision.
+          </p>
+        </Reveal>
+      </div>
+      <div class="lg:col-span-5">
+        <Reveal client:load delay={0.2}>
+          <div class="flex flex-wrap gap-4">
+            {[
+              "Burnout & Exhaustion",
+              "Chronic Pain",
+              "Stored Trauma",
+              "Grief & Loss",
+              "Emotional Disconnection",
+              "Performance Pressure",
+              "Lyme Disease Recovery",
+              "Spiritual Crisis"
+            ].map(item => (
+              <span class="px-6 py-3 bg-sand text-sage font-body text-xs font-bold uppercase tracking-[1px]">
+                {item}
+              </span>
+            ))}
+          </div>
+        </Reveal>
+      </div>
     </div>
   </section>
 
@@ -125,9 +129,9 @@ const description = "Private retreats, breathwork, bodywork, and integrated heal
                   referrerpolicy="no-referrer"
                 />
               </div>
-              <div class="relative z-10 h-full flex flex-col">
-                <h3 class="text-white group-hover:text-gold transition-colors">{service.name}</h3>
-                <p class="text-sand/60 font-light text-sm leading-relaxed mb-8">{service.desc}</p>
+              <div class="relative z-10 h-full flex flex-col gap-12">
+                <h3 class="text-white group-hover:text-gold transition-colors leading-tight">{service.name}</h3>
+                <p class="text-sand/60 font-light text-sm leading-relaxed">{service.desc}</p>
                 <span class="btn-text !text-gold mt-auto">Explore →</span>
               </div>
             </a>
@@ -188,8 +192,8 @@ const description = "Private retreats, breathwork, bodywork, and integrated heal
 
   <!-- Section 6 — About Miro -->
   <section class="py-section-y px-section-x bg-cream">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-      <div class="relative">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
+      <div class="lg:col-span-5 relative">
         <img 
           src="https://res.cloudinary.com/dt806m3nm/image/upload/v1776505357/4-1920w.jpg_uiikl9.webp" 
           alt="Miro Kloosterman" 
@@ -197,22 +201,24 @@ const description = "Private retreats, breathwork, bodywork, and integrated heal
           referrerpolicy="no-referrer"
         />
       </div>
-      <Reveal client:load>
-        <span class="label">Meet Miro</span>
-        <h2 class="mb-8">The long way round.</h2>
-        <p class="text-lg font-light text-charcoal/80 leading-relaxed mb-12">
-          From the spotlight of Dutch television to the quiet presence of a healing space in Bali. My path was broken so it could be rebuilt with more integrity. I don't just teach these modalities—I lived them.
-        </p>
-        
-        <div class="flex flex-wrap items-center gap-12 opacity-30 grayscale mb-12">
-          <span class="font-display text-xl font-bold">Men's Health</span>
-          <span class="font-display text-xl font-bold">The Rake</span>
-          <span class="font-display text-xl font-bold">GTST</span>
-          <span class="font-display text-xl font-bold">Story</span>
-        </div>
-        
-        <a href="/about" class="btn-outline">Meet Miro →</a>
-      </Reveal>
+      <div class="lg:col-span-7">
+        <Reveal client:load>
+          <span class="label">Meet Miro</span>
+          <h2 class="mb-8">The long way round.</h2>
+          <p class="text-lg font-light text-charcoal/80 leading-relaxed mb-12">
+            From the spotlight of Dutch television to the quiet presence of a healing space in Bali. My path was broken so it could be rebuilt with more integrity. I don't just teach these modalities—I lived them.
+          </p>
+          
+          <div class="flex flex-wrap items-center gap-12 opacity-30 grayscale mb-12">
+            <span class="font-display text-xl font-bold">Men's Health</span>
+            <span class="font-display text-xl font-bold">The Rake</span>
+            <span class="font-display text-xl font-bold">GTST</span>
+            <span class="font-display text-xl font-bold">Story</span>
+          </div>
+          
+          <a href="/about" class="btn-outline">Meet Miro →</a>
+        </Reveal>
+      </div>
     </div>
   </section>
 
@@ -228,7 +234,7 @@ const description = "Private retreats, breathwork, bodywork, and integrated heal
     </div>
     <div class="max-w-7xl mx-auto w-full z-10 text-center">
       <Reveal client:load>
-        <h2 class="text-white text-6xl md:text-8xl mb-8">Healing has a place. That place is Bali.</h2>
+        <h2 class="text-white text-4xl md:text-6xl mb-8">Healing has a place. That place is Bali.</h2>
         <p class="text-sand/80 text-xl font-light max-w-2xl mx-auto mb-12">
           The island's energy isn't just a backdrop—it's a participant in the work. The jungle, the water, and the ancient traditions of this land provide the container for your transformation.
         </p>
