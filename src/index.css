@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@1,400&family=Hind+Madurai:wght@300;400;600&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -19,8 +19,9 @@
   --color-on-surface: var(--color-charcoal);
 
   /* Fonts */
-  --font-display: 'Playfair Display', serif;
-  --font-body: 'Poppins', sans-serif;
+  --font-display: 'Great Vibes', cursive;
+  --font-body: 'Hind Madurai', sans-serif;
+  --font-nav: 'Lora', serif;
   --font-quote: 'Lora', serif;
 
   /* Spacing - Golden Ratio Scale (approx) */
@@ -45,33 +46,44 @@
 @layer base {
   body {
     @apply bg-sand text-charcoal font-body antialiased;
-    font-weight: 300;
-    line-height: 1.8;
-  }
-
-  h1, h2, h3 {
-    @apply font-display text-deep-forest tracking-tight;
+    font-weight: 400;
+    line-height: 1.6;
   }
 
   h1 {
-    @apply text-6xl md:text-7xl lg:text-[7.5rem] leading-[1.05]; /* lg: ~120px */
+    @apply font-display text-deep-forest;
+    font-weight: 400;
+    letter-spacing: normal;
   }
 
-  h2 {
-    @apply text-4xl md:text-[5rem] leading-[1.1]; /* md: ~80px (120 / 1.5) or approx golden */
-    /* Let's refine based on golden scale from h3 */
+  h2, h3 {
+    @apply font-nav text-deep-forest italic;
+    font-weight: 400;
   }
 
   h1 {
-    font-size: clamp(3rem, 7vw, 6.875rem); /* ~48px to 110px */
+    @apply text-6xl md:text-7xl lg:text-[8rem] leading-[1.2];
   }
 
   h2 {
-    font-size: clamp(2rem, 5vw, 4.25rem);    /* ~32px to 68px */
+    @apply text-4xl md:text-5xl lg:text-[4.5rem] leading-[1.3];
   }
 
   h3 {
-    font-size: clamp(1.5rem, 3vw, 2.625rem);  /* ~24px to 42px */
+    @apply text-2xl md:text-3xl lg:text-[2.5rem] leading-[1.3];
+  }
+
+  /* Adjusting sizes for script vs serif hierarchy */
+  h1 {
+    font-size: clamp(4rem, 12vw, 9.5rem);
+  }
+
+  h2 {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+  }
+
+  h3 {
+    font-size: clamp(1.75rem, 5vw, 3rem);
   }
 
   p {
@@ -98,15 +110,15 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center px-10 py-4 bg-gold text-deep-forest font-body text-xs font-bold uppercase tracking-[2px] transition-all duration-500 hover:bg-white hover:shadow-tactile hover:-translate-y-1;
+    @apply inline-flex items-center justify-center px-10 py-4 bg-gold text-deep-forest font-nav text-xs font-normal uppercase tracking-[2px] transition-all duration-500 hover:bg-white hover:shadow-tactile hover:-translate-y-1;
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center px-10 py-4 border border-gold text-gold font-body text-xs font-bold uppercase tracking-[2px] transition-all duration-500 hover:bg-gold hover:text-deep-forest;
+    @apply inline-flex items-center justify-center px-10 py-4 border border-gold text-gold font-nav text-xs font-normal uppercase tracking-[2px] transition-all duration-500 hover:bg-gold hover:text-deep-forest;
   }
 
   .btn-text {
-    @apply font-body text-xs font-bold uppercase tracking-[2px] text-gold relative pb-2 transition-all duration-300;
+    @apply font-nav text-xs font-normal uppercase tracking-[2px] text-gold relative pb-2 transition-all duration-300;
   }
 
   .btn-text::after {
@@ -123,7 +135,7 @@
   }
 
   .service-card h3 {
-    @apply text-xl md:text-3xl mb-0;
+    @apply text-3xl md:text-3xl mb-0 !font-nav italic;
   }
 
   .review-card {
@@ -135,11 +147,11 @@
   }
 
   .label {
-    @apply font-body text-xs font-bold uppercase tracking-[2px] text-gold mb-4 block;
+    @apply font-nav text-xs font-normal uppercase italic tracking-[2px] text-gold mb-4 block;
   }
 
   .nav-link {
-    @apply font-body text-xs font-bold uppercase tracking-[2px] text-deep-forest relative py-2;
+    @apply font-nav text-xs font-normal uppercase italic tracking-[2px] text-deep-forest relative py-2;
   }
 
   .nav-link::after {

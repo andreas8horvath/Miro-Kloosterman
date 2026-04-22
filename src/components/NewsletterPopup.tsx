@@ -84,7 +84,7 @@ export const NewsletterPopup = () => {
                     animate={{ opacity: 1 }}
                     className="py-8"
                   >
-                    <p className="text-sage font-body text-sm font-bold uppercase tracking-widest">Thank you.</p>
+                    <p className="text-sage font-nav text-sm font-bold uppercase tracking-widest italic">Thank you.</p>
                     <p className="text-charcoal/60 text-sm font-light mt-2 italic">You are now on the list.</p>
                   </motion.div>
                 ) : (
@@ -101,7 +101,7 @@ export const NewsletterPopup = () => {
                           required
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
-                          className="w-full bg-transparent border-b border-deep-forest/20 py-3 text-sm font-light outline-none focus:border-gold transition-colors"
+                          className="w-full bg-transparent border-b border-deep-forest/20 py-3 text-sm font-light italic outline-none focus:border-gold transition-colors"
                         />
                       </div>
                       <button 
