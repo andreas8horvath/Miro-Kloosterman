@@ -62,28 +62,28 @@
   }
 
   h1 {
-    @apply text-6xl md:text-7xl lg:text-[8rem] leading-[1.2];
+    @apply text-5xl md:text-6xl lg:text-[5.5rem] leading-[1.2];
   }
 
   h2 {
-    @apply text-4xl md:text-5xl lg:text-[4.5rem] leading-[1.3];
+    @apply text-3xl md:text-4xl lg:text-[3.25rem] leading-[1.3];
   }
 
   h3 {
-    @apply text-2xl md:text-3xl lg:text-[2.5rem] leading-[1.3];
+    @apply text-xl md:text-2xl lg:text-[1.75rem] leading-[1.3];
   }
 
-  /* Adjusting sizes for script vs serif hierarchy */
+  /* Adjusting sizes for script vs serif hierarchy - Reduced by ~30% */
   h1 {
-    font-size: clamp(4rem, 12vw, 9.5rem);
+    font-size: clamp(2.75rem, 8.5vw, 6.75rem);
   }
 
   h2 {
-    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-size: clamp(1.75rem, 5.5vw, 3.5rem);
   }
 
   h3 {
-    font-size: clamp(1.75rem, 5vw, 3rem);
+    font-size: clamp(1.25rem, 3.5vw, 2.1rem);
   }
 
   p {

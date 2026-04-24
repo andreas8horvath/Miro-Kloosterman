@@ -44,7 +44,7 @@ export const MobileMenu = ({ navItems, siteName }: MobileMenuProps) => {
         >
           <div className="px-section-x py-8">
             <div className="flex justify-between items-center mb-16">
-              <a href="/" className="font-display text-5xl text-deep-forest tracking-tight">
+              <a href="/" className="font-display text-4xl text-deep-forest tracking-tight">
                 {siteName}
               </a>
               <button 
@@ -68,7 +68,7 @@ export const MobileMenu = ({ navItems, siteName }: MobileMenuProps) => {
                 >
                   <a 
                     href={item.href}
-                    className="font-nav text-4xl text-deep-forest hover:text-gold transition-colors block mb-6 italic"
+                    className="font-nav text-3xl text-deep-forest hover:text-gold transition-colors block mb-6 italic"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
@@ -79,7 +79,7 @@ export const MobileMenu = ({ navItems, siteName }: MobileMenuProps) => {
                         <a
                           key={child.name}
                           href={child.href}
-                          className="font-nav text-sm font-medium uppercase tracking-[2px] text-sage hover:text-gold transition-colors italic"
+                          className="font-nav text-xs font-medium uppercase tracking-[2px] text-sage hover:text-gold transition-colors italic"
                           onClick={() => setIsOpen(false)}
                         >
                           {child.name}
