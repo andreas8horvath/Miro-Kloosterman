@@ -51,7 +51,7 @@ const allReviews = [
         <div class="max-w-3xl">
           <span class="label">Client Experiences</span>
           <h1 class="mb-12">The word people use first is safe.</h1>
-          <p class="text-xl md:text-2xl font-light text-charcoal/80 leading-relaxed">
+          <p class="text-xl md:text-2xl font-light text-soil/80 leading-relaxed">
             I've kept almost every review clients have written me over the years. Reading them back, one pattern is impossible to miss — the first thing people describe is the safety of the space.
           </p>
         </div>
@@ -60,18 +60,18 @@ const allReviews = [
   </section>
 
   <!-- Section 2 — Featured Reviews -->
-  <section class="bg-cream py-section-y px-section-x">
+  <section class="bg-linen py-section-y px-section-x">
     <div class="max-w-7xl mx-auto space-y-24">
       {featuredReviews.map((review, index) => (
         <Reveal client:load delay={index * 0.1}>
           <div class={`max-w-4xl mx-auto ${index % 2 === 1 ? 'lg:ml-auto lg:mr-0' : 'lg:mr-auto lg:ml-0'}`}>
             <div class="review-card">
-              <blockquote class="pull-quote !text-deep-forest">"{review.quote}"</blockquote>
+              <blockquote class="pull-quote !text-clay-dark">"{review.quote}"</blockquote>
               <div class="mt-12 flex items-center gap-6">
-                <div class="w-12 h-px bg-gold"></div>
+                <div class="w-12 h-px bg-terracotta"></div>
                 <div class="flex flex-col">
-                  <span class="font-body text-sm font-bold uppercase tracking-[2px] text-charcoal">{review.name}</span>
-                  <span class="font-body text-[10px] font-bold uppercase tracking-[2px] text-gold">{review.modality}</span>
+                  <span class="font-body text-sm font-bold uppercase tracking-[2px] text-soil">{review.name}</span>
+                  <span class="font-body text-[10px] font-bold uppercase tracking-[2px] text-terracotta">{review.modality}</span>
                 </div>
               </div>
             </div>
@@ -87,13 +87,13 @@ const allReviews = [
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {allReviews.map((review, index) => (
           <Reveal client:load delay={index * 0.05}>
-            <div class="bg-cream p-12 shadow-tactile flex flex-col h-full">
-              <blockquote class="font-quote italic text-lg text-charcoal/80 leading-relaxed mb-12">"{review.quote}"</blockquote>
+            <div class="bg-linen p-12 shadow-tactile flex flex-col h-full">
+              <blockquote class="font-quote italic text-lg text-soil/80 leading-relaxed mb-12">"{review.quote}"</blockquote>
               <div class="mt-auto flex items-center gap-4">
-                <div class="w-8 h-px bg-gold/30"></div>
+                <div class="w-8 h-px bg-terracotta/30"></div>
                 <div class="flex flex-col">
-                  <span class="font-body text-xs font-bold uppercase tracking-[1px] text-charcoal">{review.name}</span>
-                  <span class="font-body text-[9px] font-bold uppercase tracking-[1px] text-gold">{review.modality}</span>
+                  <span class="font-body text-xs font-bold uppercase tracking-[1px] text-soil">{review.name}</span>
+                  <span class="font-body text-[9px] font-bold uppercase tracking-[1px] text-terracotta">{review.modality}</span>
                 </div>
               </div>
             </div>
@@ -104,7 +104,7 @@ const allReviews = [
   </section>
 
   <!-- Section 4 — Closing CTA -->
-  <section class="bg-deep-forest pt-section-y pb-16 px-section-x grain relative">
+  <section class="bg-clay-dark pt-section-y pb-16 px-section-x grain relative">
     <div class="max-w-3xl mx-auto text-center">
       <Reveal client:load>
         <h2 class="text-white mb-8">Ready to start your own?</h2>

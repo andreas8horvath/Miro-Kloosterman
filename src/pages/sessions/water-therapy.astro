@@ -8,7 +8,7 @@ const description = "Harmonic Flow Aquatic Healing Arts. Water-based healing in 
 
 <Layout title={title} description={description}>
   <!-- Section 1 — Hero -->
-  <section class="relative h-screen flex items-center px-section-x pt-24 overflow-hidden grain bg-deep-forest">
+  <section class="relative h-screen flex items-center px-section-x pt-24 overflow-hidden grain bg-clay-dark">
     <div class="absolute inset-0 z-0">
       <img 
         src="https://picsum.photos/seed/miro-water-therapy/1920/1080" 
@@ -20,7 +20,7 @@ const description = "Harmonic Flow Aquatic Healing Arts. Water-based healing in 
     <div class="max-w-7xl mx-auto w-full z-10">
       <Reveal client:load>
         <div class="max-w-3xl">
-          <span class="label !text-gold">Session Modality</span>
+          <span class="label !text-terracotta">Session Modality</span>
           <h1 class="text-white mb-8">Harmonic Flow Aquatic Healing Arts.</h1>
           <p class="font-body text-xl md:text-2xl font-light text-sand/80 mb-8 tracking-wide">
             Water therapy that works in three stages — above water, under water, and the return. Reaching what land-based work can't.
@@ -60,7 +60,7 @@ const description = "Harmonic Flow Aquatic Healing Arts. Water-based healing in 
             </Reveal>
           </div>
           <Reveal client:load delay={0.1}>
-            <div class="space-y-8 text-lg font-light text-charcoal/80 leading-relaxed">
+            <div class="space-y-8 text-lg font-light text-soil/80 leading-relaxed">
               <p>Harmonic Flow Aquatic Healing Arts is a water therapy tradition that brings together multiple lineages of water-based healing. I trained in it, and I also co-facilitate this work with my partner Damla Yaku, who carries the lineage deeply.</p>
               <p>Water does something land-based work can't. It holds you. It takes away the weight of your own body. It reaches parts of the nervous system that rarely get touched when you're standing upright. The element itself is part of the therapy.</p>
             </div>
@@ -71,7 +71,7 @@ const description = "Harmonic Flow Aquatic Healing Arts. Water-based healing in 
   </section>
 
   <!-- Section 3 — The three stages -->
-  <section class="bg-cream py-section-y px-section-x">
+  <section class="bg-linen py-section-y px-section-x">
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-24">
         <div class="lg:col-span-5">
@@ -87,8 +87,8 @@ const description = "Harmonic Flow Aquatic Healing Arts. Water-based healing in 
           ].map((stage, i) => (
             <Reveal client:load delay={i * 0.1}>
               <div class="bg-sand p-12 grain">
-                <span class="label !text-gold mb-6 block">{stage.title}</span>
-                <p class="text-lg font-light text-charcoal/80 leading-relaxed">{stage.desc}</p>
+                <span class="label !text-terracotta mb-6 block">{stage.title}</span>
+                <p class="text-lg font-light text-soil/80 leading-relaxed">{stage.desc}</p>
               </div>
             </Reveal>
           ))}
@@ -108,7 +108,7 @@ const description = "Harmonic Flow Aquatic Healing Arts. Water-based healing in 
         </div>
         <div class="lg:col-span-7">
           <Reveal client:load delay={0.1}>
-            <p class="text-lg font-light text-charcoal/80 leading-relaxed">
+            <p class="text-lg font-light text-soil/80 leading-relaxed">
               Water therapy happens in pools, the sea, or natural water sources. The water has to be clean and at the right temperature — this matters more than people think. Every session is unique. The best thing you can do before a water session is let go of what you expect it to be.
             </p>
           </Reveal>
@@ -118,19 +118,19 @@ const description = "Harmonic Flow Aquatic Healing Arts. Water-based healing in 
   </section>
 
   <!-- Section 5 — Testimonial -->
-  <section class="bg-cream py-section-y px-section-x">
+  <section class="bg-linen py-section-y px-section-x">
     <div class="max-w-4xl mx-auto text-center">
       <Reveal client:load>
         <blockquote class="pull-quote">
           "The anxiety I was carrying due to work-related stress completely melted away, replaced by a deep and grounding sense of calm."
         </blockquote>
-        <p class="font-serif italic text-2xl text-deep-forest mt-8">— Amirhossein Rezaei</p>
+        <p class="font-serif italic text-2xl text-clay-dark mt-8">— Amirhossein Rezaei</p>
       </Reveal>
     </div>
   </section>
 
   <!-- Section 6 — Closing CTA -->
-  <section class="bg-deep-forest pt-section-y pb-16 px-section-x grain relative">
+  <section class="bg-clay-dark pt-section-y pb-16 px-section-x grain relative">
     <div class="max-w-3xl mx-auto text-center">
       <Reveal client:load>
         <h2 class="text-white mb-8">Ready to flow?</h2>

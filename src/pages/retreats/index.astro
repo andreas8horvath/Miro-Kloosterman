@@ -27,7 +27,7 @@ const retreatTypes = [
         <div class="max-w-3xl">
           <span class="label">Deep Immersion</span>
           <h1 class="mb-12">Retreats.</h1>
-          <p class="text-xl md:text-2xl font-light text-charcoal/80 leading-relaxed">
+          <p class="text-xl md:text-2xl font-light text-soil/80 leading-relaxed">
             Time and space to go deeper. Whether alone in a tailored one-on-one container, or held within the collective energy of a small group.
           </p>
         </div>
@@ -36,15 +36,15 @@ const retreatTypes = [
   </section>
 
   <!-- Section 2 — Retreats Grid -->
-  <section class="bg-cream py-section-y px-section-x">
+  <section class="bg-linen py-section-y px-section-x">
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         {retreatTypes.map((retreat, index) => (
           <Reveal client:load delay={index * 0.1} className="h-full">
             <a href={retreat.href} class="service-card group h-full">
-              <h3 class="text-white group-hover:text-gold transition-colors">{retreat.title}</h3>
+              <h3 class="text-white group-hover:text-terracotta transition-colors">{retreat.title}</h3>
               <p class="text-sand/60 font-light text-sm leading-relaxed">{retreat.description}</p>
-              <span class="btn-text !text-gold mt-auto">View details →</span>
+              <span class="btn-text !text-terracotta mt-auto">View details →</span>
             </a>
           </Reveal>
         ))}
@@ -53,7 +53,7 @@ const retreatTypes = [
   </section>
 
   <!-- Section 3 — Closing CTA -->
-  <section class="bg-deep-forest py-section-y px-section-x grain relative">
+  <section class="bg-clay-dark py-section-y px-section-x grain relative">
     <div class="max-w-3xl mx-auto text-center">
       <Reveal client:load>
         <h2 class="text-white mb-8">Not sure which path to take?</h2>

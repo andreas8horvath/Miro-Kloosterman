@@ -8,7 +8,7 @@ const description = "A fully personalised one-on-one healing journey in Bali, Tu
 
 <Layout title={title} description={description}>
   <!-- Section 1 — Hero -->
-  <section class="relative h-screen flex items-center px-section-x pt-24 overflow-hidden grain bg-deep-forest">
+  <section class="relative h-screen flex items-center px-section-x pt-24 overflow-hidden grain bg-clay-dark">
     <div class="absolute inset-0 z-0">
       <img 
         src="https://picsum.photos/seed/miro-retreat-hero/1920/1080" 
@@ -20,7 +20,7 @@ const description = "A fully personalised one-on-one healing journey in Bali, Tu
     <div class="max-w-7xl mx-auto w-full z-10">
       <Reveal client:load>
         <div class="max-w-3xl">
-          <span class="label !text-gold">One Practitioner · One Room · One You</span>
+          <span class="label !text-terracotta">One Practitioner · One Room · One You</span>
           <h1 class="text-white mb-8">The Private Retreat.</h1>
           <p class="font-body text-xl md:text-2xl font-light text-sand/80 mb-8 tracking-wide">
             A fully personalised one-on-one healing journey. Designed for the person you actually are.
@@ -37,7 +37,7 @@ const description = "A fully personalised one-on-one healing journey in Bali, Tu
       <div class="lg:col-span-7">
         <Reveal client:load>
           <h2 class="mb-12">No two people are the same. Neither are two retreats.</h2>
-          <div class="space-y-8 text-lg font-light text-charcoal/80 leading-relaxed">
+          <div class="space-y-8 text-lg font-light text-soil/80 leading-relaxed">
             <p>I don't run a standard program. I never have. Before you arrive — or before I arrive — we spend time together, sometimes weeks, understanding what you're actually dealing with, what your body is doing, what your life looks like, and what you're ready for. Only then do I start building your retreat.</p>
             <p>By the time the first day begins, the program is already designed around you. And it keeps adjusting as we go, because the body in front of me on day four is not the same body I met on day one.</p>
             <p>The support doesn't end when you leave — or when I do. I stay with you for at least a month afterwards, usually longer, while you integrate what moved and carry the work back into your real life.</p>
@@ -56,7 +56,7 @@ const description = "A fully personalised one-on-one healing journey in Bali, Tu
   </section>
 
   <!-- Section 3 — Where -->
-  <section class="bg-cream py-section-y px-section-x">
+  <section class="bg-linen py-section-y px-section-x">
     <div class="max-w-7xl mx-auto">
       <Reveal client:load>
         <span class="label">The Environment</span>
@@ -80,7 +80,7 @@ const description = "A fully personalised one-on-one healing journey in Bali, Tu
                 />
               </div>
               <div class="relative z-10">
-                <h3 class="text-white mb-6 group-hover:text-gold transition-colors">{loc.name}</h3>
+                <h3 class="text-white mb-6 group-hover:text-terracotta transition-colors">{loc.name}</h3>
                 <p class="text-sand/60 font-light text-sm leading-relaxed">{loc.desc}</p>
               </div>
             </div>
@@ -103,7 +103,7 @@ const description = "A fully personalised one-on-one healing journey in Bali, Tu
         <div class="lg:col-span-5">
           <Reveal client:load>
             <h2 class="mb-12">The work itself.</h2>
-            <p class="text-lg font-light text-charcoal/80 leading-relaxed mb-12">
+            <p class="text-lg font-light text-soil/80 leading-relaxed mb-12">
               Every retreat draws from the nine modalities I've trained in. Which ones you experience depends entirely on what you need. A typical retreat includes a combination of:
             </p>
           </Reveal>
@@ -124,8 +124,8 @@ const description = "A fully personalised one-on-one healing journey in Bali, Tu
                 "Inner child work"
               ].map(item => (
                 <div class="flex items-center gap-4">
-                  <div class="w-2 h-2 bg-gold rotate-45 flex-shrink-0"></div>
-                  <span class="font-body text-sm font-light text-charcoal">{item}</span>
+                  <div class="w-2 h-2 bg-terracotta rotate-45 flex-shrink-0"></div>
+                  <span class="font-body text-sm font-light text-soil">{item}</span>
                 </div>
               ))}
             </div>
@@ -136,7 +136,7 @@ const description = "A fully personalised one-on-one healing journey in Bali, Tu
   </section>
 
   <!-- Section 5 — Who This Is For -->
-  <section class="bg-cream py-section-y px-section-x">
+  <section class="bg-linen py-section-y px-section-x">
     <div class="max-w-4xl mx-auto">
       <Reveal client:load>
         <h2 class="text-center mb-24">This is for you if…</h2>
@@ -150,8 +150,8 @@ const description = "A fully personalised one-on-one healing journey in Bali, Tu
             "The length, the place, and the depth can all be shaped around what you need"
           ].map(item => (
             <div class="flex items-start gap-6">
-              <div class="w-1.5 h-1.5 bg-gold rounded-full mt-2.5 flex-shrink-0"></div>
-              <p class="text-lg font-light text-charcoal/80 leading-relaxed">{item}</p>
+              <div class="w-1.5 h-1.5 bg-sun rounded-full mt-2.5 flex-shrink-0"></div>
+              <p class="text-lg font-light text-soil/80 leading-relaxed">{item}</p>
             </div>
           ))}
         </div>
@@ -160,10 +160,10 @@ const description = "A fully personalised one-on-one healing journey in Bali, Tu
   </section>
 
   <!-- Section 6 — Investment -->
-  <section class="bg-deep-forest pt-section-y pb-16 px-section-x grain relative">
+  <section class="bg-clay-dark pt-section-y pb-16 px-section-x grain relative">
     <div class="max-w-3xl mx-auto text-center">
       <Reveal client:load>
-        <span class="label !text-gold">Investment</span>
+        <span class="label !text-terracotta">Investment</span>
         <h2 class="text-white mb-8">A bespoke commitment.</h2>
         <p class="text-sand/60 text-xl font-light mb-16 leading-relaxed">
           Every private retreat is built from scratch, so the investment is different for every client. It depends on the length of your stay, the depth of the work, where we run it, what your body and situation call for, and what's possible for you.

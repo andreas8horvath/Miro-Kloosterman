@@ -44,12 +44,12 @@ export const MobileMenu = ({ navItems, siteName }: MobileMenuProps) => {
         >
           <div className="px-section-x py-8">
             <div className="flex justify-between items-center mb-16">
-              <a href="/" className="font-display text-4xl text-deep-forest tracking-tight">
+              <a href="/" className="font-display text-4xl text-clay-dark tracking-tight">
                 {siteName}
               </a>
               <button 
                 onClick={() => setIsOpen(false)}
-                className="text-deep-forest p-2"
+                className="text-clay-dark p-2"
                 aria-label="Close Menu"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -68,18 +68,18 @@ export const MobileMenu = ({ navItems, siteName }: MobileMenuProps) => {
                 >
                   <a 
                     href={item.href}
-                    className="font-nav text-3xl text-deep-forest hover:text-gold transition-colors block mb-6 italic"
+                    className="font-nav text-3xl text-clay-dark hover:text-terracotta transition-colors block mb-6 italic"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
                   </a>
                   {item.children && (
-                    <div className="flex flex-col gap-4 pl-4 border-l border-gold/20 mb-8">
+                    <div className="flex flex-col gap-4 pl-4 border-l border-terracotta/20 mb-8">
                       {item.children.map((child) => (
                         <a
                           key={child.name}
                           href={child.href}
-                          className="font-nav text-xs font-medium uppercase tracking-[2px] text-sage hover:text-gold transition-colors italic"
+                          className="font-nav text-xs font-medium uppercase tracking-[2px] text-terracotta hover:text-terracotta transition-colors italic"
                           onClick={() => setIsOpen(false)}
                         >
                           {child.name}
@@ -91,7 +91,7 @@ export const MobileMenu = ({ navItems, siteName }: MobileMenuProps) => {
               ))}
             </nav>
 
-            <div className="mt-24 pt-12 border-t border-deep-forest/5">
+            <div className="mt-24 pt-12 border-t border-clay-dark/5">
               <span className="label !mb-4">Get in touch</span>
               <p className="text-sm mb-8">info@mirokloosterman.com</p>
               <a 
@@ -111,7 +111,7 @@ export const MobileMenu = ({ navItems, siteName }: MobileMenuProps) => {
     <div className="lg:hidden">
       <button 
         onClick={() => setIsOpen(true)}
-        className="text-deep-forest p-2"
+        className="text-clay-dark p-2"
         aria-label="Open Menu"
       >
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

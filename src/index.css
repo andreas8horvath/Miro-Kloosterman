@@ -2,21 +2,29 @@
 @import "tailwindcss";
 
 @theme {
-  /* Miro Kloosterman Editorial Palette */
-  --color-deep-forest: #1C2B20;
-  --color-sage: #4A6741;
-  --color-sage-light: #6B8F61;
-  --color-sand: #F5EFE4;
-  --color-gold: #C9A84C;
-  --color-cream: #FAF6EF;
-  --color-charcoal: #2D2D2D;
+  /* Terracotta & Sand Palette */
+  --color-terracotta: #B5542A;
+  --color-clay-dark: #6B2E1A;
+  --color-sand: #F5EDE3;
+  --color-linen: #E8DDCC;
+  --color-soil: #2B1F16;
+  --color-sun: #D4A15A;
+
+  /* Legacy Aliases for compatibility */
+  --color-gold: var(--color-terracotta);
+  --color-deep-forest: var(--color-clay-dark);
+  --color-charcoal: var(--color-soil);
+  --color-sage: var(--color-terracotta);
+  --color-sage-light: var(--color-sun);
+  --color-cream: var(--color-linen);
 
   /* Semantic Mapping */
-  --color-primary: var(--color-gold);
-  --color-on-primary: var(--color-deep-forest);
+  --color-primary: var(--color-clay-dark);
+  --color-on-primary: var(--color-sand);
+  --color-accent: var(--color-terracotta);
   
   --color-surface: var(--color-sand);
-  --color-on-surface: var(--color-charcoal);
+  --color-on-surface: var(--color-soil);
 
   /* Fonts */
   --font-display: 'Great Vibes', cursive;
@@ -37,27 +45,27 @@
   /* Radius - Restrained */
   --radius-sm: 4px;
   --radius-md: 8px;
-  --radius-lg: 0px; /* Editorial often uses sharp corners */
+  --radius-lg: 0px; 
 
   /* Shadows - Warm Toned */
-  --shadow-tactile: 0 8px 40px rgba(28, 43, 32, 0.12);
+  --shadow-tactile: 0 8px 40px rgba(107, 46, 26, 0.12); /* Using clay-dark for shadow base */
 }
 
 @layer base {
   body {
-    @apply bg-sand text-charcoal font-body antialiased;
+    @apply bg-sand text-soil font-body antialiased;
     font-weight: 400;
     line-height: 1.6;
   }
 
   h1 {
-    @apply font-display text-deep-forest;
+    @apply font-display text-clay-dark;
     font-weight: 400;
     letter-spacing: normal;
   }
 
   h2, h3 {
-    @apply font-nav text-deep-forest italic;
+    @apply font-nav text-clay-dark italic;
     font-weight: 400;
   }
 
@@ -110,20 +118,20 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center px-10 py-4 bg-gold text-deep-forest font-nav text-xs font-normal uppercase tracking-[2px] transition-all duration-500 hover:bg-white hover:shadow-tactile hover:-translate-y-1;
+    @apply inline-flex items-center justify-center px-10 py-4 bg-clay-dark text-sand font-nav text-xs font-normal uppercase tracking-[2px] transition-all duration-500 hover:bg-terracotta hover:shadow-tactile hover:-translate-y-1;
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center px-10 py-4 border border-gold text-gold font-nav text-xs font-normal uppercase tracking-[2px] transition-all duration-500 hover:bg-gold hover:text-deep-forest;
+    @apply inline-flex items-center justify-center px-10 py-4 border border-sun text-sun font-nav text-xs font-normal uppercase tracking-[2px] transition-all duration-500 hover:bg-sun hover:text-clay-dark;
   }
 
   .btn-text {
-    @apply font-nav text-xs font-normal uppercase tracking-[2px] text-gold relative pb-2 transition-all duration-300;
+    @apply font-nav text-xs font-normal uppercase tracking-[2px] text-terracotta relative pb-2 transition-all duration-300;
   }
 
   .btn-text::after {
     content: '';
-    @apply absolute left-0 bottom-0 w-full h-px bg-gold scale-x-100 origin-left transition-transform duration-500;
+    @apply absolute left-0 bottom-0 w-full h-px bg-terracotta scale-x-100 origin-left transition-transform duration-500;
   }
 
   .btn-text:hover::after {
@@ -131,32 +139,36 @@
   }
 
   .service-card {
-    @apply bg-deep-forest p-12 flex flex-col gap-12 transition-all duration-700 hover:shadow-tactile hover:-translate-y-2;
+    @apply bg-clay-dark p-12 flex flex-col gap-12 transition-all duration-700 hover:shadow-tactile hover:-translate-y-2;
   }
 
   .service-card h3 {
-    @apply text-3xl md:text-3xl mb-0 !font-nav italic;
+    @apply text-3xl md:text-3xl mb-0 !font-nav italic text-sand;
+  }
+
+  .service-card p {
+    @apply text-linen;
   }
 
   .review-card {
-    @apply bg-cream p-12 shadow-tactile flex flex-col gap-8;
+    @apply bg-linen p-12 shadow-tactile flex flex-col gap-8;
   }
 
   .pull-quote {
-    @apply font-quote italic text-2xl md:text-3xl text-sage leading-relaxed;
+    @apply font-quote italic text-2xl md:text-3xl text-terracotta leading-relaxed;
   }
 
   .label {
-    @apply font-nav text-xs font-normal uppercase italic tracking-[2px] text-gold mb-4 block;
+    @apply font-nav text-xs font-normal uppercase italic tracking-[2px] text-terracotta mb-4 block;
   }
 
   .nav-link {
-    @apply font-nav text-xs font-normal uppercase italic tracking-[2px] text-deep-forest relative py-2;
+    @apply font-nav text-xs font-normal uppercase italic tracking-[2px] text-clay-dark relative py-2;
   }
 
   .nav-link::after {
     content: '';
-    @apply absolute left-0 bottom-0 w-0 h-px bg-gold transition-all duration-500;
+    @apply absolute left-0 bottom-0 w-0 h-px bg-terracotta transition-all duration-500;
   }
 
   .nav-link:hover::after {

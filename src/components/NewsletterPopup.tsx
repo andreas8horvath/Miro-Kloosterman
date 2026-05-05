@@ -46,7 +46,7 @@ export const NewsletterPopup = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={handleDismiss}
-            className="absolute inset-0 bg-deep-forest/60 backdrop-blur-sm"
+            className="absolute inset-0 bg-clay-dark/60 backdrop-blur-sm"
           />
           
           <motion.div
@@ -59,7 +59,7 @@ export const NewsletterPopup = () => {
           >
             <button 
               onClick={handleDismiss}
-              className="absolute top-6 right-6 text-deep-forest/40 hover:text-deep-forest transition-colors z-10"
+              className="absolute top-6 right-6 text-clay-dark/40 hover:text-clay-dark transition-colors z-10"
             >
               <X size={20} />
             </button>
@@ -75,8 +75,8 @@ export const NewsletterPopup = () => {
               </div>
               
               <div className="p-10 md:p-12 flex flex-col justify-center">
-                <span className="label !text-gold mb-4">The Journal</span>
-                <h2 className="text-deep-forest text-3xl mb-6 font-display">Notes on Silence.</h2>
+                <span className="label !text-terracotta mb-4">The Journal</span>
+                <h2 className="text-clay-dark text-3xl mb-6 font-display">Notes on Silence.</h2>
                 
                 {isSubmitted ? (
                   <motion.div 
@@ -84,12 +84,12 @@ export const NewsletterPopup = () => {
                     animate={{ opacity: 1 }}
                     className="py-8"
                   >
-                    <p className="text-sage font-nav text-sm font-bold uppercase tracking-widest italic">Thank you.</p>
-                    <p className="text-charcoal/60 text-sm font-light mt-2 italic">You are now on the list.</p>
+                    <p className="text-terracotta font-nav text-sm font-bold uppercase tracking-widest italic">Thank you.</p>
+                    <p className="text-soil/60 text-sm font-light mt-2 italic">You are now on the list.</p>
                   </motion.div>
                 ) : (
                   <>
-                    <p className="text-charcoal/60 text-sm font-light leading-relaxed mb-10">
+                    <p className="text-soil/60 text-sm font-light leading-relaxed mb-10">
                       Occasionally, I send out notes on breath, silence, and the integration of nine modalities. No noise, just substance.
                     </p>
                     
@@ -101,7 +101,7 @@ export const NewsletterPopup = () => {
                           required
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
-                          className="w-full bg-transparent border-b border-deep-forest/20 py-3 text-sm font-light italic outline-none focus:border-gold transition-colors"
+                          className="w-full bg-transparent border-b border-clay-dark/20 py-3 text-sm font-light italic outline-none focus:border-terracotta transition-colors"
                         />
                       </div>
                       <button 
@@ -112,7 +112,7 @@ export const NewsletterPopup = () => {
                       </button>
                     </form>
                     
-                    <p className="text-[9px] uppercase tracking-[1px] text-charcoal/30 mt-8 text-center">
+                    <p className="text-[9px] uppercase tracking-[1px] text-soil/30 mt-8 text-center">
                       Respecting your space. Unsubscribe anytime.
                     </p>
                   </>

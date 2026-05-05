@@ -61,13 +61,13 @@ const navItems = [
     <meta property="og:description" content={description} />
     <meta name="twitter:card" content="summary_large_image" />
 	</head>
-	<body class="bg-sand text-charcoal font-body antialiased selection:bg-gold/20">
+	<body class="bg-sand text-soil font-body antialiased selection:bg-terracotta/20">
     {!hideNav && (
       <nav class="fixed top-0 left-0 w-full z-50 bg-sand/80 backdrop-blur-md transition-all duration-500">
       <div class="max-w-7xl mx-auto px-section-x">
         <div class="flex justify-between h-24 items-center">
           <div class="flex-shrink-0">
-            <a href="/" class="font-display text-3xl text-deep-forest tracking-tight">{siteName}</a>
+            <a href="/" class="font-display text-3xl text-clay-dark tracking-tight">{siteName}</a>
           </div>
           <div class="hidden lg:block">
             <div class="flex items-center space-x-12">
@@ -83,9 +83,9 @@ const navItems = [
                   </a>
                   {item.children && (
                     <div class="absolute left-0 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                      <div class="bg-cream shadow-tactile p-6 min-w-[200px] flex flex-col gap-4">
+                      <div class="bg-linen shadow-tactile p-6 min-w-[200px] flex flex-col gap-4">
                         {item.children.map(child => (
-                          <a href={child.href} class="font-nav text-[10px] font-medium uppercase tracking-[2px] text-deep-forest hover:text-gold transition-colors">
+                          <a href={child.href} class="font-nav text-[10px] font-medium uppercase tracking-[2px] text-clay-dark hover:text-terracotta transition-colors">
                             {child.name}
                           </a>
                         ))}
@@ -112,9 +112,9 @@ const navItems = [
     <NewsletterPopup client:load />
 
     {!hideFooter && (
-      <footer class="bg-deep-forest text-sand pt-16 pb-16 px-section-x relative overflow-hidden grain">
+      <footer class="bg-clay-dark text-sand pt-16 pb-16 px-section-x relative overflow-hidden grain">
       <div class="max-w-7xl mx-auto">
-        <div class="h-px w-full bg-gold/30 mb-16"></div>
+        <div class="h-px w-full bg-terracotta/30 mb-16"></div>
         
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24">
           <div class="lg:col-span-4">
@@ -124,28 +124,28 @@ const navItems = [
           
           <div class="lg:col-span-5 grid grid-cols-2 gap-8">
             <div>
-              <span class="label text-gold/60">Navigate</span>
+              <span class="label text-terracotta/60">Navigate</span>
               <ul class="space-y-4">
                 {navItems.map(item => (
-                  <li><a href={item.href} class="text-sm hover:text-gold transition-colors">{item.name}</a></li>
+                  <li><a href={item.href} class="text-sm hover:text-terracotta transition-colors">{item.name}</a></li>
                 ))}
               </ul>
             </div>
             <div>
-              <span class="label text-gold/60">Modalities</span>
+              <span class="label text-terracotta/60">Modalities</span>
               <ul class="space-y-4">
-                <li><a href="/sessions/breathwork" class="text-sm hover:text-gold transition-colors">Breathwork</a></li>
-                <li><a href="/sessions/body-reset" class="text-sm hover:text-gold transition-colors">Body Reset</a></li>
-                <li><a href="/sessions/chi-nei-tsang" class="text-sm hover:text-gold transition-colors">Chi Nei Tsang</a></li>
-                <li><a href="/sessions/water-therapy" class="text-sm hover:text-gold transition-colors">Water Therapy</a></li>
-                <li><a href="/sessions/hypnotherapy" class="text-sm hover:text-gold transition-colors">Hypnotherapy</a></li>
-                <li><a href="/sessions/coaching" class="text-sm hover:text-gold transition-colors">Coaching</a></li>
+                <li><a href="/sessions/breathwork" class="text-sm hover:text-terracotta transition-colors">Breathwork</a></li>
+                <li><a href="/sessions/body-reset" class="text-sm hover:text-terracotta transition-colors">Body Reset</a></li>
+                <li><a href="/sessions/chi-nei-tsang" class="text-sm hover:text-terracotta transition-colors">Chi Nei Tsang</a></li>
+                <li><a href="/sessions/water-therapy" class="text-sm hover:text-terracotta transition-colors">Water Therapy</a></li>
+                <li><a href="/sessions/hypnotherapy" class="text-sm hover:text-terracotta transition-colors">Hypnotherapy</a></li>
+                <li><a href="/sessions/coaching" class="text-sm hover:text-terracotta transition-colors">Coaching</a></li>
               </ul>
             </div>
           </div>
 
           <div class="lg:col-span-3">
-            <span class="label text-gold/60">Contact</span>
+            <span class="label text-terracotta/60">Contact</span>
             <p class="text-sm mb-8">info@mirokloosterman.com</p>
             <a href="https://tidycal.com/miro-kloosterman/15-minute-meeting" class="btn-primary w-full">Book a discovery call</a>
           </div>
@@ -157,9 +157,9 @@ const navItems = [
             <p class="mt-2">Also at bodymindandsoultherapy.com</p>
           </div>
           <div class="flex gap-8">
-            <a href="/cookies" class="hover:text-gold transition-colors">Cookies</a>
-            <a href="/privacy" class="hover:text-gold transition-colors">Privacy</a>
-            <a href="/imprint" class="hover:text-gold transition-colors">Imprint</a>
+            <a href="/cookies" class="hover:text-terracotta transition-colors">Cookies</a>
+            <a href="/privacy" class="hover:text-terracotta transition-colors">Privacy</a>
+            <a href="/imprint" class="hover:text-terracotta transition-colors">Imprint</a>
           </div>
         </div>
       </div>

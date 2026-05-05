@@ -47,7 +47,7 @@ const sessions = [
         <div class="max-w-3xl">
           <span class="label">One-on-One Support</span>
           <h1 class="mb-12">Modalities.</h1>
-          <p class="text-xl md:text-2xl font-light text-charcoal/80 leading-relaxed">
+          <p class="text-xl md:text-2xl font-light text-soil/80 leading-relaxed">
             A place to start. Or a regular practice. In-person when our paths cross, or online from anywhere.
           </p>
         </div>
@@ -56,15 +56,15 @@ const sessions = [
   </section>
 
   <!-- Section 2 — Sessions Grid -->
-  <section class="bg-cream py-section-y px-section-x">
+  <section class="bg-linen py-section-y px-section-x">
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {sessions.map((session, index) => (
           <Reveal client:load delay={index * 0.1} className="h-full">
             <a href={session.href} class="service-card group h-full">
-              <h3 class="text-white group-hover:text-gold transition-colors">{session.title}</h3>
+              <h3 class="text-white group-hover:text-terracotta transition-colors">{session.title}</h3>
               <p class="text-sand/60 font-light text-sm leading-relaxed">{session.description}</p>
-              <span class="btn-text !text-gold mt-auto">Learn more →</span>
+              <span class="btn-text !text-terracotta mt-auto">Learn more →</span>
             </a>
           </Reveal>
         ))}
@@ -73,7 +73,7 @@ const sessions = [
   </section>
 
   <!-- Section 3 — Closing CTA -->
-  <section class="bg-deep-forest py-section-y px-section-x grain relative">
+  <section class="bg-clay-dark py-section-y px-section-x grain relative">
     <div class="max-w-3xl mx-auto text-center">
       <Reveal client:load>
         <h2 class="text-white mb-8">Not sure which session is right?</h2>

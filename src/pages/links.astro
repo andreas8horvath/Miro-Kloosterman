@@ -38,7 +38,7 @@ const links = [
       <!-- Profile Section -->
       <Reveal client:load>
         <div class="flex flex-col items-center mb-12">
-          <div class="w-48 h-48 rounded-full overflow-hidden border-2 border-gold/20 mb-8 bg-deep-forest shadow-tactile">
+          <div class="w-48 h-48 rounded-full overflow-hidden border-2 border-terracotta/20 mb-8 bg-clay-dark shadow-tactile">
             <img 
               src="https://res.cloudinary.com/dt806m3nm/image/upload/v1776505357/4-1920w.jpg_uiikl9.webp" 
               alt="Miro Kloosterman" 
@@ -46,8 +46,8 @@ const links = [
               referrerpolicy="no-referrer"
             />
           </div>
-          <h1 class="text-3xl md:text-3xl font-display text-deep-forest mb-2">Miro Kloosterman</h1>
-          <p class="text-sm font-body uppercase tracking-[3px] text-sage font-bold">Body, Mind & Soul</p>
+          <h1 class="text-3xl md:text-3xl font-display text-clay-dark mb-2">Miro Kloosterman</h1>
+          <p class="text-sm font-body uppercase tracking-[3px] text-terracotta font-bold">Body, Mind & Soul</p>
         </div>
       </Reveal>
 
@@ -61,8 +61,8 @@ const links = [
               class:list={[
                 "group relative w-full py-5 px-8 flex justify-between items-center transition-all duration-500 rounded-sm",
                 link.primary 
-                  ? "bg-deep-forest text-sand hover:bg-gold hover:text-deep-forest shadow-tactile" 
-                  : "bg-cream text-deep-forest border border-gold/10 hover:border-gold hover:shadow-tactile"
+                  ? "bg-clay-dark text-sand hover:bg-terracotta hover:text-sand shadow-tactile" 
+                  : "bg-linen text-clay-dark border border-terracotta/10 hover:border-terracotta hover:shadow-tactile"
               ]}
             >
               <div class="flex flex-col">
@@ -70,7 +70,7 @@ const links = [
                   {link.name}
                 </span>
                 {link.badge && (
-                  <span class="text-[8px] uppercase tracking-widest text-gold mt-1 font-bold">
+                  <span class="text-[8px] uppercase tracking-widest text-terracotta mt-1 font-bold">
                     {link.badge}
                   </span>
                 )}
@@ -84,7 +84,7 @@ const links = [
       <!-- Footer Info -->
       <Reveal client:load delay={0.8}>
         <div class="mt-20 text-center">
-          <p class="text-[10px] uppercase tracking-[2px] text-charcoal/40 mb-8 leading-relaxed">
+          <p class="text-[10px] uppercase tracking-[2px] text-soil/40 mb-8 leading-relaxed">
             Worldwide · Online
           </p>
           <div class="flex justify-center gap-8">
